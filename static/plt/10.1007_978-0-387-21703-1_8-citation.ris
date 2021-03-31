@@ -1,0 +1,20 @@
+TY  - CHAP
+AU  - de Ruyter, Rob
+AU  - Bialek, William
+ED  - van Hemmen, J. Leo
+ED  - Cowan, Jack D.
+ED  - Domany, Eytan
+PY  - 2002
+DA  - 2002//
+TI  - Timing and Counting Precision in the Blowfly Visual System
+BT  - Models of Neural Networks IV: Early Vision and Attention
+SP  - 313
+EP  - 371
+PB  - Springer New York
+CY  - New York, NY
+AB  - We measure the reliability of signals at three levels within the blowfly visual system, and present a theoretical framework for analyzing the experimental results, starting from the Poisson process. We find that blowfly photoreceptors, up to frequencies of 50–100 Hz and photon capture rates of up to about 3 · 105/s, operate well within an order of magnitude from ideal photon counters. Photoreceptors signals are transmitted to LMCs through an array of chemical synapses. We quantify a lower bound on LMC reliability, which in turn provides a lower bound on synaptic vesicle release rate, assuming Poisson statistics. This bound is much higher than what is found in published direct measurements of vesicle release rates in goldfish bipolar cells, suggesting that release statistics may be significantly sub-Poisson. Finally we study H1, a motion sensitive tangential cell in the fly’s lobula plate, which transmits information about a continuous signal by sequences of action potentials. In an experiment with naturalistic motion stimuli performed on a sunny day outside in the field, H1 transmits information at about 50% coding efficiency down to millisecond spike timing precision. Comparing the measured reliability of H1’s response to motion steps with the bounds on the accuracy of motion computation set by photoreceptor noise, we find that the fly’s brain makes efficient use of the information available in the photoreceptor array.
+SN  - 978-0-387-21703-1
+UR  - https://doi.org/10.1007/978-0-387-21703-1_8
+DO  - 10.1007/978-0-387-21703-1_8
+ID  - de Ruyter2002
+ER  - 

@@ -5,7 +5,6 @@ def test():
     # in the meta.json for details.
 
     # If an assertion fails, the message will be displayed
-    assert "print(DATA[0])" in __solution__, "Are you printing the first record?"
-    assert some_var == len(DATA), "Are you getting the correct length?"
+    assert round(mass, 2) == 8.11, "Are you printing the first record?"
 
     __msg__.good("Well done!")
