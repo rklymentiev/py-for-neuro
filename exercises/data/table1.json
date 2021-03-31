@@ -1,0 +1,5 @@
+{
+	"id": [855625, 856106, 857374, 857010, 85713702, 85715, 857155, 857156, 857343],
+	"diagnosis": ["malignant", "malignant", "benign", "malignant", "benign",
+		"malignant", "benign", "benign", "benign"]
+}
