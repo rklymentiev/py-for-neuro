@@ -19,14 +19,15 @@ export default ({ data }) => {
             <Logo className={classes.logo} aria-label={siteMetadata.title} />
 
             <section>
-                <h1 className={classes.subtitle}> INSERT CATCHY TAG LINE HERE </h1>
+                <h1 className={classes.subtitle}> Perform your favorite data analysis in Python </h1>
                 <div className={classes.introduction}>
-                <p>
-                    This is a good place to write what your course is about!  Dinosaurs? Neural Networks? LSTM? How to do taxes and not get bored? Write it here!   
+                <p> THIS IS A BETA VERSION!
+                    This free and interactive course is designed to guide you through the basics of Python programming. Course mostly has Neuroscience-based exercises, however, everyone can benefit from it, regardless the field you want to apply it in.
+                    Course covers most of the topics to get you started, including the basics of programming, working with packages like NumPy or Pandas for data manipulation, making human readable plots and working with data in different formats.
                 </p>
                 </div>
             </section>
-            
+
             {chapters.map(({ slug, title, description }) => (
                 <section key={slug} className={classes.chapter}>
                     <h2 className={classes.chapterTitle}>
