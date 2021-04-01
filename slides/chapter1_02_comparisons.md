@@ -2,15 +2,13 @@
 type: slides
 ---
 
-# Comparing objects to each other
+# Comparing objects
 
-Notes: Now that you know how to create new variables, you can compare the variables. This opens a lot of possibilities for further data manipulation!
+Notes: Now that you know how to create new variables, you can compare them. This opens a lot of possibilities for further data manipulation!
 
 ---
 
-# Comparisons
-
-There are eight comparison operations in Python.
+# Python comparison operations
 
 | Operation | Meaning |
 |:-:|:-:|
@@ -35,7 +33,7 @@ Notes: Comparison always return a Boolean object which can be either `True` or `
 | x & y | if x is False, then x, else y |
 | not x | if x is False, then True, else False |
 
-Notes: This might seems confusing at first, but that's important to keep in mind when dealing with multiple comparisons. Imagine you want to get only Males who are older than 45 years for your data analysis. Your code would look something like that:
+Notes: This might seems confusing at first, but that's important to keep in mind when dealing with multiple comparisons. Imagine you want to select only males who are older than 45 years for your data analysis. Your code would look something like that:
 
 ```python
 (sex == "Male") & (age > 45)
@@ -59,7 +57,6 @@ True
 
 ```python
 # example 2
-x = 15
 y = 20
 (x > 10) | (y < 5)
 ```
@@ -84,7 +81,7 @@ Notes: Example #1 is pretty straight forward. `x` is indeed smaller than 100, so
 
 In the second example the left condition was `True` (`x` is greater than 10) and the right condition was `False` (`y` is not less than 5), which resulted in the final `True` result (in other words, at least one condition was `True`).
 
-In the third example we want to check if **both** conditions are `True`, which is not the case, that's why the final result is `False`. You can also save the result of condition operation to a new object (like `result` in the example for later use).
+In the third example we want to check if **both** conditions are `True`, which is not the case, that's why the final result is `False`. You can also save the result of a condition operation to a new object (like `result` in this example) for later use.
 
 ---
 

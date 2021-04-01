@@ -8,21 +8,39 @@ type: chapter
 id: 0
 ---
 
-<exercise id="1" title="Why did I create this course?">
+<exercise id="1" title="Quick introduction">
 
 Hello and welcome!
 
-My name is Ruslan and I feel passionate about Neuroscience. During my short experience in a neuroscience field I have already spotted the lack of programming/computer science knowledge among scientists. Given my background in Data Science and belief in the "open source knowledge", I decided to create a course to introduce other people to Python programming. In my opinion programming knowledge helps to a) work with data in a more convenient way (there is another world apart from Excel, you know); b) automate repeated tasks; c) perform data analysis easily. And also programming is just fun.
+My name is Ruslan and I feel passionate about Neuroscience. During my short experience in a neuroscience field I have already spotted the lack of programming/computer science knowledge among scientists. Given my background in Data Science and belief in the "open source knowledge", I decided to create a course to introduce other people to Python programming. In my opinion basic programming knowledge allows to (a) work with data in a more convenient way (there a whole new world away from Excel, you know); (b) automate repeated tasks; (c) make custom visualizations. And also programming is just fun.
 
-Course is divided into several chapters for specific topics which makes it easy to chose those you are interested in and skip parts that you already know. All problems solutions are already here, so you are free to check your answers. Keep in mind that if your code does exactly what was asked in the task, but the algorithm is different, that doesn't mean that your solution is wrong. It just means that this task (as 80%+ of them) has different ways of solving.
+#### What this course IS about:
+
+- getting familiar with programming basics;
+- working with most commonly used packages (such as NumPy, Pandas, Seaborn);
+- building custom plots;
+- importing/exporting files of different formats;
+- performing statistical analysis in Python.
+
+#### What this course IS NOT about:
+
+- developing web applications using Python;
+- performing (f)MRI or EEG analysis in Python;
+- building artificial neuronal networks.
+
+Course is divided into several chapters for specific topics which makes it easy to choose those you are interested in and skip parts that you already know. All solutions for exercises are already here, so you are free to check your answers. Keep in mind that if your code does exactly what was asked in the task, but the algorithm is different, that doesn't mean that your solution is wrong. It just means that this task (as most of the tasks in the world) has different ways of solving.
 
 </exercise>
 
 <exercise id="2" title="Q&A">
 
+**Q: If I am not a neuroscientist and not planning to work in life science field, can I benefit from the course?**
+
+A: Definitely! Most exercises are based on neuroscience related data sets (description of these data sets is provided in the next parts), but you are not required to have a neuroscience background to solve them since they are more about Python programming.
+
 **Q: Is this a supervised course?**
 
-A: No, there is no supervision. I tried to make tasks and hints as clear as possible. There is also (not that active) Discord server Python for Neuroscience that was created for discussions about Python related problems in a neuroscience field.
+A: No, there is no supervision. I tried to make tasks and hints as clear as possible. There is also an open (but not that active) Discord server [Python for Neuroscience](https://discord.gg/yUq9sfHHDb) that was created for discussions about Python related problems in a neuroscience field.
 
 **Q: Will I get a certificate after the completion of the course?**
 
@@ -30,23 +48,19 @@ A: No. But you will get the *knowledge*. Isn't it better?
 
 **Q: Do I need to have Python installed on my machine?**
 
-A: You don't have to install Python for this course since you can use Python code windows on this website (built on [Binder](https://mybinder.org/)). However, you have to install Python at some point to start doing your own analysis, otherwise what's the point? I will show the best way on how to install Python in next parts.
+A: You don't have to install Python for this course since you can use Python code windows on this website (built on [Binder](https://mybinder.org/)). However, you have to install Python at some point to start doing your own analysis, otherwise what's the point? I will show the best way on how to install Python in the following part.
 
 **Q: Will this course make me a super proficient computational neuroscientist and increase my popularity in the academia?**
 
-A: No, unfortunately.
+A: Not quite. This course will introduce you to the basics of programming, but not the real applications of modeling of human behavior or neuronal processes.
 
-**Q: Will this course introduce me to the Python programming so later I can apply this knowledge doing Machine Learning/Modeling stuff?**
+**Q: Will this course introduce me to the Python programming so later I can apply this knowledge doing more advanced stuff, like Machine Learning?**
 
 A: Exactly! This course will show you the main concepts of programming and most popular Python packages, so later you can apply your knowledge to deal with more complex stuff, such as models building.
 
-**Q: If I am not a neuroscientist and not planning to work in life science field, can I benefit from the course?**
-
-A: Definitely. Most exercises are based on neuroscience related data sets (description of these data sets is provided in the next parts), but all the exercises have clear defined tasks and you are not required to have a brain science background to solve them since there are more about Python programming.
-
 **Q: I have spotted a typo/error, where do I report it?**
 
-A: Feel free to report an issue at the [GitHub page]() or create a pull requests.
+A: Feel free to report an issue at the [GitHub page](https://github.com/ruslan-kl/py-for-neuro) or create a pull requests.
 
 </exercise>
 
@@ -69,6 +83,12 @@ Simply saying, after installation of Anaconda you will get Python and 95% of the
 
 [Download](https://www.anaconda.com/products/individual) || [Installation guides (macOS, Windows, Linux)](https://docs.anaconda.com/anaconda/install/)
 
+If you have never worked with Python, I would suggest start with [JupyterLab](https://jupyter.org/) environment. If you have installed Anaconda, you don't need any additional installations. Here is a nice video tutorial: [Jupyter Notebook Tutorial: Introduction, Setup, and Walkthrough](https://www.youtube.com/watch?v=HW29067qVWk)
+
+<center><img src="https://jupyterlab.readthedocs.io/en/stable/_images/jupyterlab.png" width="600"></img></center>
+
+[JupyterLab documentation](https://jupyterlab.readthedocs.io/en/stable/)
+
 <br>
 Do I necessarily have to install Python for this course?
 
@@ -84,7 +104,7 @@ You have Python interpreter built on Binder directly on the website, so you can 
 
 </exercise>
 
-<exercise id="5" title="A little bit of motivation">
+<exercise id="5" title="A little bit of motivation (not finished)">
 
 https://www.researchgate.net/publication/9517409_Movement-Produced_Stimulation_in_the_Development_of_Visually_Guided_Behavior
 

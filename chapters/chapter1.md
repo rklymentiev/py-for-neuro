@@ -17,7 +17,9 @@ id: 1
 
 <exercise id="2" title="Say hello to the world">
 
-Good part about Python (and I assume about the most of the programming languages) is that function names are most of the times self explanatory. If you see a function called `print()`, it does exactly what you expect it to do. It prints out the object on a screen. Now, run your very first clean and beautiful code and greed the World!
+<center><img src="hello_world.jpg" width="300"></center>
+
+Good part about Python (and I assume about the most of the programming languages) is that function names are most of the times self explanatory. If you see a function called `print()`, it does exactly what you expect it to do. It prints out the object on a screen. Now, run your very first clean and beautiful code and greet the World!
 
 <codeblock id="01_01">
 
@@ -29,15 +31,15 @@ Giving up so early?
 
 <exercise id="3" title="Create your first variable">
 
-1. create a new variable `x` and set it to be equal 4
-2. assign the value of the square root of `x` to a new variable `y`
-3. print the value of the variable `y` on the screen
+1. Create a new variable `x` and set it to be equal 4;
+2. assign the value of the square root of `x` to a new variable `y`;
+3. print the value of the variable `y` on the screen.
 
 <i>Note, that there is no built-in function to get a square root, but you can use a power operator `**`.</i>
 
 <codeblock id="01_02">
 
-Square root of a number is the same as taking a number to the power of 0.5.
+* square root of a number is the same as the power of 0.5;
 
 </codeblock>
 
@@ -71,7 +73,7 @@ Are you sure about that?
 
 <choice>
 <opt text="0.0" correct="true">
-That would also mean that 26 is an even number.
+Remainder after the division 26 by 2 is 0. That also means that 26 is an even number.
 </opt>
 
 <opt text="13.0" >
@@ -90,7 +92,7 @@ Are you trying to take 26% of 2?
 
 <codeblock id="01_03">
 
-
+* mass = molar weight * molarity * volume
 
 </codeblock>
 
@@ -111,7 +113,7 @@ Are you trying to take 26% of 2?
 
 <codeblock id="01_04">
 
-You want the participant to be in a treatment group and have BMI equal or greater than 15 at the same time.
+* you want the participant to be in a treatment group and have BMI equal or greater than 15 **at the same time**;
 
 </codeblock>
 
@@ -120,9 +122,8 @@ You want the participant to be in a treatment group and have BMI equal or greate
 
 <codeblock id="01_05">
 
-Now you want to combine three conditions at the same time. Note, that `&` operator has a greater precedence over the `|` operator. Consider brackets `()` to make sure your conditions are being checked in the right order.
-
-You can learn more about the operators' precedence [here](https://docs.python.org/3/reference/expressions.html#operator-precedence).
+* now you need to combine three conditions at the same time. Note, that `&` operator has a greater precedence over the `|` operator. Use brackets `()` to make sure your conditions are being checked in the right order;
+* you can learn more about the operators' precedence [here](https://docs.python.org/3/reference/expressions.html#operator-precedence).
 
 </codeblock>
 
@@ -139,7 +140,7 @@ You can learn more about the operators' precedence [here](https://docs.python.or
 
 <exercise id="8" title="DNA strings">
 
-**Exercise 1**. What would be the output of the following code:
+**Question 1**. What would be the output of the following code:
 
 ```python
 mRNA = "GUAUGCACGUGACUUUCCUCAUGAGCUGAU"
@@ -152,7 +153,7 @@ It's a valid piece of code.
 </opt>
 
 <opt text="True" >
-Does the sequence really start and end with the same codon at the same time?
+Does the sequence really start and end with the GUA codon at the same time?
 </opt>
 
 <opt text="False" correct="true">
@@ -160,17 +161,17 @@ True & False = False
 </opt>
 </choice>
 
-**Exercise 2**. An RNA string is a string formed from the alphabet containing 'A', 'C', 'G', and 'U'. Given a DNA string corresponding to a coding strand, its transcribed RNA string is formed by replacing all occurrences of 'T' in with 'U'. Get the transcribed RNA string.
+**Exercise 1**. An RNA string is a string formed from the alphabet containing 'A', 'C', 'G', and 'U'. Given a DNA string corresponding to a coding strand, its transcribed RNA string is formed by replacing all occurrences of 'T' in with 'U'. Get the transcribed RNA string in all capital letters.
 
 <codeblock id="01_06">
 
 - remember the `.replace(OLD, NEW)` and `.upper()` methods?
-- you can combine multiple methods together (`object.method1().method2().method3()`)
-- keep an eye on the methods' order
+- you can combine multiple methods together (`object.method1().method2().method3()`);
+- keep an eye on the methods' order;
 
 </codeblock>
 
-**Exercise 3**. A palindromic sequence is a nucleic acid sequence in a double-stranded DNA or RNA molecule wherein reading in a certain direction (e.g. 5' to 3') on one strand matches the sequence reading in the opposite direction (e.g. 5' to 3') on the complementary strand. Is given sequence a palindromic sequence?
+**Exercise 2**. A palindromic sequence is a nucleic acid sequence in a double-stranded DNA or RNA molecule wherein reading in a certain direction (e.g. 5' to 3') on one strand matches the sequence reading in the opposite direction (e.g. 5' to 3') on the complementary strand. Is given sequence a palindromic sequence?
 
 <codeblock id="01_07">
 
@@ -201,7 +202,7 @@ True & False = False
 
 </codeblock>
 
-**Exercise 2**. Count how many times adenine (A), cytosine (C), guanine (G), and thymine (T) nucleotides appear in the given DNA string. Save result as a dictionary with four keys, where keys represent the nucleotide and values represent the counts. *You can use either first letters for the dictionary keys or the full names.*
+**Exercise 2**. Count how many times adenine (A), cytosine (C), guanine (G), and thymine (T) nucleotides appear in the given DNA string. Save result as a dictionary with four keys, where keys represent the nucleotide and values represent the counts. *You can use either first letters for the dictionary keys (A) or the full names (Adenine).*
 
 <codeblock id="01_09">
 

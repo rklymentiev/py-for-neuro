@@ -2,5 +2,5 @@ age = 30
 group = "control"
 BMI = 20
 
-condition = ___
+condition = (group ___ "treatment") ___ (___ >= 15)
 print(condition)

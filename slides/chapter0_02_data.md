@@ -30,7 +30,7 @@ Credits: Michael L. Waskom, Michael C. Frank, Anthony D. Wagner, Adaptive Engage
 
 Notes: Description: fMRI data from parietal and frontal regions from context-dependent decision making.
 
-Found in the Seaborn package's datasets (`sns.load_dataset("fmri"`).
+Found in the Seaborn package's datasets (`sns.load_dataset("fmri")`).
 
 ---
 
@@ -58,7 +58,7 @@ Credits: Roitman, JD and Shadlen, MN (2002), “Response of neurons in the later
 
 Notes: Description: Response of neurons in the lateral intraparietal area during a combined visual discrimination reaction time task.
 
-Found in the Seaborn package's datasets (`sns.load_dataset("dots"`). Full data set can be found [here](https://shadlenlab.columbia.edu/resources/RoitmanDataCode.html).
+Found in the Seaborn package's datasets (`sns.load_dataset("dots")`). Full data set can be found [here](https://shadlenlab.columbia.edu/resources/RoitmanDataCode.html).
 
 ---
 

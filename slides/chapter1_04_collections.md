@@ -103,7 +103,7 @@ participants[2] = 'Ben' # replace element at the index 2
 ```python
 # methods that don't change a sting and return a new object
 print(participants.count('Bill')) # returns the number of instances;
-print(participants.index('Max')) # returns index of first instance;
+print(participants.index('Max'))  # returns index of first instance;
 ```
 
 ```out
@@ -111,11 +111,11 @@ print(participants.index('Max')) # returns index of first instance;
 3
 ```
 
-Notes: You might also heard terms "method" and "function" and most of the times they could be used interchangeably. Confusing, isn't it? Think of methods as a function, that could be applied only for specific data type. Whereas function `len()` can be applied on strings, lists and many other objects. We call function by `function(object)` and method by `object.method()`.
+Notes: You heard terms "method" and "function" already and most of the times they were be used interchangeably. Confusing, isn't it? Think of methods as a function, that could be applied only for specific data type. Whereas function `len()` for example can be applied on strings, lists and many other objects. We call function by `function(object)` and method by `object.method()`.
 
 On this slide you can see some of the methods, that are unique for the lists.  It's important to note that all of these methods change the initial string. You can see how the string changes in comment lines.
 
-If you do some code this like you will end up with `NoneType` object:
+If you run a code like this one, you will end up with `NoneType` object:
 
 ```python
 l = [1,2,3]
@@ -153,7 +153,7 @@ TypeError: 'tuple' object does not support item assignment
 
 Notes: Another collection type in Python is tuple. We defined lists using the square brackets (`[1,2,3]`), but for tuples we use parentheses (`(1,2,3)`).
 
-Tuples are quite boring, since they don't have so much methods that can be applied on them. But there is a reason for that. Tuples are **unchangeable**. This means that no function, methods can change objects in the tuple.
+Tuples are quite boring, since they don't have so much methods that can be applied on them. But there is a reason for that. Tuples are **unchangeable**. This means that no function or method can change objects in the tuple.
 
 ---
 
@@ -190,7 +190,7 @@ languages - snakes # set difference
 {'java', 'r'}
 ```
 
-Notes: Figure brackets are the indicator for sets, another collection type. You cannot access items in a set by referring to an index, since sets are unordered the items has **no index**. But you can loop through the set items using a `for` loop, or ask if a specified value is present in a set, by using the `in` keyword.
+Notes: Figure brackets are the indicator for sets, another collection type. You cannot access items in a set by referring to an index, since sets are unordered and have **no index**. But you can loop through the set items using a `for` loop, or ask if a specified value is present in a set, by using the `in` keyword.
 
 You can apply basic sets commands (like union or intersection). Note that we didn't get `'python'` twice for the union, since sets don't allow duplicate values. This fact can become handy used when looking for the unique values in a list.
 
@@ -235,7 +235,10 @@ my_dict.values()
 Notes: Dictionaries are structures which can contain multiple data types, and is ordered with key-value pairs: for each (unique) key, the dictionary outputs one value. Keys can be strings, numbers, or tuples, while the corresponding values can be any Python object.
 
 ```python
-dict_obj = {'key1': value1, 'key2': value2, ...}
+dict_obj = {
+    'key1': value1,
+    'key2': value2,
+    ...}
 ```
 As you can see from the first example, you cannot access values of the dictionary by the indexes (like you did in lists). But you can access them by the key. Due to this feature dictionaries don't allow duplicated keys.
 
