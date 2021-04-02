@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 2: Programming Fundamentals'
 description:
-  'In this chapter we are going to look at some programming concepts, such as working with loops, writing custom functions and dealing with errors.'
+  'In this chapter we are going to look at programming concepts, such as working with loops, writing custom functions and dealing with errors.'
 prev: /chapter1
 next: /chapter3
 type: chapter
@@ -21,9 +21,9 @@ id: 2
 
 <codeblock id="02_01">
 
-- there are the methods to check whether consist of alphabetical symbols (`.isalpha()`) or numeric symbols (`.isnumeric()`). Whatever is left might be just `"Symbols"`;
+- there are the methods to check whether consist of alphabetical symbols (`.isalpha()`) or numeric symbols (`.isnumeric()`). Whatever is left must be a symbol;
 - you might want to set the counter initially to zero and then increase by 1 when the appropriate condition is met in the `for` loop;
-- remember the `+=` trick?
+- you cn also use the `+=` trick;
 
 </codeblock>
 
@@ -42,7 +42,7 @@ Keep just first 10 digits for simplicity.
 
 <codeblock id="02_03">
 
-- you can use the function `sorted(list_object, reverse=True)` to sort the list in descending order and cut the first `n` observations with the help of slicing;
+- you can use the function `sorted(list_object, reverse=True)` to sort the list in descending order and cut the first `n` observations with the help of slicing `[:n]`;
 
 </codeblock>
 
@@ -55,9 +55,9 @@ Keep just first 10 digits for simplicity.
 
 </exercise>
 
-<exercise id="4" title="Functions practice (1)">
+<exercise id="4" title="Functions practice (1): custom functions">
 
-**Question 1**. Keep in mind that if your function holds non-default and default arguments at the time, you have to place **all** the default arguments at the end in the function header (`def function_name(arguments)`) after the non-default arguments. Given that, which of the function headers you think is incorrect?
+**Question 1**. Keep in mind that if your function holds non-default and default arguments at the time, you have to place **all** the default arguments at the end in the function header (`def function_name(arguments)`) after the non-default arguments. Given that, which of the function headers you think is **incorrect**?
 
 <choice>
 <opt text="def func(a, b, c=1)">
@@ -69,24 +69,24 @@ All non-default arguments should be put before default arguments. The correct he
 </opt>
 
 <opt text="def func(a=1, b=1, c=1)">
-There is nothing wrong with have all the arguments as default.
+There is nothing wrong with having all the arguments as default.
 </opt>
 
 <opt text="def func(a, b, c)">
-There is nothing wrong with have all the arguments as non-default.
+There is nothing wrong with having all the arguments as non-default.
 </opt>
 
 </choice>
 
 **Exercise 1**. Write a function that takes a list of numbers as an input and returns a variance of that list.
 
-Variance equals to:
+Population variance can be approximated as:
 
-<img src="https://latex.codecogs.com/gif.latex?s^2&space;=&space;\frac{\sum{(x-\bar{x}})^2}{N}" title="s^2 = \frac{\sum{(x-\bar{x}})^2}{N}" />,
+<center><img src="https://latex.codecogs.com/gif.latex?s^2&space;=&space;\frac{\sum{(x-\bar{x}})^2}{N}" title="s^2 = \frac{\sum{(x-\bar{x}})^2}{N}" /></center>
 
-* <img src="https://latex.codecogs.com/gif.latex?\bar{x}" title="\bar{x}" /> - the average value of a sample,
+* <img src="https://latex.codecogs.com/gif.latex?\bar{x}" title="\bar{x}" /> - the average value,
 
-* <img src="https://latex.codecogs.com/gif.latex?N" title="N" /> - sample size.
+* <img src="https://latex.codecogs.com/gif.latex?N" title="N" /> - number of observations.
 
 <codeblock id="02_04">
 
@@ -94,9 +94,9 @@ Variance equals to:
 
 </codeblock>
 
-**Exercise 2**. You might have noticed that equation for sample variance in a previous exercise is not really correct since we have to subtract 1 degree of freedom in the denominator.
+**Exercise 2**. When we are dealing with the **sample variance** we have to subtract 1 degree of freedom in the denominator.
 
-<img src="https://latex.codecogs.com/gif.latex?s^2&space;=&space;\frac{\sum{(x-\bar{x}})^2}{N-1}" title="s^2 = \frac{\sum{(x-\bar{x}})^2}{N-1}" />
+<center><img src="https://latex.codecogs.com/gif.latex?s^2&space;=&space;\frac{\sum{(x-\bar{x}})^2}{N-1}" title="s^2 = \frac{\sum{(x-\bar{x}})^2}{N-1}" /></center>
 
 Update your function by adding `df` argument that will specify how many degrees of freedom we want to subtract. Set the default value to 1 (meaning that by default it will use the formula for the sample variance).
 
@@ -108,7 +108,7 @@ Update your function by adding `df` argument that will specify how many degrees 
 
 </exercise>
 
-<exercise id="5" title="Functions practice (2)">
+<exercise id="5" title="Functions practice (2): lambda functions">
 
 **Exercise 3**. You performed a learning task and got accuracy (number of correct trials divided by total number of trials) for 10 subjects stored in a dictionary. Now you want to save the IDs of those participants whose score was above 0.6 in a separate list. How could you solve it using `filter` and `lambda` function?
 
@@ -124,7 +124,7 @@ Then using `for` loop and `if` statement separate IDs into control and treatment
 
 <codeblock id="02_07">
 
-- to clean the groups list you can remove the last two characters with the help of `replace()` (or slicing) and apply `lower()` method;
+- to clean the groups list you can remove the last two characters with the help of `.replace()` method (or slicing everything but last two values) and apply `lower()` method;
 - to iterate over indexes of the list you can use the structure `for i in range(len(list_obj))`. In that case `range()` function creates a list starting at 0 and ending at the value `n-1`, where `n` is the length of the given list;
 
 </codeblock>
@@ -138,9 +138,9 @@ Then using `for` loop and `if` statement separate IDs into control and treatment
 
 </exercise>
 
-<exercise id="7" title="assert practice">
+<exercise id="7" title="Functions practice (3): assert and docstring">
 
-**Exercise 1**. Remember the `variance()` function you created recently? What if input list holds any non-numeric object? In this case function will also fail. Check that **all** the values in the input lists are numeric (`int` or `float`) using `assert` statement.
+**Exercise 5**. Remember the `variance()` function you created recently? What if input list holds any non-numeric object? In this case function will also fail. Check that **all** the values in the input lists are numeric (`int` or `float`) using `assert` statement.
 
 Also, degrees of freedom should be a positive integer or 0. Raise an error if that's not true.
 
@@ -148,11 +148,11 @@ Also, degrees of freedom should be a positive integer or 0. Raise an error if th
 
 - one of the ways to do this is by help of `map()` and `lambda()` functions. You can check that type of each value in a list is either `int` or `float` by calling `in` operator in `lambda()`\'s expression.
 - `sum([True, False, True])` equals 2, since `True` = 1, `False` = 0;
-- if sum (or we can call it count) of numeric values in a list doesn't equal to the lentgh of a list, what does, it tell us?
+- if sum (or we can call it count) of numeric values in a list doesn't equal the length of a list, what does it tell us?
 
 </codeblock>
 
-**Exercise 2**. Update the function with a dosctring, so other users can understand what this function is about.
+**Exercise 6**. Update the function with a dosctring, so other users can understand what this function is about.
 
 <codeblock id="02_09">
 

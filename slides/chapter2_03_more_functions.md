@@ -33,8 +33,7 @@ Notes: Recall the function to calculate the pi value. This was a pretty simple f
 
 # `assert` statement
 
-**General form**:
-
+#### General form:
 ```python
 assert condition, "Message to add to an error in case the condition isn't true"
 ```
@@ -61,7 +60,7 @@ AssertionError: Check the type of the diameter argument. Should be numeric.
 
 Notes: `assert` works somewhat similar to `if` statement. We check a condition. If it's `True` nothing happens and function executes according to the script. If the condition if `False`, then you get an `AssertionError` with the message you specified and function **is not** executed.
 
-You might wonder, why do we need to bother with this if we still got an error at the end? Imagine you have more sophisticated function with dozens of code lines and you have one input object that is used at the very end of the function. You wouldn't want to wait for the very end of the function execution to realize that you used a wrong input value, right? Life would be so much easier, if you knew it from the beginning and don't execute your function until you provide appropriate input values.
+You might wonder, why do we need to bother with this if we still got an error at the end? Imagine you have more sophisticated function with dozens of code lines and you have one input object that is used at the very end of the function. You wouldn't want to wait for the very end of the function execution to realize that you used a wrong input value, right? Life would be so much easier, if you knew it from the beginning and didn't execute your function until you provide appropriate input values.
 
 Note that the `\` symbol is used for splitting the line in the assert statement for visual purpose. You don't have to use it if your line is not that long.
 
@@ -71,7 +70,7 @@ Note that the `\` symbol is used for splitting the line in the assert statement 
 
 ```python
 def get_pi(circumference, diameter, digits_to_round=2):
-    """ Function returns the pi value based on the circumference and diameter values of a circle.
+    """ Function returns pi value based on the circumference and diameter values of a circle.
 
     Parameters
     ----------
@@ -95,7 +94,7 @@ def get_pi(circumference, diameter, digits_to_round=2):
     return round(pi, digits_to_round)
 ```
 
-Notes: What if you publish your function or just send it to someone so that can use it? Usually, people don't want to read all the code inside the function to understand how to use it. So it's nice to provide a brief documentation (a doc-string) along with your function. You can see example on your left. You start right after the function header and use a string (``"""this is still a string"""``) to write down some short explanations on how yo use this function and what are the inputs/outputs. Although there are several ways of docsctring formats, you are free to write whatever you want.
+Notes: What if you publish your function or send it to someone so that can use it? Usually, people don't want to read all the code inside the function to understand how to use it. So it's nice to provide a brief documentation (a doc-string) along with your function. You can see example on the left. You start right after the function header and use a string (``"""this is still a string"""``) to write down some short explanations on how to use this function and what are the inputs/outputs. Although there are several ways of docsctring formats, you are free to write whatever you want.
 
 You can earn more about docstring formats [here](http://daouzli.com/blog/docstring.html).
 

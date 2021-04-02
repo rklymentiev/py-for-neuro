@@ -5,9 +5,9 @@ accuracy_scores = {
 # store the top 3 values from the dictionary as a list
 max_accs = sorted(accuracy_scores.values(), reverse=True)[:3]
 # create an empty list that will hold ids of participants with the highes accuracy
-max_ids = []
+max_ids = []                             # create an empty list
 for key in accuracy_scores.keys():       # iterate over all keys in the dictionary
-    if accuracy_scores[key] in max_accs: # if the value of by this key is in top 3
-        max_ids.append(key)              # then append the list
+    if accuracy_scores[key] in max_accs: # check if the value of this key is in top 3
+        max_ids.append(key)              # if so, append the list
 
 print(max_ids)

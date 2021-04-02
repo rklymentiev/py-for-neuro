@@ -96,9 +96,8 @@ Continuation lines should align wrapped elements either vertically using Python'
 
 # Indentations (2)
 
+#### Recommended
 ```python
-# recommended
-
 # hanging indents should add a level.
 foo = long_function_name(
     var_one, var_two,
@@ -136,12 +135,14 @@ z = (x + y) * (x - y)
 
 #### However:
 
+#### Recommended
 ```python
-# recommended
 def function(default_parameter=5):
     pass
+```
 
-# not recommended
+#### Not recommended
+```python
 def function(default_parameter = 5):
     pass
 ```
@@ -175,4 +176,4 @@ Notes: Keep in mind, that most of the recommendations described in this presenta
 
 ---
 
-# Let's code!
+# This is it for now!

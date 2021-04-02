@@ -34,18 +34,16 @@ else:
 X is smaller that Y
 ```
 
-Notes: We have looked at the conditions in a previous chapter (like `==`, `!=` or `<`). Now we want to take some actions which will depend on the outcome of the comparison.
+Notes: We have looked at the comparisons in a previous chapter (like `==`, `!=` or `<`). Now we want to take some actions which will depend on the outcome of the comparison.
 
-The form is pretty straight-forward. If something is true, take one action, if something else is true (`elif`), take another action. If none of the statements were true, do something else (`else`). You can see the trivial example with comparing `x` and `y` variables.
+The form is pretty straight-forward. `if` something is `True`, take one action, if something else (`elif`) is true, take another action. If none of the statements were true, do something else (`else`). You can see the trivial example with comparing `x` and `y` variables.
 
 Couple of comments:
 
 1. 4 spaces in the beginning of the line are there for a reason;
 2. you can skip `else` statement in case you don't want to take any actions when the above conditions were false;
-3. you can add as many `elif` statements as you want to make a sophisticated pattern;
-4. you can combine multiple comparisons, like:
-
-`if (x>5) & (y<10)`
+3. you can add as many `elif` statements as you want to make a sophisticated pattern or you can skip it at all;
+4. you can combine multiple comparisons, like `if (x>5) & (y<10)`.
 
 ---
 
@@ -64,7 +62,7 @@ while condition is True:
 x = 0
 
 while x < 4:
-    x += 1 # which is equal to `x = x + 1`
+    x += 1 # which is the equivalent of `x = x + 1`
     print(x)
 ```
 
@@ -118,9 +116,9 @@ print(variances)
 [4, 16, 2.25, 4, 16]
 ```
 
-Notes: Unlike `while` loops, `for` loops don't require any condition. But they require an iterable object (like list). Even though `for` loops can be really computationally slow, they can be helpful in some applications.
+Notes: Unlike `while` loops, `for` loops don't require any condition. But they require an iterable object (like list). Even though `for` loops can be really computationally slow, they are really helpful in some applications.
 
-In the first example we were iterating over the list `my_list`, which hold three strings. At each step of the loop we defined a temporary variable `word` (name `word` is arbitrary, you can call it as you wish) as a value from the lists.
+In the first example we were iterating over the list `my_list`, which consists of three strings. At each step of the loop we defined a temporary variable `word` (name `word` is arbitrary, you can call it as you wish) as a value from the lists.
 
 * *Step 1*. `word` = `'data'`
 * *Step 2*. `word` = `'science'`
@@ -137,7 +135,7 @@ Second example shows how you can get take every number to the power of two using
 
 Notes:
 * If you need to break the loop before it has looped through all the items (in the `for` loop) or even if the statement is still `True` (in the `while` loop) you can use `break` statement.
-* With the `continue` statement you can stop the current iteration of the loop, and continue with the next one.
+* With the `continue` statement you can stop the current iteration of the loop and continue with the next one.
 
 ---
 
@@ -148,9 +146,9 @@ stdev = [2, 4, 0, 1.5, 2, 4]
 ```
 ```python
 variances = []
-for val in stdev:
+for val in stdev: # example 1
     if val == 0:
-        continue
+        continue  # exit the current step of the loop
     variances.append(val**2)
 print(variances)
 ```
@@ -160,9 +158,9 @@ print(variances)
 
 ```python
 variances = []
-for val in stdev:
+for val in stdev: # example 2
     if val == 0:
-        break
+        break  # exit the entire loop
     variances.append(val**2)
 print(variances)
 ```
@@ -172,7 +170,7 @@ print(variances)
 
 Notes: As in the previous example, we want to get the variances from the list of standard deviations. However, we see that now we have a value of `0` in the list, which doesn't make so much sense. We have two different scenarios:
 
-1. We want to square **all the values expect for `0`**. In such case we can use `continue` statement. When condition `val==0` is true, Python ends current step of the loop and starts a new one. So we omit the code with the appending.
+1. We want to square **all the values expect for `0`**. In such case we can use `continue` statement. When condition `val==0` is true, Python ends current step of the loop and starts a new one. So we omit the code with the appending in our example.
 
 2. We want to square **all the values before the `0`**. Who knows, maybe something went wrong in the calculations and we cannot trust all the values after the zero. When condition `val==0` is true, `break` statement ends the whole loop, even if more steps could be performed.
 

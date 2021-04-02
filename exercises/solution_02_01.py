@@ -1,17 +1,17 @@
 my_string = "P@#yn26at^&i5ve"
 
-# start the counter
-word_characters_count = 0    # like 'a', 'b', 'c'
-digits_count = 0             # like '1', '4', '9'
-symbols_count = 0            # like '%', '@', '+'
+# set the initial values for the counter
+word_characters_count = 0
+digits_count = 0
+symbols_count = 0
 
 # iterate over the string
 for val in my_string:
-    if val.isalpha():   # check if a word character
+    if val.isalpha():   # check if a word character ('a', 'b', 'c')
         word_characters_count += 1
-    elif val.isdigit(): # check if a digit
+    elif val.isdigit(): # check if a digit (1, 2, 3)
          digits_count += 1
-    else:               # the rest are symbols
+    else:               # the rest are symbols ('%', '@', '+')
         symbols_count += 1
 
 # add resulted values to a dictionary

@@ -2,21 +2,21 @@
 type: slides
 ---
 
-# Working with functions
+# Writing custom functions
+
+Notes: A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result.
 
 ---
 
 # Functions
 
-A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result.
-
-**General form**:
+#### General form:
 ```python
 def my_new_function(some_argument1, some_argument2):
     do something
     return something
 ```
-
+#### Example:
 ```python
 def mean(input_list):
     nominator = sum(input_list)
@@ -30,11 +30,11 @@ print(mean(input_list=l))
 ```out
 3.0
 ```
-Notes: You have seen the examples of several built-in functions like `len()`, `max()`, `sorted()`, etc. These functions allow you to perform some desired calculations. But what if you want to make a sophisticated calculations and there is no function for this? For example, you want to take an average value from the list. There is no built-in function for that, you can create it yourself, since average of a list of numbers is the sum of the list divided by its length.
+Notes: You have seen the examples of several built-in functions like `len()`, `max()`, `sorted()`, etc. These functions allow you to perform some desired calculations. But what if you want to make a sophisticated calculations and there is no function for this? For example, you want to take an average value from the list. There is no built-in function for that, but you can create it yourself, since average value of a list of numbers is the sum of the list divided by its length.
 
 In a `mean()` function (again, name of the function is your choice, but try to keep it meaningful) we specified that there is going to be just one argument (`input_list`). That will hold the value of an object we pass to the function when we call it.
 
-In the function's body we create two new variables that hold the values of sum and length. And at the and we return the value of a division. The last step is very important since now `mean()` function returns an object, that could be passed to a variable and used later. Try creating a function without the `return` statement.
+In the function's body we create two new variables that hold the values of sum and length. And at the end we return the value of a division. The last step is very important since now `mean()` function returns an object, that could be passed to a variable and used later. Try creating a function without the `return` statement on your own and see what happens.
 
 ---
 
@@ -64,7 +64,7 @@ print(get_pi(circumference=22, diameter=7, digits_to_round=1))
 3.1
 ```
 
-Notes: Functions can take no input arguments, like in the first example. In such case the result of the function will be always the same.
+Notes: Functions can take no input arguments, like in the `get_pi()` example. In such case the result of the function will be always the same.
 
 You can specify as many input arguments as you wish. Also, arguments can have default values (like `digits_to_round=2`). This means that if you don't specify it's value in the function run, it will be taken from the default value.
 
@@ -74,12 +74,12 @@ You can specify as many input arguments as you wish. Also, arguments can have de
 
 # `map` and `filter` functions
 
-**General form**:
+#### General form:
 ```python
 map(function, iterable_object)
 filter(function, iterable_object)
 ```
-
+#### Examples:
 ```python
 def squared(x):
     return x**2
@@ -105,7 +105,7 @@ Notes: `map()` function is used to apply a function on all the elements of speci
 
 In the first example we applied function `squared` to **every** object from the list `stdev` and converted the result to a list.
 
-The `filter()` function constructs an iterator from elements of an iterable for which a function returns true. In simple words, the `filter()` function filters the given iterable with the help of a function that tests each element in the iterable to be true or not.
+The `filter()` function constructs an iterator from elements of an iterable for which a function returns true. In simple words, the `filter()` function filters the given iterable object with the help of a function that tests each element in the iterable to be true or not.
 
 In the example we applied function `greater_than_two()` to **every** object from the list `stdev`. `greater_than_two()` returns `True` of `False` values and `filter()` filters out all the variables that have `False` response.
 ---
@@ -114,11 +114,11 @@ In the example we applied function `greater_than_two()` to **every** object from
 
 A `lambda` function is a small anonymous function. It can take any number of arguments, but can only have one expression.
 
-**General form**:
+#### General form:
 ```python
 lambda arguments: expression
 ```
-
+#### Examples:
 ```python
 stdev = [2, 4, 1.5, 2, 4]
 list(map(lambda x: x**2, stdev))
@@ -133,7 +133,7 @@ list(filter(lambda x: x>2, stdev))
 ```out
 [4, 4]
 ```
-Notes: On the previous slide we created two new functions `squared()` and `greater_than_two()` that we used only needed once and maybe we will not need them later at all. This might look like not a big deal for now, but imagine you have 100 of such "temporary" function that do it's own one-time-task. This can result in unnecessary memory usage. We can fix this with the help of `lambda` function.
+Notes: On the previous slide we created two new functions `squared()` and `greater_than_two()` that we used only once and will not need them later at all. This might look like not a big deal for now, but imagine you have 100 of such "temporary" functions that do it's own one-time-task. This can result in unnecessary memory usage. We can fix this with the help of `lambda` functions.
 
 In the first example we created a `lambda` function that takes `x` as an input and returns `x**2`. If you compare it to `square` function, you can notice that they are basically the same, but `lambda` function have no name and you cannot access it later after since it's not saved in the environment.
 

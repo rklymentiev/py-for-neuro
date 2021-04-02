@@ -115,3 +115,6 @@ Held, R., & Hein, A. (1963). Movement-produced stimulation in the development of
 Why do I bring this up here? Programming is not a type of knowledge that can be learned by watching YouTube videos or reading tutorials. There are 1000+ different libraries and functions in Python and there is no course that can introduce them all to you. This course will introduce basic concepts of programming with the example of some functions and problems but there are lots more! I highly encourage you to play around the problem sets apart from task described. You should ask yourself questions like "what will change if I replace value X by value Y?" or "what does this argument do and what happens if I drop it?". Don't be afraid to try change different parts of the code. I promise you that your computer will not explode (if it does, feel free to report an issue on the GiHub page). In the worst case scenario you will get an error message from Python, which are usually very informative and tell you what exactly you did wrong.
 
 </exercise>
+
+<exercise id="6" title="Acknowledgments">
+</exercise>
