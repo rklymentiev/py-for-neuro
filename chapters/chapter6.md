@@ -48,7 +48,7 @@ Another quite new but powerful package is Pingouin. It has much more informative
 
 As told before, SciPy has built functions to work with distribution of random variables, either discrete or continuous. Distributions represent a separate classes with usefule methods for manipulation. Here is the example for Normal distribution:
 
-### Population distribution
+#### Population distribution
 
 ```python
 import numpy as np
@@ -92,7 +92,7 @@ print(f"P(X>120) = {prob_x:.2f}")
 P(X>120) = 0.09
 ```
 
-### Sample distribution
+#### Sample distribution
 
 ```python
 sample_n = 100

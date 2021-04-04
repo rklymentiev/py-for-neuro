@@ -1,8 +1,8 @@
 import pandas as pd
 
-oasis_df = pd.read_csv("exercises/data/oasis_cross-sectional.csv")
+dementia_df = pd.read_csv("exercises/data/oasis_cross-sectional.csv")
 
-agg_df = oasis_df.groupby(by="CDR").agg({"ID": "count", "nWBV": "median"})
+agg_df = dementia_df.groupby(by="CDR").agg({"ID": "count", "nWBV": "median"})
 print("Original:")
 display(agg_df)
 

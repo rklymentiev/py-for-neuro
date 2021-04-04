@@ -5,6 +5,6 @@ def test():
     # in the meta.json for details.
 
     # If an assertion fails, the message will be displayed
-    assert ".2f" in __solution__, "Did you round the accuracy scores?"
+    assert round(RMSE, 2) == 9.62, 'Final RMSE is not correct.'
 
     __msg__.good("Well done!")

@@ -8,14 +8,57 @@ type: chapter
 id: 3
 ---
 
-<exercise id="1" title="NumPy" type="slides">
+<exercise id="1" title="How to import the package">
+
+To import any package we use `import` statement. Let's consider package NumPy for example. We could import it in several ways:
+
+```python
+# option 1
+import numpy
+
+x = numpy.sqrt(4)
+```
+
+
+```python
+# option 2 (most commonly used)
+import numpy as np
+
+x = np.sqrt(4)
+```
+```python
+# option 3
+import numpy as CraZy_NaMe
+
+x = CraZy_NaMe.sqrt(4)
+```
+
+Option 1 is pretty straight-forward. You import the whole package to the workspace and later you can access its content using `numpy.` prefix, for example `numpy.sqrt()`.
+
+You might wonder what is that `as np` doing in the option 2. This is what called "aliasing". Most of the packages have the "short" alias name, that is commonly used. In this way we specify that we are going to load the NumPy library and will store it in `np` object. All the functions from the package will be called using `np.` prefix, for example `np.sqrt()`.
+
+Basically you could also import the package as in option 3 and later you would call any function from it as `CraZy_NaMe.sqrt()`. Such method is not really recommended since it can be difficult for other to follow the code, but hey, you code = your rules.
+
+It can happen that you don't need the whole package imported into the workspace (due to the memory limitations for example). You can also import desired functions or modules (you can think of a module as "mini package" inside the package with functions) from the package in a following way:
+
+```python
+from numpy import sqrt, linalg
+
+x = sqrt(4)
+```
+
+In this way we import function `sqrt()` and module `linalg` (which has multiple function inside, such as `linalg.matrix_power()`). Note that we don't use `numpy.` prefix in such case.
+
+</exercise>
+
+<exercise id="2" title="NumPy" type="slides">
 
 <slides source="chapter3_01_numpy">
 </slides>
 
 </exercise>
 
-<exercise id="2" title="NumPy exercises">
+<exercise id="3" title="NumPy exercises">
 
 **Question 1**. What is **not the right way** to import `numpy` package?
 
@@ -33,11 +76,47 @@ There is nothing wrong with that line. In fact, this is the most common way.
 </opt>
 
 <opt text="from numpy import np" correct="true">
-We use `from ___ import ___` when we want to import a specific module or function. from a package This would be a valid line of code, if `numpy` package had a `np` module/function.
+We use `from ___ import ___` when we want to import a specific module or function from a package. This would be a valid line of code, if `numpy` package had a `np` module/function.
 </opt>
 </choice>
 
-**Exercise 1**. You performed a learning task for subjects with anxiety (anxiety level was measured according to Speilberger Trait Anxiety Inventory (TAI)\*). Variable `X` is the corresponding TAI of each subject. Variable `y` is the accuracy score (0-100% range).
+**Exercise 1**. You performed a learning task for subjects with anxiety (anxiety level was measured according to Speilberger Trait Anxiety Inventory (TAI)). Variable `X` is the corresponding TAI of each subject. Variable `y` is the accuracy score (0-100% range).
+
+```python
+import numpy as np
+
+X = np.load("exercises/data/X.npy")
+y = np.load("exercises/data/y.npy")
+print(X)
+```
+```out
+[[ 1.  54.1]
+ [ 1.  40. ]
+ [ 1.  53.1]
+ [ 1.  66. ]
+ [ 1.  31.1]
+ [ 1.  46.8]
+ [ 1.  47.6]
+ [ 1.  33.6]
+ [ 1.  44.8]
+ [ 1.  50.8]
+ [ 1.  51.9]
+ [ 1.  50.8]
+ [ 1.  39.8]
+ [ 1.  46.3]
+ [ 1.  33.7]
+ [ 1.  34. ]
+ [ 1.  44.8]
+ [ 1.  49.4]
+ [ 1.  32.5]
+ [ 1.  37.7]]
+```
+```python
+print(y)
+```
+```out
+[53.9 42.8 52.9 43.3 77.5 39. 43.6 54.8 64.6 43.1 63. 35.4 42.6 60.8 60.6 59.8 64.6 57. 70.3 55.3]
+```
 
 <center><img src="regression_anxiety.png" width="500"></center>
 
@@ -47,15 +126,16 @@ Build a linear regression model:
 
 where *b0* is the intercept, *b1* is the slope parameter.
 
-These b coefficients can be found as:
+These *b* coefficients can be found as:
 
 <center><img src="https://latex.codecogs.com/gif.latex?b&space;=&space;(X^T&space;X)^{-1}&space;X^T&space;y" title="b = (X^T X)^{-1} X^T y" /></center>
 
 which will result in (2x1) matrix with (1,1) value of *b0* and (2,1) value of *b1*.
 
+Note that `X` array has (20,2) shape where the first column is column of ones. This is done to fit the intercept of the linear regression model. You can learn more about linear regression model here:
 
-
-* Spielberger, C. D., Gorsuch, R. L., Lushene, R., Vagg, P. R., & Jacobs, G. A. (1983). *Manual for the State-Trait Anxiety Inventory*. Palo Alto, CA: Consulting Psychologists Press.
+* Blog post: [A (not that) Simple Least Squares Regression](https://defme.xyz/post/least-squares-regression/)
+* YouTube video: [StatQuest: Linear Models Pt.1 - Linear Regression](https://www.youtube.com/watch?v=nk2CQITm_eo)
 
 <codeblock id="03_01">
 
@@ -75,27 +155,27 @@ Value <img src="https://latex.codecogs.com/gif.latex?(y_{\text{pred}}&space;-&sp
 
 To find RMSE, you have to :
 
-1. find the **predicted** value of accuracy (`y`) for each TAI score (`X`). Keep in mind, that `X` array has two columns, first column consists of ones and second columns is the actual TAI scores.
-2. take the difference between the predicted and actual value of `y` (residuals) and square it
-3. take the average of all squared residual values and get a square root of that value.
+1. Find the **predicted** value of accuracy (`y`) for each TAI score (`X`). Keep in mind, that `X` array has two columns, first column consists of ones and second columns is the actual TAI scores.
+2. Take the difference between the predicted and actual value of `y` (residuals) and square it.
+3. Take the average of all squared residual values and get a square root of that value.
 
 <codeblock id="03_02">
 
-- predicted values can be found by *b0 + b1 X*;
-- `np.mean()` and `np.sqrt()` functions might help.
+- predicted values can be found by *b0 + b1 X*, but remember that you need only the second column from `X` array;
+- `np.mean()` and `np.sqrt()` functions might also help;
 
 </codeblock>
 
 </exercise>
 
-<exercise id="3" title="Pandas" type="slides">
+<exercise id="4" title="Pandas" type="slides">
 
 <slides source="chapter3_02_pandas">
 </slides>
 
 </exercise>
 
-<exercise id="4" title="Pandas exercises">
+<exercise id="5" title="Pandas exercises">
 
 **Question 1**. How many missing values are in the socioeconomic status column (`SES`)?
 
@@ -142,7 +222,7 @@ That's the total amount of *non-missing* observations in a column.
 DataFrames can only have two dimensions (rows and columns).
 </opt>
 <opt text="Yes">
-Could you imagine a 5D csv file?
+Can you imagine a 5 dimensional csv file?
 </opt>
 </choice>
 
@@ -165,21 +245,21 @@ Could you imagine a 5D csv file?
 
 <codeblock id="03_04">
 
-- to get the count you can choose a `ID` column and specify `"count"` function in a dictionary;
+- to get the count you can choose a `ID` column and specify `"count"` function in a dictionary. Median function is `"median"` (surprisingly);
 - note that `count` returns count of non-negative observations so results might be sometimes confusing.
 
 </codeblock>
 
 </exercise>
 
-<exercise id="5" title="Joining data in Pandas" type="slides">
+<exercise id="6" title="Joining data in Pandas" type="slides">
 
 <slides source="chapter3_03_pandas_joins">
 </slides>
 
 </exercise>
 
-<exercise id="6" title="Joining practice">
+<exercise id="7" title="Joining practice">
 
 **Exercise 1**. You have two DataFrames loaded in. One has IDs of patients and the breast cancer status (malignant or benign). The other one has IDs of patients and some features for cell nucleus.
 

@@ -10,9 +10,9 @@ type: slides
 
 NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
 
-[Official Website](https://numpy.org/) || [Documentation](https://numpy.org/doc/)
+[Website](https://numpy.org/) || [Documentation](https://numpy.org/doc/)
 
-**Importing `numpy`**:
+### Importing NumPy:
 
 ```python
 import numpy as np
@@ -25,17 +25,12 @@ print(np.sqrt(4))
 2.0
 ```
 
-Notes: `numpy` is one of the most fundamental packages for numerical computing in Python. It has hundreds of functions which is impossible to memorize. In this chapter we will not go through all of them. The main goal is to introduce the main idea of working with `numpy` so you can continue exploring package's possibilities on yourself.
-
-To import any package we use `import` statement. You might wonder what is that `as np` doing there. This is what called "aliasing". Most of the packages have the "short" alias name, that is commonly used. In this way we specify that we are going to load the `numpy` library and will store it in `np` object. All the functions from the package will be called using `np.` prefix.
-
-Basically you could also import package as `import numpy as FunnY_NamE` and later you would call any function from it as `FunnY_NamE.sqrt()`. There is also nothing wrong to not use any alias names at all (`import numpy`).
-
+Notes: NumPy is one of the most fundamental packages for numerical computing in Python. It has hundreds of functions, but in this chapter we will not go through all of them. The main goal is to introduce the main idea of working with NumPy so you can continue exploring package's possibilities on your own.
 ---
 
 # Arrays
 
-`numpy` is great for doing vector arithmetic. A `numpy` array is a grid of values, all of the same type, and is indexed by a tuple of non-negative integers.
+NumPy is great for doing vector arithmetic. A NumPy array is a grid of values, all of the same type, and is indexed by a tuple of non-negative integers.
 
 ```python
 a = np.array([1, 3, 5])
@@ -66,15 +61,15 @@ print(c.shape)
 (2,2)
 ```
 
-Notes: Array is the basic `numpy` type which has lots of benefits over lists. Important to remember, that objects in array should be **in the same type**. If it's not the case (like in `b` array), `numpy` will convert all object to one data type it finds most convenient. For the `b` case it converted all the objects to the string, since there was already one string. Usually we don't work with strings in `numpy` so our array are numeric most (if not 100\%) of the time.
+Notes: Array is the basic NumPy type which has lots of benefits over lists. Important to remember, that objects in array should be **the same type**. If it's not the case (like in `b` array), NumPy will convert all object to one data type it finds most convenient. For the `b` case it converted all the objects to the string, since there was already one string. Usually we don't work with strings in NumPy so our array consist of numeric values most (if not 100\%) of the time.
 
-Just as lists, `numpy` array can have nested structure. `c` array is 2 dimensional array with the shape 2x2, meaning it has two rows and two columns.
+Just as lists, numpy array can have nested structure. `c` array is 2 dimensional array with the shape 2x2, meaning it has two rows and two columns.
 
 ---
 
 # Vector operations
 
-**Convert values in a list from Celsius to Fahrenheit**:
+### Convert values in a list from Celsius to Fahrenheit:
 
 ```python
 # lists
@@ -96,7 +91,7 @@ print(temperature_array)
 [64.4, 70.7, 69.8, 69.8, 65.84, 63.68, 69.62, 68.0]
 ```
 
-Notes: You can a simple example of numeric operations on lists vs arrays. `numpy` makes life easier and we can apply those operations directly on an array (in the same way we would apply them on a vector) without calling any mapping functions, loops or so on.
+Notes: You can a simple example of numeric operations on lists vs arrays. NumPy makes life easier and we can apply those operations directly on an array (in the same way we would apply them on a vector) without calling any mapping functions, loops or so on.
 
 ---
 
@@ -104,27 +99,25 @@ Notes: You can a simple example of numeric operations on lists vs arrays. `numpy
 
 | Image as we see it | Image as Python sees it |
 |:-:|:--|
-| <img src="brain_photo.jpg" width="300"> |  <code> import numpy as np<br>from skimage import io<br>IMG_URL = 'brain_photo.jpg'<br>image = io.imread(IMG_URL)<br>image.shape</code><br><code>(500, 667, 3)</code> |
+| <img src="brain_photo.jpg" width="300"> |  <code> import numpy as np<br>from skimage import io<br>IMG_URL = 'brain_photo.jpg'<br>image = io.imread(IMG_URL)<br>image.shape</code><br><code>(3024, 4032, 3)</code> |
 
 <span>Photo by <a href="https://unsplash.com/@natcon773?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Natasha Connell</a> on <a href="https://unsplash.com/s/photos/brain?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
-Notes: The best way to visualize the multidimensional array is through image. We don\'t care at the moment how we imported image in Python. The most important is that now image is a 3-D array `array` with the shape `(500, 667, 3)`, meaning that now we have original image had 500 pixel height, 667 pixels width and 3 layers (red, green and blue). The array is filled with values in a range [0, 255] that correspond to pixel intensity of each layer. In the next slide you will see how slicing affects the image.
+Notes: The best way to visualize the multidimensional array is through image. We don\'t care at the moment how we imported image in Python. The most important is that now image is a 3-D array `array` with the shape `(3024, 4032, 3)`, meaning that now we have original image had 3024 pixel height, 4032 pixels width and 3 layers (red, green and blue). The array is filled with values in a range [0, 255] that correspond to pixel intensity of each layer. In the next slide you will see how slicing affects the image.
 
 ---
 
 # Slicing
 
-<img src="brain_slice.png" width="1000">
+<center><img src="brain_slice.png" width="500"></center>
 
 Notes: On the first plot you see the Python visualization of the array without any slicing.
 
-On the second plot we took `100:200` values from the first dimension (*height*), all values (`:`) from the second dimension (*width*) and all values (`:`) from the third dimension (*layers*).
+On the second plot we took `100:1200` values from the first dimension (*height*), all values (`:`) from the second dimension (*width*) and all values (`:`) from the third dimension (*layers*).
 
-On the third plot we took all values (`:`) from the first dimension (*height*), `300:400` values from the second dimension (*width*) and all values (`:`) from the third dimension (*layers*).
+On the third plot we took all values (`:`) from the first dimension (*height*), `1300:2400` values from the second dimension (*width*) and all values (`:`) from the third dimension (*layers*).
 
-On the fourth plot we took `100:350` values from the first dimension (*height*), `200:500` values from the second dimension (*width*) and all values (`:`) from the third dimension (*layers*).
-
-
+On the fourth plot we took `1100:1350` values from the first dimension (*height*), `1200:1500` values from the second dimension (*width*) and all values (`:`) from the third dimension (*layers*).
 
 ---
 
@@ -188,7 +181,7 @@ print(x)
 [0. 5.]
 ```
 
-Notes: Example of solving the linear equations.
+Notes: Example of solving the linear equations. Here we distinguished that *x1* = 0, *x2* = 0.5.
 
 ---
 

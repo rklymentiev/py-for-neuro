@@ -42,8 +42,7 @@ from mypkg import example1, \
     example2, example3
 ```
 
-Example of breaking before a binary operator:
-
+#### Example of breaking before a binary operator:
 ```python
 # recommended
 total = (first_variable
@@ -134,15 +133,12 @@ z = (x + y) * (x - y)
 
 
 #### However:
-
-#### Recommended
 ```python
+# recommended
 def function(default_parameter=5):
     pass
-```
 
-#### Not recommended
-```python
+# not recommended
 def function(default_parameter = 5):
     pass
 ```

@@ -1,8 +1,8 @@
 import numpy as np
 
-X = np.load("exercises/numpy/X.npy")
-y = np.load("exercises/numpy/y.npy")
-b = np.load("exercises/numpy/b.npy")
+X = np.load("exercises/data/X.npy")
+y = np.load("exercises/data/y.npy")
+b = np.load("exercises/data/b.npy")
 
 y_pred = b[0] + b[1]*X[:,1]           # the predicted values
 # or

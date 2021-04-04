@@ -2,7 +2,7 @@
 type: slides
 ---
 
-# Time to automate!
+# Automating the routine
 
 ---
 
@@ -211,4 +211,4 @@ You can even add `if`/`else` statement. Note the difference in the order of stat
 
 ---
 
-# Let's code!
+# Time to automate!

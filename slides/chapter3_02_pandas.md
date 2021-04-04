@@ -2,35 +2,37 @@
 type: slides
 ---
 
-# Working with table data through Pandas
+# Working with table data with Pandas
 
 ---
 
-# Welcome `pandas`
+# Hello Pandas
 
 `pandas` is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.
 
-[Official Website](https://pandas.pydata.org/) || [Documentation](https://pandas.pydata.org/pandas-docs/stable/)
+[Website](https://pandas.pydata.org/) || [Documentation](https://pandas.pydata.org/pandas-docs/stable/)
 
-**Importing `pandas`**:
+### Importing Pandas:
 
 ```python
 import pandas as pd
 ```
 
-Notes: Even though `numpy` is extremely using when it comes to numerical operations, sometimes we are dealing with the mixed data types and most of the time it comes in a tabular format. For these cases `numpy` is not really helpful, but `pandas` comes into play.
+Notes: Even though NumPy is extremely useful when it comes to numerical operations, sometimes we are dealing with the mixed data types and most of the time it comes in a tabular format. For these cases NumPy is not really helpful, but Pandas comes into play.
 
-To put it simply, `pandas` allows you to work with the table data the way you work with tables in Excel but with much more benefits!
+To put it simply, Pandas allows you to work with the table data the same way you work with tables in Excel but with much more benefits!
 
-Commonly used alias name for `pandas` is `pd`.
+Commonly used alias name for Pandas is `pd`.
 
 ---
 
-# `pandas` Series (1)
+# Pandas Series (1)
 
 One-dimensional `ndarray` with axis labels, that need not be unique. The object supports both integer- and label-based indexing.
 
 ```python
+import pandas as pd
+
 temperature = [18.0, 21.5, 21.0, 21.0, 18.8, 17.6, 20.9, 20.0]
 temperature_series = pd.Series(temperature)
 print(temperature_series)
@@ -47,15 +49,15 @@ print(temperature_series)
 dtype: float64
 ```
 
-Notes: The same way `numpy` has its object data type `ndarray`, in the same `pandas` has two main data types which allow you to perform all the cool stuff. We start with Series.
+Notes: The same way NumPy has its object data type `ndarray`, in the same Pandas has two main data types which allow you to perform all the cool stuff. We start with Series.
 
-Series are basically **one**-dimensional array, that has a name and index name. Names could be integers, strings or strings, but they have to be unique. To put it simple, remember built-in lists objects? Lists consists of different values that could be called by an integer index. Series are almost the same, but they also allow using specified names instead of ordering index. We will look at the example of this a bit later. Another key difference is that Series don't really allow mixed data types within one object.
+Series are basically **one**-dimensional array, that has a name and index name. Names could be integers or strings, but they have to be unique. To put it simple, remember built-in lists objects? Lists consists of different values that could be called by an integer index. Series are almost the same, but they also allow using specified names instead of ordering index. We will look at the example of this a bit later. Another key difference is that Series don't allow mixed data types within one object.
 
-On our example we have a Searies with the values of `float64` type and indexes from `0` to `7`.
+On our example we have a Series with the values of `float64` type and indexes from `0` to `7`.
 
 ---
 
-# `pandas` Series (2)
+# Pandas Series (2)
 
 ```python
 print(temperature_series[2:4]) # slicing
@@ -89,37 +91,35 @@ print(temperature_series.mean()) # useful methods
 67.73
 ```
 
-Notes: `pandas` Series allow slicing like more of the objects with the `[<start index>:<end index>:<step>]` structure.
+Notes: Pandas Series allow slicing like more of the objects with the `[<start index>:<end index>:<step>]` structure.
 
-They also allow performing numerical operations in a simple "vectored" way without looping all over all values.
+They also allow performing numerical operations in a simple "vectored" way without looping over all values.
 
 And of course Series have their own unique methods that can be applied on them.
 
 ---
 
-# `pandas` DataFrame
+# Pandas DataFrame
 
 ```python
-oasis_df = pd.read_csv("/content/oasis_cross-sectional.csv")
-display(oasis_df)
+dementia_df = pd.read_csv("/content/oasis_cross-sectional.csv")
+display(dementia_df)
 ```
 
 <img src="dataframe.png" width="600">
 
-Notes: Second data type is `pandas` DataFrames. It is basically a collection of multiple Series that represent columns. DataFrames have column names and row names (indexes) and can be only **two** dimensional.
+Notes: Second data type is Pandas DataFrames. It is basically a collection of multiple Series that represent columns. DataFrames have column names and row names (indexes) and can be only **two** dimensional.
 
-You can see example of a csv file being uploaded into Python and converted into DataFrame. The data is from Vos et al. (2013)\* experiment and represents the data of patients with Alzheimer's.
+You can see example of a csv file being uploaded into Python and converted into DataFrame. The data is from Vos et al. (2013)\* experiment and represents the data of patients with different levels of dementia.
 
-Note that now withing each column the type is the same but overall types are different for the whole DataFrame. And that's what you would probably expect. Usually, each row represents a particular observation or subject data, whereas column represent different features of that observation. So you would expect that for the column (feature) "Age" all subjects have a numeric values and for the column "Name" - strings.
-
-\* Vos SJ, Xiong C, Visser PJ, Jasielec MS, Hassenstab J, Grant EA, Cairns NJ, Morris JC, Holtzman DM, Fagan AM. Preclinical Alzheimer's disease and its outcome: a longitudinal cohort study. *Lancet Neurol*. 2013 Oct;12(10):957-65. doi: 10.1016/S1474-4422(13)70194-7. Epub 2013 Sep 4. PMID: 24012374; PMCID: PMC3904678.
+Note that now the type is the same within each column but overall types are different for the whole DataFrame. And that's what you would probably expect. Usually, each row represents a particular observation or subject data, whereas column represent different features of that observation. So you would expect that for the column (feature) "Age" all subjects have a numeric values and strings for the column "Name".
 
 ---
 
 # What's inside
 
 ```python
-print(oasis_df.info())
+print(dementia_df.info())
 ```
 ```out
 <class 'pandas.core.frame.DataFrame'>
@@ -145,7 +145,7 @@ memory usage: 41.0+ KB
 
 Notes: Calling a `.info()` method is always a good place to start working with your data. It gives you a brief overview what's inside your DataFrame. As you can see, here we have 436 rows (observations) and 12 columns (features).
 
-In the columns table you see the column name, how many non-null values are present (in other words, how many values are **not** missing) and what are the type of variables in each column. Note that `pandas` marks strings as `object`.
+In the columns table you see the column name, how many non-null values are present (in other words, how many values are **not** missing) and what are the type of variables in each column. Note that Pandas marks strings as `object`.
 
 We can already notice that column `Delay` has only 20 values, meaning that `436-20=416` values are missing. Missing values are represented as `np.NaN`, which stands for Non A Number.
 ---
@@ -155,7 +155,7 @@ We can already notice that column `Delay` has only 20 values, meaning that `436-
 #### Selecting one column, returns Series:
 
 ```python
-oasis_df['Age']
+dementia_df['Age']
 ```
 ```out
 0      74
@@ -168,7 +168,7 @@ Name: Age, Length: 436, dtype: int64
 #### Selecting multiple columns, returns DataFrame:
 
 ```python
-oasis_df[['Age', 'Educ', 'SES']]
+dementia_df[['Age', 'Educ', 'SES']]
 ```
 ```out
      Age  Educ  SES
@@ -182,7 +182,7 @@ oasis_df[['Age', 'Educ', 'SES']]
 
 Notes: You can easily select any column to work with by specifying its name as string inside the indexing brackets. In such case you get a `pandas` Series.
 
-If you want to select two or more columns at the time you can pass a list with column names inside the index. In this case you get a `pandas` DataFrame object.
+If you want to select two or more columns at the time you can pass a list with column names inside the brackets. In this case you get a Pandas DataFrame object.
 
 ---
 
@@ -203,8 +203,8 @@ Notes: DataFrames have also another a bit specific way of indexing. Remember tha
 
 #### Filter a whole DataFrame by specific condition:
 ```python
-condition = (oasis_df['M/F'] == 'F') & (oasis_df['Age'] > 60)
-oasis_df[condition]
+condition = (dementia_df['M/F'] == 'F') & (dementia_df['Age'] > 60)
+dementia_df[condition]
 ```
 ```out
 ID M/F Hand  Age  Educ  ...  CDR  eTIV   nWBV    ASF  Delay
@@ -218,7 +218,7 @@ ID M/F Hand  Age  Educ  ...  CDR  eTIV   nWBV    ASF  Delay
 #### Select a column and filter by condition:
 
 ```python
-oasis_df['ID'][oasis_df['nWBV'].between(0.7, 0.8)]
+dementia_df['ID'][dementia_df['nWBV'].between(0.7, 0.8)]
 ```
 ```out
 0      OAS1_0001_MR1
@@ -231,7 +231,7 @@ Name: ID, Length: 162, dtype: object
 
 Notes: To filter the data you have to specify the condition to filter on. In the same way as we did before, you can combine multiple condition with `&` (AND) or `|` (OR) operations.
 
-In the first example we are taking all the observations that meet the criteria: fender is female and age is greater than 60. Note that you don't have to create a separate object (`condition`), it was done only for a better visual representation.
+In the first example we are taking all the observations that meet the criteria: gender is female and age is greater than 60. Note that you don't have to create a separate object (`condition`), it was done only for a better visual representation.
 
 In the second example first we take the column `ID` and then we filter the Series by the condition that normalized whole-brain volume (`nWBV`) should be in a range between 0.7 and 0.8.
 
@@ -240,7 +240,7 @@ In the second example first we take the column `ID` and then we filter the Serie
 # Data aggregation
 
 ```python
-oasis_df.groupby(by=["CDR", "M/F"]).agg({"eTIV": "min", "nWBV": "mean"})
+dementia_df.groupby(by=["CDR", "M/F"]).agg({"eTIV": "min", "nWBV": "mean"})
 ```
 ```out
           TIV      nWBV
@@ -260,7 +260,7 @@ Notes: Another useful tool is grouping and aggregation of the data. In this exam
 1. Group by a list of column names. If you wanted to split just by one column, you could specify just a string with column name, for example `by="CDR"`.
 2. Right now we have a "grouped" DataFrame object, which is not that interesting. We apply aggregation method and specify a dictionary in a following way: `{"<column name>": "<aggregation function>"}`. If you wanted to apply multiple functions on the same column you could specify a list, for example, `{"eTIV": ["min", "max"]}`.
 
-*Clinical Dementia Rating (0 = no dementia, 0.5 = very mild AD, 1 = mild AD, 2 = moderate AD)*
+*Clinical Dementia Rating: 0 = no dementia, 0.5 = very mild AD, 1 = mild AD, 2 = moderate AD*
 
 ---
 

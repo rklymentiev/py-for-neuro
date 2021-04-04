@@ -38,9 +38,9 @@ Notes: In this example we have two tables:
 * **Table A**: holds IDs and subjects' names
 * **Table B**: holds IDs and subjects' occupation
 
-We will join the data by the column `Id`. *Think what would happen if we didn't have the `Id` column in the Table B. Would we be able to join these two table together?*
+We will join the data by the column `Id`. *Think what would happen if we didn't have the `Id` column in the Table B. Would we be able to join these two tables together?*
 
-During the inner join we take only those observations that have matching `Id` value in both tables (these observations are marked with green ticks). Note that there were two observations in a Table B with `Id` "1", so in a resulted table (bottom right) we have two observations for "Bob".
+With inner join we take only those observations that have matching `Id` value in both tables (these observations are marked with green ticks). Note that there were two observations in a Table B with `Id` "1", so in a resulted table (bottom right) we have two observations for "Bob".
 
 ---
 
@@ -48,11 +48,11 @@ During the inner join we take only those observations that have matching `Id` va
 
 <center><img src="left_join.png" width="600"></center>
 
-Notes: By performing a **left join** we have to define one table as "left" and the other one as "right". In this example Table A = "left", Table B = "right". We take **all** the observations from the Table A and join matching observations from the Table B (matched by the `Id` column).
+Notes: By performing a **left join** we have to define one table as "left" and the other one as "right". In this example Table A is "left", Table B is "right". We take **all** the observations from the Table A and join matching observations from the Table B (matched by the `Id` column).
 
 Some observations from Table A didn't have matching observations in the Table B, that's why we see a missing values in a table.
 
-**Right join** idea is basically the same, but in this case we would take all the observations from the right table and add matches from the left table. So if we did a right join with  Table A = "right" and Table B = "left" we would end up with the same results.
+**Right join** idea is basically the same, but in this case we would take all the observations from the right table and add matches from the left table. So if we did a right join with  Table A is "right" and Table B is "left" we would end up with the same results.
 
 ---
 
@@ -64,7 +64,7 @@ Notes: By joining the tables by full join we take all observations from both tab
 
 ---
 
-# pandas command
+# Pandas command
 
 ```python
 table1 = pd.DataFrame(
@@ -89,11 +89,11 @@ pd.merge(
 4   4   Ben        NaN
 ```
 
-Notes: To perform joining in `pandas` we can use `pd.merge()` function. If the joining column has the same name in both DataFrame you can use `on` argument. If names were different (for example `Id` for table1 and `subj_Id` for table2), then we would have to use `left_on` and `right_on` arguments (`left_on="Id"`, `right_on="subj_Id"`).
+Notes: To perform joining in Pandas we can use `pd.merge()` function. If the joining column has the same name in both DataFrame you can use `on` argument. If names were different (for example `Id` for table1 and `subj_Id` for table2), then we would have to use `left_on` and `right_on` arguments (`left_on="Id"`, `right_on="subj_Id"`).
 
 The missing values are represented as `np.NaN` objects.
 
-Note that Full Join is called "outer" is `pandas` (`how="outer"`).
+Note that Full Join is called "outer" is Pandas (`how="outer"`).
 
 ---
 

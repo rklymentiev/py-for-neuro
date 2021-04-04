@@ -1,7 +1,7 @@
 ____ ____ ____ np
 
-X = np.load("exercises/numpy/X.npy")
-y = np.load("exercises/numpy/y.npy")
+X = np.load("exercises/data/X.npy")
+y = np.load("exercises/data/y.npy")
 
 b = ____
 
