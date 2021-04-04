@@ -23,13 +23,13 @@ Notes: # Outline
 
 *Credits: [Wikipedia](https://en.wikipedia.org/wiki/Data_visualization)*
 
-Notes: Simply saying, data visualization is the set of techniques in order to create a graphical representation of a raw data. I personally believe that a lot of data-/neuroscientists don't really appreciate the power of a simple plot. Making plots of the data can help you to find hidden patterns and insights before applying any fancy machine learning stuff.
+Notes: Simply saying, data visualization is the set of techniques to create a graphical representation of a raw data. I personally believe that a lot of data-/neuroscientists don't really appreciate the power of a simple plot. Making plots of the data can help you to find hidden patterns and insights before applying any fancy machine learning stuff.
 
 ---
 
 # Line plot
 
-<center><img src="data_viz/line_plot_demo.png" width="700"></img></center>
+<center><img src="data_viz/line_plot_demo.png" width="600"></img></center>
 
 Notes: A **line chart** or **line plot** or **line graph** or **curve chart** is a type of chart which displays information as a series of data points called 'markers' connected by straight line segments. It is a basic type of chart common in many fields. It is similar to a scatter plot except that the measurement points are ordered (typically by their x-axis value) and joined with straight line segments.
 
@@ -45,9 +45,9 @@ It is important to note, that it doesn't make a lot of sense to use a line plot 
 
 # Example of a line plot
 
-<center><img src="data_viz/line_chart_EEG.jpg" width="600"></img></center>
+<center><img src="data_viz/line_chart_EEG.jpg" width="700"></img></center>
 
-Credits: Sabine Gosselke Berthelsen, Merle Horne, Yury Shtyrov, Mikael Roll, Different neural mechanisms for rapid acquisition of words with grammatical tone in learners from tonal and non-tonal backgrounds: ERP evidence, *Brain Research*, Volume 1729, 2020, 146614, ISSN 0006-8993, https://doi.org/10.1016/j.brainres.2019.146614.
+*Berthelsen, 2020*
 
 Notes: A perfect example of line charts in a neuroscience world would be an EEG data plots. Each line represents different combination of stimuli, so in this case you can compare three variables at once - how does the **potential changes** over **time** in the FCz electrode for a given **stimuli**?
 
@@ -87,9 +87,9 @@ However, you should always check the legend/description of the plot to see wheth
 
 # Example of a stacked area chart
 
-<center><img src="data_viz/stacked_area_plot_example.jpg" width="600"></img></center>
+<center><img src="data_viz/stacked_area_plot_example.jpg" width="800"></img></center>
 
-Credits: Maxwell A. Bertolero, Jordan D. Dworkin, Sophia U. David, Claudia López Lloreda, Pragya Srivastava, Jennifer Stiso, Dale Zhou, Kafui Dzirasa, Damien A. Fair, Antonia N. Kaczkurkin, Bianca Jones Marlin, Daphna Shohamy, Lucina Q. Uddin, Perry Zurn, Danielle S. Bassett, Racial and ethnic imbalance in neuroscience reference lists and intersections with gender, bioRxiv 2020.10.12.336230; doi: https://doi.org/10.1101/2020.10.12.336230
+*Bertolero, 2020*
 
 Notes: This is a really good example of stacked area chart usage showing the race of first and last authors of paper published in neuroscience journals.
 
@@ -147,9 +147,9 @@ The idea is similar to stacked area chart. For each x value (or y if we use hori
 
 # Example of a bar plot
 
-<center><img src="data_viz/bar_plot_example.png" width="400"></img></center>
+<center><img src="data_viz/bar_plot_example.png" width="450"></img></center>
 
-Credits: van Atteveldt, Nienke M. AND van Aalderen-Smeets, Sandra I. AND Jacobi, Carina AND Ruigrok, Nel, Media Reporting of Neuroscience Depends on Timing, Topic and Newspaper Type, *PLOS ONE*, Volume 9, 2014, doi: https://doi.org/10.1371/journal.pone.0104780
+*van Atteveldt, 2014*
 
 Notes: The average accuracy values for the different topics.
 
@@ -161,30 +161,30 @@ There is a choice to sort bars by the x axis (for example, alphabetically), or b
 
 <center><img src="data_viz/grouped_bar_chart_example.jpg" width="700"></img></center>
 
-Credits: Sabine Gosselke Berthelsen, Merle Horne, Yury Shtyrov, Mikael Roll,
-Different neural mechanisms for rapid acquisition of words with grammatical tone in learners from tonal and non-tonal backgrounds: ERP evidence, *Brain Research*, Volume 1729, 2020, 146614, ISSN 0006-8993, https://doi.org/10.1016/j.brainres.2019.146614.
+*Berthelsen, 2020*
 
-Notes: Mean response time (left) and response accuracy (right) at the beginning and end of both days by group (error bars represent standard deviations).
+
+Notes: Plots show mean response time (left) and response accuracy (right) by groups (error bars represent standard deviations).
 
 ---
 
 # Example of a stacked bar plot
 
-<center><img src="data_viz/stacked_bar_plot_example2.jpg" width="600"></img></center>
+<center><img src="data_viz/stacked_bar_plot_example2.jpg" width="650"></img></center>
 
-Credits: O'Connell, Garret & De Wilde, Janet & Haley, Jane & Shuler, Kirsten & Schafer, Burkhard & Sandercock, Peter & Wardlaw, Joanna. (2011). The brain, the science and the media. *EMBO reports*. 12. 630-6. 10.1038/embor.2011.115.
+*O'Connell, 2011*
 
-Notes: Stacked bar chart of articles published in the media and specialized reviews per year.
+Notes: Stacked bar chart of frequency of articles published in the media and specialized reviews per year.
 
 ---
 
 # Example of a normalized stacked bar plot
 
-<center><img src="data_viz/stacked_bar_plot_example.jpg" width="400"></img></center>
+<center><img src="data_viz/stacked_bar_plot_example.jpg" width="600"></img></center>
 
-Credits: Chataway, Jeremy & Angelis, Floriana & Connick, Peter & Parker, Richard & Plantone, Domenico & Doshi, Anisha & John, Nevin & Stutters, Jonathan & Macmanus, David & Carrasco, Ferran & Barkhof, Frederik & Ourselin, Sebastien & Braisher, Marie & Ross, Moira & Cranswick, Gina & Pavitt, Sue & Giovannoni, Gavin & Wheeler-Kingshott, Claudia & Hawkins, Clive & McLean, Brendan. (2020). Efficacy of three neuroprotective drugs in secondary progressive multiple sclerosis (MS-SMART): a phase 2b, multiarm, double-blind, randomised placebo-controlled trial. *The Lancet Neurology*. 19. 10.1016/S1474-4422(19)30485-5.
+*Chataway, 2020*
 
-Notes: Stacked bar chart for change in EDSS score from randomization to 96 weeks. Positive change is worsening in EDSS score and negative change is improvement in EDSS score. EDSS=Expanded Disability Status Scale.
+Notes: Stacked bar chart for change in Expanded Disability Status Scale score among groups.
 
 ---
 
@@ -195,7 +195,7 @@ Notes: Stacked bar chart for change in EDSS score from randomization to 96 weeks
 
 Notes: There is one trick. We can transform each line plot to the bar plot, for example transform plot **A** to plot **B**. All the information is saved, but just in a bit different way of representing. And could also switch back from plot **B** to plot **A**. It is due to the fact that x axis variable is time-relevant (months).
 
-However, not every bar chart can be reasonably converted to the line chart. Plot **C** have a categorical x axis variable that is not really well suited for the line chart. Most of the time we read line chart from left to right, looking at the ups and downs in a trend. By we don't have an actual trend here and we changed the order of the x axis labels the line would look completely different. Another point, that we assume that we know (or can predict the values) at each point on the line even if it has no observed x value. For example, for the plot **A** we can assume that the value between March and April (~15 of March) was around 150. But what would be the actual meaning of the average between group B and group C on the **D** plot?
+However, not every bar chart can be reasonably converted to the line chart. Plot **C** have a categorical x axis variable that is not really well suited for the line chart. Most of the time we read line chart from left to right, looking at the ups and downs in a trend. By we don't have an actual trend here and if we changed the order of the x axis labels the line would look completely different. Another point, that we assume that we know (or can predict the values) at each point on the line even if it has no observed x value. For example, for the plot **A** we can assume that the value between March and April (~15 of March) was around 150. But what would be the actual meaning of the average between group B and group C on the **D** plot?
 
 ---
 
@@ -223,11 +223,11 @@ Further reading:
 
 # Example of a "bad" line chart
 
-<center><img src="data_viz/bad_bar_chart.jpg" width="600"></img></center>
+<center><img src="data_viz/bad_bar_chart.jpg" width="700"></img></center>
 
-Credits: Carole Leung, Ka-Shun Lei, Shu-Mei Wang, Bess Yin-Hung Lam, Theory of mind in schizotypy: A behavioral and event-related potential (ERP) study, *Schizophrenia Research: Cognition*, Volume 23, 2021, 100190, ISSN 2215-0013, https://doi.org/10.1016/j.scog.2020.100190.
+*Leung, 2021*
 
-Notes: The mean ERP amplitudes in the parietal region for different conditions among controls and Schizotypy groups.
+Notes: The mean ERP (evoked response potential) amplitudes in the parietal region for different conditions among controls and Schizotypy groups.
 
 I see this way of plotting the data quite often in articles. My opinion of the "badness" here can be subjective, but I believe that grouped bar plot would fit much better here.
 

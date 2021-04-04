@@ -10,14 +10,14 @@ type: slides
 
 Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.
 
-[Official Website](https://matplotlib.org/) || [Documentation](https://matplotlib.org/stable/contents.html) || [Gallery](https://matplotlib.org/stable/gallery/index.html)
+[Website](https://matplotlib.org/) || [Documentation](https://matplotlib.org/stable/contents.html) || [Gallery](https://matplotlib.org/stable/gallery/index.html)
 
 **Importing `matplotlib`**:
 
 ```python
 import matplotlib.pyplot as plt
 ```
-Notes: Matplotlib must be the most used package for the data visualization in Python. If you have worked in Matlab, you might see a lot of similarities in the plotting syntax  (hence the name). Matplotlib has the gallery with the possible graphs you can make, which makes it easy to adopt the code for your own code.
+Notes: Matplotlib must be the most commonly used package for the data visualization in Python. If you have worked in Matlab, you might see a lot of similarities in the plotting syntax  (hence the name). Matplotlib has the gallery with the possible graphs you can make, which makes it easy to adopt the code for your own problem.
 
 Most of the time we don't need the whole package, but just a module `pyplot`, which has commonly used alias name `plt`.
 
@@ -37,12 +37,12 @@ Notes: Here are some possible parameters you can change in the plot, such as tit
 x = np.linspace(start=0, stop=6*np.pi, num=100)
 y_sin = np.sin(x)
 
-plt.figure()
+plt.figure() # start
 plt.plot(x, y_sin)
 plt.title("My First Plot")
 plt.xlabel("This is x axis")
 plt.ylabel("This is y axis")
-plt.show()
+plt.show()   # end
 ```
 
 <img src="plt/example.png" width="400">
@@ -61,7 +61,8 @@ Notes: One of the way to think about the plotting syntax is in this way.
 
 ```python
 y_cos = np.cos(x)
-plt.figure()
+
+plt.figure() # start
 plt.plot(x, y_sin, 'o--', color='r', label='Sine')
 plt.plot(x, y_cos, color='black', label='Cosine')
 plt.axhline(y=0, linewidth=1, color='#42f5b0', linestyle='dashed', label='Zero')
@@ -69,7 +70,7 @@ plt.title("My First Plot", fontsize=18)
 plt.xlabel("This is x axis")
 plt.ylabel("This is y axis")
 plt.legend()
-plt.show()
+plt.show()   # end
 ```
 
 <img src="plt/line2.png" width="400">
@@ -89,7 +90,7 @@ Some explanations:
 
 ```python
 plt.figure()
-plt.plot(x,y_sin, x, y_cos)
+plt.plot(x, y_sin, x, y_cos)
 plt.fill_between(x, y_sin, alpha=0.5)
 plt.fill_between(x, y_cos, alpha=0.5)
 plt.xlabel('x axis')
@@ -100,7 +101,7 @@ plt.show()
 
 <img src="plt/area.png" width="400">
 
-Notes: Just like in MATLAB you can add several variables to plot in one `plt.plot()` function.
+Notes: Just like in Matlab you can add several variables to plot in one `plt.plot()` function.
 
 One of the ways to create an area chart is to use `plt.fill_between()` function. `alpha` is responsible for opacity (`0`: object is transparent, `1`: full color).
 
@@ -124,7 +125,7 @@ plt.show()
 
 <img src="plt/bar.png" width="350">
 
-Notes: `plt.bar()` displays the bar in a given order from the DataFrame/list. So if you want to represent bars in a specific order (for example, descending as on the example), you have to perform some manipulations on the input DataFrame before calling plot function.
+Notes: `plt.bar()` displays the bar in a given order from the DataFrame/list. So if you want to represent bars in a specific order (for example, descending as on the example), you have to perform some manipulations on the DataFrame before calling plot function.
 
 ---
 
@@ -132,7 +133,7 @@ Notes: `plt.bar()` displays the bar in a given order from the DataFrame/list. So
 
 Seaborn is a Python data visualization library based on Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.
 
-[Official Website](https://seaborn.pydata.org/) || [Documentation](https://seaborn.pydata.org/api.html) || [Gallery](https://seaborn.pydata.org/examples/index.html)
+[Website](https://seaborn.pydata.org/) || [Documentation](https://seaborn.pydata.org/api.html) || [Gallery](https://seaborn.pydata.org/examples/index.html)
 
 **Importing `seaborn`**:
 
@@ -159,9 +160,9 @@ plt.show()
 
 <img src="plt/scatter.png" width="400">
 
-Notes: Even though we are using Seaborn to create a scatter plot, we still need Matplotlib to call layout functions, like title.
+Notes: Even though we are using Seaborn to create a scatter plot, we still need Matplotlib to call layout functions, like `plt.title()`.
 
-Note that we didn't call `plt.xlabel()` or `plt.ylabel()`, Seaborn takes the axis labels from column names (so score another one for Seaborn). Also, you have to options to specify `x` and `y` arguments inside most of the Seaborn function. First method is represented here, by specifying the `data` and then calling `x` and `y` as column names. Ot you could do this in a Matplotlib style:
+Note that we didn't call `plt.xlabel()` or `plt.ylabel()`, Seaborn takes the axis labels from column names (score another one for Seaborn). Also, you have two options on how to specify `x` and `y` arguments inside the Seaborn functions. First method is represented on the left, by specifying the `data` and then calling `x` and `y` as column names. Or you could do this in a Matplotlib style:
 
 ```python
 sns.scatterplot(
@@ -184,6 +185,7 @@ df = pd.DataFrame(
  plt.subplot(1,2,1)
  sns.scatterplot(data=df, x="height", y="weight", hue="gender")
  plt.title("Height vs Weight", fontsize=18)
+
  plt.subplot(1,2,2)
  sns.barplot(data=df, x="weight", y="weight")
  plt.title("Average Height by Gender", fontsize=18)
@@ -203,10 +205,9 @@ In this example we specified that final plot will consists of `1` row and `2` co
 Some comments:
 
 * `hue` allows to add a grouping variable;
-* we don't have to calculate the average to `weight` in order to pass the values to the `sns.barplot()` function, since Seaborn doesn this for us. In fact, we can change function to another one using `estimator` argument.
-
+* we don't have to calculate the average to `weight` in order to pass the values to the [`sns.barplot()`](https://seaborn.pydata.org/generated/seaborn.barplot.html) function, since Seaborn doesn this for us. In fact, we can change function to another one using `estimator` argument.
 * [Matplotlib subplots and axes objects](http://www.math.buffalo.edu/~badzioch/MTH337/PT/PT-matplotlib_subplots/PT-matplotlib_subplots.html)
 
 ---
 
-# Let's code!
+# Let's plot!

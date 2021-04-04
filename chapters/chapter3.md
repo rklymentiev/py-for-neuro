@@ -241,7 +241,7 @@ Can you imagine a 5 dimensional csv file?
 
 **Exercise 2**. For each outcome of clinical dementia rating (`CDR`) get a count of observations and the median of the normalized whole-brain volume (`nWBV`). Rename the columns in aggregated DataFrame, so they are more representative.
 
-* `<DataFrame>.rename()` methods takes an argument `columns` to change the column names. You should pass a dictionary in a dictionary `{"<old name>": "<new name>"}`. `inplace=True` will overwrite the DataFrame (save the new column names).
+**Hint!** [`<DataFrame>.rename()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html) method takes an argument `columns` to change the column names. You should pass a dictionary in a dictionary `{"<old name>": "<new name>"}`. `inplace=True` will overwrite the DataFrame (save the new column names).
 
 <codeblock id="03_04">
 
@@ -273,10 +273,6 @@ Is the average of `radius_mean` value is greater for malignant type?
 |:-:|:-:|
 | <center><img src="table1.png"></center> | <center><img src="table2.png" ></center> |
 
-This is the sample of so called **Breast Cancer Wisconsin (Diagnostic) Data Set**.
-
-Credits: W.N. Street, W.H. Wolberg and O.L. Mangasarian. Nuclear feature extraction for breast tumor diagnosis. IS&T/SPIE 1993 International Symposium on Electronic Imaging: Science and Technology, volume 1905, pages 861-870, San Jose, CA, 1993.
-
 <codeblock id="03_05">
 
 - basically any type of join would be appropriate here, since we are interested in matching breast cancer type with `radius_mean` and we could have missing values that don't affect calculations for the average value;
@@ -285,16 +281,16 @@ Credits: W.N. Street, W.H. Wolberg and O.L. Mangasarian. Nuclear feature extract
 
 </codeblock>
 
-**Exercise 2**. This time get all the features for cell nucleus and label with the type of cancer. When the cancer type is not specified mark it as "unknown". Don't change missing values in other columns.
+**Exercise 2**. This time get all the features for cell nucleus and label them with the type of cancer. When the cancer type is not specified mark it as "unknown". Don't change missing values in other columns.
 
-You could also notice that now you joined DataFrame has two columns "id" and "ID" from both tables. Keep only the column that has all the parameters values.
+The joined DataFrame will have two columns `"id"` and `"ID"`. Keep only the first column.
 
-*Hint! To replace the missing value you can use `.fillna()` method.*
+**Hint!** To replace the missing value you can use [`.fillna()`](https://pandas.pydata.org/docs/reference/api/pandas.Series.fillna.html) method. It can be applied on Series or DataFrame.
 
 <codeblock id="03_06">
 
 - right join would be more appropriate here (or left join if you define the `table2` as the left one);
-- to remove the column you can use `.drop()` method. Don't forget the specify the axis (0: rows, 1: columns);
+- to remove the column `"ID"` you can use [`.drop()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html) method. Don't forget the specify the `axis` (0: rows, 1: columns);
 - don't forget the rewrite the column `'diagnosis'` after you replace the missing values.
 
 </codeblock>

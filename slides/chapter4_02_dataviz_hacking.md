@@ -16,7 +16,7 @@ All the plots were found on reddit [r/dataisugly](https://www.reddit.com/r/datai
 
 <center><img src="data_viz/hack1.png" width="600"></img></center>
 
-Notes: Given all of the things said about line chart, you would probably assume that when values have the same (or nearly the same) magnitude, they should be plotted on the same height of y axis. Well, this is not the case for this graph if we look at the last 4 observations. What should we trust, the dot height or the value? Who knows.
+Notes: Given all of the things said about line chart, you would probably assume that when values have the same (or nearly the same) magnitude, they should be plotted on the same height of y axis. Well, this is not the case for this graph when we look at the last 4 observations. What should we trust, the dot height or the numerical value? Who knows.
 
 Another note, some dates are missing on x axis. It may look like from 13 and 18 of March there was a huge increase in whatever-value-that-is, but if we plotted all the missing dates, it could have a different view.
 
@@ -36,7 +36,7 @@ Scale of the y axis is also disrupted. It could be a logarithmic scale, but does
 
 <center><img src="data_viz/hack5.jpg" width="600"></img></center>
 
-Notes: Do people from Philippines can reach only to the knees of people from the Netherlands?
+Notes: Do people from Philippines can reach only to the knees of people from Netherlands?
 
 Yes, if we take a quick look at this graph.
 
@@ -64,7 +64,7 @@ Notes: It's hard to judge this graph since it a bit unclear what exactly went wr
 
 <center><img src="data_viz/hack6.png" width="500"></img></center>
 
-Notes: By a quick glance at the plot it may look like Yang has a much large proportions of voters. But if we look at the actual values, it's not the case. Once again, scale is important.
+Notes: By a quick glance at the plot it may look like Yang has a much large proportions of voters. But if we look at the actual values, it's not the case. Scale \*is\* important.
 
 ---
 

@@ -1,4 +1,4 @@
-___ ___ ___ ___
+___ ___ as pd
 
 dementia_df = ___.read_csv("exercises/data/oasis_cross-sectional.csv")
 

@@ -21,11 +21,11 @@ id: 5
 
 1. `w`rite the string to a txt file
 2. `a`ppend the file to add another string. **Note!** If you use method `"w"` instead of `"a"` the new string will **overwrite** the existing data in the file. So be careful when trying to add something to the file.
-3. `r`ead in the file (you have to specify the method)
+3. `r`ead in the file (you have to specify the appropriate method)
 
 <codeblock id="05_01">
 
-* `r`ead in the file
+* everything you need is in the exercise description;
 
 </codeblock>
 
@@ -44,7 +44,8 @@ And that is clearly not the way we would like to see it. We can use `.readlines(
 
 <codeblock id="05_02">
 
-* you can remove `"\n"` parts from the string by replacing it by the empty string `""`
+* you can remove `"\n"` parts from the string by replacing it by the empty string `""`;
+* remember `lambda` functions?
 
 </codeblock>
 
@@ -71,10 +72,10 @@ Even though it's not very common, but you *can* use any delimiter.
 </opt>
 </choice>
 
-**Exercise 1**.
+### Exercise 1. fMRI data set
 
-1. Load in the data from fMRI experiment. Path to file `"exercises/data/fmri_data.csv"`.
-2. Create a new DataFrame `parietal_df` with observations from the parietal region.
+1. Load in the data from fMRI experiment. Path to file `"exercises/data/fmri_data.csv"`. Note that columns is a file are separated by `;`.
+2. Create a new DataFrame `parietal_df` with observations from the parietal region (`df["region"] == "parietal"`);
 3. Save the resulted DataFrame as an Excel file.
 
 <codeblock id="05_03">
@@ -94,7 +95,7 @@ MATLAB is a proprietary multi-paradigm programming language and numeric computin
 
 MAT-files are binary MATLAB files that store workspace variables.
 
-We can load MAT files into Python with the help of SciPy package. We are interested in `loadmat` function inside the `io` module.
+We can load MAT files into Python with the help of SciPy package. We are interested in [`loadmat()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.loadmat.html) function inside the `io` module.
 
 ```python
 from scipy.io import loadmat
@@ -117,9 +118,10 @@ The resulted object is a dictionary. Each key represents saved variable from the
 
 [MATLAB Website](https://www.mathworks.com/products/matlab.html) || [SciPy Website](https://www.scipy.org/)
 
-**Exercise 1**. Load in the MAT-file `H1_neuron.mat` that holds data from a fly H1 neuron response to an approximate white-noise visual motion stimulus.
+#### Exercise 1. H1 neuron's firing rate
 
-Make a plot of a stimulus values (line plot) and add vertical lines for those time points when the spike occurred. Use only first 250 observations for this plot for simplicity.
+1. Load in the MAT-file `H1_neuron.mat` that holds data from a fly H1 neuron response to an approximate white-noise visual motion stimulus. Path to the file: `"exercises/data/H1_neuron.mat"`;
+2. Make a plot of a stimulus values (line plot) and add vertical lines for those time points when the spike occurred. Use only first 250 observations for this plot for simplicity.
 
 <codeblock id="05_04">
 

@@ -97,16 +97,16 @@ To read en Excel file (.xls, .xlsx) we can use `pd.read_excel()` function. If Ex
 #### URL with the file:
 
 ```python
-URL = "https://raw.githubusercontent.com/ruslan-kl/py-for-neuro/master/exercises/data/oasis_cross-sectional.csv"
-oasis_df = pd.read_csv(filepath_or_buffer=URL)
+URL = "https://raw.githubusercontent.com/ruslan-kl/py-for-neuro/binder/exercises/data/oasis_cross-sectional.csv"
+dementia_df = pd.read_csv(filepath_or_buffer=URL)
 ```
 
-#### Compressed file
+#### Compressed file:
 
 <center><img src="io/csv_zip.png" width="600"></img></center>
 
 ```python
-oasis_df = pd.read_csv(filepath_or_buffer="oasis_cross-sectional.zip")
+dementia_df = pd.read_csv(filepath_or_buffer="oasis_cross-sectional.zip")
 ```
 
 Notes: The good part about Pandas is that it allows to load files directly from the internet by the direct URL to the file.
@@ -118,7 +118,7 @@ Also file can be compressed in an archive (for example, .zip or .7z) and we can 
 # Writing CSV/Excel files with pandas
 
 ```python
-oasis_df.to_csv(path_or_buf="oasis_df.csv", sep=",", index=True) # CSV file
+dementia_df.to_csv(path_or_buf="dementia_df.csv", sep=",", index=True) # CSV file
 ```
 
 #### Output file
@@ -126,7 +126,10 @@ oasis_df.to_csv(path_or_buf="oasis_df.csv", sep=",", index=True) # CSV file
 <center><img src="io/index_csv.png" width="600"></img></center>
 
 ```python
-oasis_df.to_excel(excel_writer="oasis_df.xslx", sheet_name='Main Data', index=False) # Excel file
+dementia_df.to_excel( # Excel file
+    excel_writer="dementia_df.xslx",
+    sheet_name='Main Data',
+    index=False)
 ```
 
 Notes: To save a DataFrame into the CSV file we can use `.to_csv()` method. Note that `index` argument is responsible for saving the DataFrame index as a first column in the output file. If you don't want to save indexes, set `index=False`.

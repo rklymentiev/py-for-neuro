@@ -34,7 +34,7 @@ Course is divided into several chapters for specific topics which makes it easy 
 
 <exercise id="2" title="Q&A">
 
-**Q: If I am not a neuroscientist and not planning to work in life science field, can I benefit from the course?**
+**Q: If I am not a neuroscientist and not planning to work in a life science field, can I benefit from the course?**
 
 A: Definitely! Most exercises are based on neuroscience related data sets (description of these data sets is provided in the next parts), but you are not required to have a neuroscience background to solve them since they are more about Python programming.
 

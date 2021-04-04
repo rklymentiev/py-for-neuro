@@ -1,6 +1,6 @@
-___
+___ pandas ___ ___
 import seaborn as ___
-import ___.___ as plt
+import ___.pyplot as plt
 
 # read in the data
 ___ = ___.___(___)

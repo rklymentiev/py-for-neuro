@@ -6,7 +6,7 @@ def test():
 
     # If an assertion fails, the message will be displayed
     assert "heatmap" in __solution__, 'Did you call the heatmap function?'
-    assert len(selected_columns) == 10, 'Did filter out only the columns with average values?'
-    assert corr_matrix.shape == (10,10), "Did you create a correlation matrix?"
+    assert len(selected_columns) == 10, 'Did you include only the columns with average values in a list selected_columns?'
+    assert corr_matrix.shape == (10,10), "Did you filter out the DataFrame before calling corr function?"
 
     __msg__.good("Well done!")

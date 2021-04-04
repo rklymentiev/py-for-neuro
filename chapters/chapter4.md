@@ -22,9 +22,28 @@ id: 4
 
 </exercise>
 
-<exercise id="3" title="Check yourself" >
+<exercise id="3" title="References">
 
-**Question 1**. Which combination of County and Year has the greatest value?
+* Sabine Gosselke Berthelsen, Merle Horne, Yury Shtyrov, Mikael Roll, Different neural mechanisms for rapid acquisition of words with grammatical tone in learners from tonal and non-tonal backgrounds: ERP evidence, *Brain Research*, Volume 1729, 2020, 146614, ISSN 0006-8993, https://doi.org/10.1016/j.brainres.2019.146614.
+* Maxwell A. Bertolero, Jordan D. Dworkin, Sophia U. David, Claudia López Lloreda, Pragya Srivastava, Jennifer Stiso, Dale Zhou, Kafui Dzirasa, Damien A. Fair, Antonia N. Kaczkurkin, Bianca Jones Marlin, Daphna Shohamy, Lucina Q. Uddin, Perry Zurn, Danielle S. Bassett, Racial and ethnic imbalance in neuroscience reference lists and intersections with gender, bioRxiv 2020.10.12.336230; doi: https://doi.org/10.1101/2020.10.12.336230
+* van Atteveldt, Nienke M. AND van Aalderen-Smeets, Sandra I. AND Jacobi, Carina AND Ruigrok, Nel, Media Reporting of Neuroscience Depends on Timing, Topic and Newspaper Type, *PLOS ONE*, Volume 9, 2014, doi: https://doi.org/10.1371/journal.pone.0104780
+* O'Connell, Garret & De Wilde, Janet & Haley, Jane & Shuler, Kirsten & Schafer, Burkhard & Sandercock, Peter & Wardlaw, Joanna. (2011). The brain, the science and the media. *EMBO reports*. 12. 630-6. https://doi.org/10.1038/embor.2011.115.
+* Chataway, Jeremy & Angelis, Floriana & Connick, Peter & Parker, Richard & Plantone, Domenico & Doshi, Anisha & John, Nevin & Stutters, Jonathan & Macmanus, David & Carrasco, Ferran & Barkhof, Frederik & Ourselin, Sebastien & Braisher, Marie & Ross, Moira & Cranswick, Gina & Pavitt, Sue & Giovannoni, Gavin & Wheeler-Kingshott, Claudia & Hawkins, Clive & McLean, Brendan. (2020). Efficacy of three neuroprotective drugs in secondary progressive multiple sclerosis (MS-SMART): a phase 2b, multiarm, double-blind, randomised placebo-controlled trial. *The Lancet Neurology*. 19. https://doi.org/10.1016/S1474-4422(19)30485-5.
+* Carole Leung, Ka-Shun Lei, Shu-Mei Wang, Bess Yin-Hung Lam, Theory of mind in schizotypy: A behavioral and event-related potential (ERP) study, *Schizophrenia Research: Cognition*, Volume 23, 2021, 100190, ISSN 2215-0013, https://doi.org/10.1016/j.scog.2020.100190.
+* Callard, Felicity & Smallwood, Jonathan & Golchert, Johannes & Margulies, Daniel. (2013). The era of the wandering mind? Twenty-first century research on self-generated mental activity. *Frontiers in psychology*. 4. 891. https://doi.org/10.3389/fpsyg.2013.00891.
+* Farinelli, Marina & Panksepp, Jaak & Gestieri, Laura & Leo, Maria & Agati, Raffaele & Maffei, Monica & Leonardi, Marco & Northoff, Georg. (2013). SEEKING and depression in stroke patients: An exploratory study. *Journal of clinical and experimental neuropsychology*. 35. https://doi.org/10.1080/13803395.2013.776009.
+* Nivard, Michel & Gage, Suzi & Hottenga, Jouke & van beijsterveldt, Toos & Abdellaoui, Abdel & Baselmans, Bart & Ligthart, Lannie & St. Pourcain, B. & Boomsma, Dorret & Munafoò, Marcus & Middeldorp, Christel. (2016). Genetic overlap between schizophrenia and developmental psychopathology: a longitudinal approach applied to common childhood disorders between age 7 and 15 years. https://doi.org/10.1101/052829.
+* B.J. Casey, Tariq Cannonier, May I. Conley, Alexandra O. Cohen, Deanna M. Barch, Mary M. Heitzeg, Mary E. Soules, Theresa Teslovich, Danielle V. Dellarco, Hugh Garavan, Catherine A. Orr, Tor D. Wager, Marie T. Banich, Nicole K. Speer, Matthew T. Sutherland, Michael C. Riedel, Anthony S. Dick, James M. Bjork, Kathleen M. Thomas, Bader Chaarani, Margie H. Mejia, Donald J. Hagler, M. Daniela Cornejo, Chelsea S. Sicat, Michael P. Harms, Nico U.F. Dosenbach, Monica Rosenberg, Eric Earl, Hauke Bartsch, Richard Watts, Jonathan R. Polimeni, Joshua M. Kuperman, Damien A. Fair, Anders M. Dale, The Adolescent Brain Cognitive Development (ABCD) study: Imaging acquisition across 21 sites,
+*Developmental Cognitive Neuroscience*, Volume 32, 2018, Pages 43-54, ISSN 1878-9293, https://doi.org/10.1016/j.dcn.2018.03.001.
+* Amir H. Meghdadi, Chris Berka, Christian Richard, Greg Rupp, Stephanie Smith, Marija Stevanović Karić, Kevin McShea, Emily Sones, Ksenija Marinković, Thomas Marcotte, EEG event related potentials in sustained, focused and divided attention tasks: Potential biomarkers for cognitive impairment in HIV patients, *Clinical Neurophysiology*, Volume 132, Issue 2, 2021, Pages 598-611, ISSN 1388-2457, https://doi.org/10.1016/j.clinph.2020.11.026.
+* Schiro MM, Stauber SE, Peterson TL, Krueger C, Darnell SJ, et al. (2011) Mutations in Protein-Binding Hot-Spots on the Hub Protein Smad3 Differentially Affect Its Protein Interactions and Smad3-Regulated Gene Expression. *PLOS ONE* 6(9): e25021. https://doi.org/10.1371/journal.pone.0025021
+* Tobias U. Hauser, Laurence T. Hunt, Reto Iannaccone, Susanne Walitza, Daniel Brandeis, Silvia Brem and Raymond J. Dolan *Journal of Neuroscience* 12 August 2015, 35 (32) 11209-11220; DOI: https://doi.org/10.1523/JNEUROSCI.0560-15.2015
+
+</exercise>
+
+<exercise id="4" title="Check yourself" >
+
+**Question 1**. What combination of County and Year has the greatest value?
 
 <center><img src="data_viz/heat_map_test.png" width="500"></center>
 
@@ -56,7 +75,7 @@ Help people easily understand what you tried to show on the plot.
 </opt>
 
 <opt text="Include as many different colors as you can">
-This would be true, if you want to create an eye hell.
+This would be true, if you wanted to create an eye hell.
 </opt>
 </choice>
 
@@ -76,7 +95,7 @@ Check out this plot: https://en.wikipedia.org/wiki/Pie_chart#/media/File:Badpie.
 </opt>
 </choice>
 
-**Question 4**. Which months have possible outlier values?
+**Question 4**. What months have possible outlier values?
 
 <center><img src="data_viz/boxplot_outliers.png" width="500"></center>
 
@@ -100,54 +119,7 @@ They might have some "extreme" values for sure, that we cannot see them from thi
 
 </exercise>
 
-<exercise id="4" title="Data Viz Hacking" type="slides">
-
-<slides source="chapter4_02_dataviz_hacking">
-</slides>
-
-</exercise>
-
-<exercise id="5" title="What went wrong here?">
-
-**Question 1**. Is this plot done correctly?
-
-<center><img src="data_viz/pie_chart_quiz.jpg" width="500"></center>
-
-<choice id="1">
-<opt text="Yes, there is nothing wrong with this plot">
-Compare the numerical values and the actual circle proportion.
-</opt>
-
-<opt text="No, proportion and numerical values do not agree" correct="true">
-42& looks more like 33%.
-</opt>
-
-<opt text="No, total sum is not 100%">
-Well, that's true, but that could be caused by a rounding error and it's not the biggest problem of the plot.
-</opt>
-</choice>
-
-**Question 2**. What about this one?
-
-<center><img src="data_viz/bad_bar_quiz.jpg" width="500"></center>
-
-<choice id="2">
-<opt text="Yes, there is nothing wrong with this plot">
-Check the scale of the x axis.
-</opt>
-
-<opt text="No, this should have been a vertical bar plot" >
-There is nothing wrong to use a horizontal bar chart in this case.
-</opt>
-
-<opt text="Scale is corrupted" correct="true">
-Makati City and Quezon City have a huge numerical difference, but small "visual difference".
-</opt>
-</choice>
-
-</exercise>
-
-<exercise id="6" title="How to create a meaningful plot">
+<exercise id="5" title="How to create a meaningful plot">
 
 ### Rule of thumb:
 
@@ -163,24 +135,24 @@ Makati City and Quezon City have a huge numerical difference, but small "visual 
 
 </exercise>
 
-<exercise id="7" title="Packages for data visualization" type="slides">
+<exercise id="6" title="Packages for data visualization" type="slides">
 
 <slides source="chapter4_03_dataviz_packages">
 </slides>
 
 </exercise>
 
-<exercise id="8" title="Make your plots">
+<exercise id="7" title="Make your plots">
 
 **Exercise 1. Breast cancer diagnostic data set**
 
-Sample for the data set:
+Sample of the data set:
 
 <center><img src="breast_cancer.png"></center>
 
 1. Load the data with breast cancer observations (path to the file `"exercises/data/breast_cancer.csv"`);
-2. Make a **scatter plot** of `radius_mean` on the `x` axis against `texture_mean` on the `y` axis along with the **regression line**. You can do this in one line of code using `sns.regplot()` function. Specify standard deviation as an error (`x_ci="sd"`);
-3. Add vertical line with average radius and horizontal line with average texture. Set both if them to be dashed, black and of width of 1.
+2. Make a **scatter plot** of `radius_mean` on the `x` axis against `texture_mean` on the `y` axis along with the **regression line**. You can do this in one line of code using [`sns.regplot()`](https://seaborn.pydata.org/generated/seaborn.regplot.html) function. Specify standard deviation as an error term (`x_ci="sd"`);
+3. Add vertical line with average radius and horizontal line with average texture. Set both if them to be dashed, black and of width 1.
 
 <codeblock id="04_01">
 
@@ -209,7 +181,7 @@ Is there really no relationship between variables?
 1. Load the data with breast cancer observations (path to the file `"exercises/data/breast_cancer.csv"`);
 2. Select only columns the average values (with the `"mean"` in the name);
 3. Create a correlation matrix and store it to `corr_matrix` variable;
-4. Pass the `corr_matrix` into the `sns.heatmap()` function to create a heatmap.
+4. Pass the `corr_matrix` into the [`sns.heatmap()`](https://seaborn.pydata.org/generated/seaborn.heatmap.html) function to create a heatmap.
 
 <codeblock id="04_02">
 
@@ -236,7 +208,7 @@ This shouldn't be that surprising. The higher the perimeter, the higher the area
 
 </exercise>
 
-<exercise id="9" title="Exploratory Data Analysis">
+<exercise id="8" title="Exploratory data analysis">
 
 In statistics, **exploratory data analysis** is an approach to analyzing data sets to summarize their main characteristics, often using statistical graphics and other data visualization methods. A statistical model can be used or not, but primarily EDA is for seeing what the data can tell us beyond the formal modeling or hypothesis testing task. Exploratory data analysis was promoted by John Tukey to encourage statisticians to explore the data, and possibly formulate hypotheses that could lead to new data collection and experiments.
 
@@ -244,9 +216,9 @@ In statistics, **exploratory data analysis** is an approach to analyzing data se
 
 Credits: [Wikipedia](https://en.wikipedia.org/wiki/Exploratory_data_analysis)
 
-### Exercise 1. Dementia data set
+#### Exercise 1. Dementia data set
 
-Sample for the data set:
+Sample of the data set:
 
 <center><img src="oasis.png"></center>
 
@@ -288,14 +260,34 @@ Look at the size of error bars.
 </opt>
 </choice>
 
-### Exercise 2
+Here is an example how you could automate the subplots creation using the `for` loop:
 
-Seaborn package is really powerful and it allows to create complex plots in a simple way. Let's look at the `sns.relplot()` (relational plot) for an example. By default it creates a scatter plot between two variables with possibility to add additional frouping variables.
+```python
+columns_to_plot = ["Age", "Educ", "SES", "MMSE"]
 
-1. plot the relationship between estimated total intracranial volume (`"eTIV"`) and normalized whole-brain volume (`nWBV`);
-2. split plots to separate columns according to the clinical dementia rating (`"CDR"`) using `col` argument;
-3. set the color of each point according to the gender (`"M/F"`) using `hue` argument;
-4. set the size of a point according to the atlas scaling factor (`"ASF"`) using `size` column.
+plt.figure(figsize=(10,7), facecolor="white")
+
+for (i, colname) in enumerate(columns_to_plot):
+    plt.subplot(2,2,i+1)
+    sns.barplot(
+        x="CDR", data=dementia_df, y=colname,
+        hue="M/F", ci="sd", color="lightblue")
+    plt.title(f"{colname} (Mean ± SD)")
+
+plt.tight_layout()
+plt.show()
+```
+
+<br>
+
+#### Exercise 2
+
+Seaborn package is really powerful and it allows to create complex plots in a simple way. Let's look at the [`sns.relplot()`](https://seaborn.pydata.org/generated/seaborn.relplot.html) (relational plot) for example. By default it creates a scatter plot between two variables with possibility to add additional grouping variables.
+
+1. Plot the relationship between estimated total intracranial volume (`"eTIV"`) and normalized whole-brain volume (`nWBV`);
+2. Split plots to separate columns according to the clinical dementia rating (`"CDR"`) using `col` argument;
+3. Set the color of each point according to the gender (`"M/F"`) using `hue` argument;
+4. Set the size of a point according to the atlas scaling factor (`"ASF"`) using `size` column.
 
 <codeblock id="04_04">
 
@@ -316,6 +308,53 @@ It looks like there is no relationship at all.
 
 <opt text="On average values of atlas scaling factor increase as the estimated total intracranial volume increases" correct="true">
 Look at the size of the point and what's happening when we move along x axis.
+</opt>
+</choice>
+
+</exercise>
+
+<exercise id="9" title="Data viz hacking" type="slides">
+
+<slides source="chapter4_02_dataviz_hacking">
+</slides>
+
+</exercise>
+
+<exercise id="10" title="What went wrong here?">
+
+**Question 1**. Is this plot done correctly?
+
+<center><img src="data_viz/pie_chart_quiz.jpg" width="500"></center>
+
+<choice id="1">
+<opt text="Yes, there is nothing wrong with this plot">
+Compare the numerical values and the actual circle proportion.
+</opt>
+
+<opt text="No, proportion and numerical values do not agree" correct="true">
+42& looks more like 33%.
+</opt>
+
+<opt text="No, total sum is not 100%">
+Well, that's true, but that could be caused by a rounding error and it's not the biggest problem of the plot.
+</opt>
+</choice>
+
+**Question 2**. What about this one?
+
+<center><img src="data_viz/bad_bar_quiz.jpg" width="500"></center>
+
+<choice id="2">
+<opt text="Yes, there is nothing wrong with this plot">
+Check the scale of the x axis.
+</opt>
+
+<opt text="No, this should have been a vertical bar plot" >
+There is nothing wrong to use a horizontal bar chart in this case.
+</opt>
+
+<opt text="Scale is corrupted" correct="true">
+Makati City and Quezon City have a huge numerical difference, but small "visual difference".
 </opt>
 </choice>
 

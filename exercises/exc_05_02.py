@@ -21,6 +21,6 @@ print(outcomes_str)
 print("Imported list:")
 print(outcomes_list)
 
-outcomes_list = ___ # clean the values in a list
+outcomes_list = list(___) # clean the values in a list
 print("\nFixed list:")
 print(outcomes_list)
