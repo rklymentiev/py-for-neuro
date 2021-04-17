@@ -20,10 +20,7 @@ export default ({ data }) => {
             <Logo className={classes.logo} aria-label={siteMetadata.title} />
 
             <section>
-                <h1 className={classes.subtitle}> Perform your favorite data analysis in Python </h1>
-                <div className={classes.introduction}>
-                <center><i>BETA VERSION</i></center>
-                </div>
+                <h1 className={classes.subtitle}> Perform your favorite data analysis in Python (beta)</h1>
             </section>
 
             {chapters.map(({ slug, title, description }) => (

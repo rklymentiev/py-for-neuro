@@ -65,11 +65,7 @@ print(response.status_code)
 
 Notes: There are several package to handle requests in Python, like `httplib`, `urllib2`, `requests`. Here we will focus only on the last one.
 
-This is an exaple simple API to return the current location of the ISS (International Space Station). It returns the current latitude and longitude of the space station with a unix timestamp for the time the location was valid. This API takes no inputs. Accorfing to the documentation, API URL is:
-
-```
-http://api.open-notify.org/iss-now.json
-```
+This is an exaple simple API to return the current location of the ISS (International Space Station). It returns the current latitude and longitude of the space station with a unix timestamp for the time the location was valid. This API takes no inputs. Accorfing to the documentation, API URL is: http://api.open-notify.org/iss-now.json.
 
 After `GET`ting the response by that URL we can check its status to make sure everything is fine.
 
@@ -102,7 +98,7 @@ Further reading:
 
 # Response content
 
-```print
+```python
 print(response.content)
 ```
 ```out
@@ -186,7 +182,7 @@ print(response.url)
 http://api.open-notify.org/iss-pass.json?lat=52.1205&lon=11.6276&n=3
 ```
 
-Notes: The international space station (ISS) is an orbital outpost circling high above out heads. Sometimes it’s overhead, but when? It depends on your location. Given a location on Earth (latitude, longitude, and altitude) this [International Space Station Pass Times API](http://open-notify.org/Open-Notify-API/ISS-Pass-Times/) will compute the next `n` number of times that the ISS will be overhead.
+Notes: The international space station (ISS) is an orbital outpost circling high above out heads. Sometimes it’s overhead, but when? It depends on your location. Given a location on Earth (latitude, longitude, and altitude) [International Space Station Pass Times API](http://open-notify.org/Open-Notify-API/ISS-Pass-Times/) will compute the next `n` number of times that the ISS will be overhead.
 
 This API has a set of **parameters** that could be added to the URL to modify the output:
 

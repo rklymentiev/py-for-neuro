@@ -60,7 +60,7 @@ A: Exactly! This course will show you the main concepts of programming and most 
 
 **Q: I have spotted a typo/error, where do I report it?**
 
-A: Feel free to report an issue at the [GitHub page](https://github.com/ruslan-kl/py-for-neuro) or create a pull requests.
+A: Feel free to report an issue at the [GitHub page](https://github.com/ruslan-kl/py-for-neuro) or create a pull request.
 
 </exercise>
 
@@ -104,17 +104,65 @@ You have Python interpreter built on Binder directly on the website, so you can 
 
 </exercise>
 
-<exercise id="5" title="A little bit of motivation (not finished)">
+<exercise id="5" title="Where to search for help">
 
-https://www.researchgate.net/publication/9517409_Movement-Produced_Stimulation_in_the_Development_of_Visually_Guided_Behavior
+<center><img src="documentation.jpg" width="500"></img></center>
 
-<center><img src="cats.png"></img></center>
+What could you do if you know the name of the function (for example `print()`) but you don't know how to use it? You can look into the documentation of the function on the [website](https://docs.python.org/3/library/functions.html#print) or using [`help()`](https://docs.python.org/3/library/functions.html#help) function directly in Python:
 
-Held, R., & Hein, A. (1963). Movement-produced stimulation in the development of visually guided behavior. *Journal of Comparative and Physiological Psychology*, 56(5), 872–876. https://doi.org/10.1037/h0040546
+```python
+help(print)
+```
+```out
+Help on built-in function print in module builtins:
 
-Why do I bring this up here? Programming is not a type of knowledge that can be learned by watching YouTube videos or reading tutorials. There are 1000+ different libraries and functions in Python and there is no course that can introduce them all to you. This course will introduce basic concepts of programming with the example of some functions and problems but there are lots more! I highly encourage you to play around the problem sets apart from task described. You should ask yourself questions like "what will change if I replace value X by value Y?" or "what does this argument do and what happens if I drop it?". Don't be afraid to try change different parts of the code. I promise you that your computer will not explode (if it does, feel free to report an issue on the GiHub page). In the worst case scenario you will get an error message from Python, which are usually very informative and tell you what exactly you did wrong.
+print(...)
+    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+```
+
+However, what should you do if you don't know which function can help if solving an issue (for example, how to calculate average in Python)? In such case Google search will help. Most of the questions the questions you have have been asked online before you. The best way to get the solution to your problem is Stack Overflow. Data Science has a great online community which is happy to help.
+
+<center><img src="stackoverflow.png" width="500"></img></center>
+
+There are hundreds of packages with hundreds of functions in each, so it's impossible to learn them all by heart. Here is a nice collection of the packages divided by tasks: [Awesome Python](https://awesome-python.com/) or [GitHub link](https://github.com/vinta/awesome-python).
+
+And of course cheat sheets might also become handy: [Data Science Cheat Sheets](https://www.datacamp.com/community/data-science-cheatsheets).
 
 </exercise>
 
-<exercise id="6" title="Acknowledgments">
+<exercise id="6" title="A little bit of motivation">
+
+In the 1963 there was an experiment by Held and Hein where they put neonatal (newborn) kittens in a special device. One kitten was able to move around in a circle, the other one was kept in a basket so he couldn't moved around but could observe the world around due to the movements induced by actively moving kitten. Animals spent around 3 hours a day in that device and the rest of the time they spent in a cage with no light. Each animal was tested in several tests afterwards, such as avoidance of a visual cliff or blink to an approaching object. Study showed that passively moved kittens failed to show a response (blink) to an approaching object or discrimination of the cliff.
+
+<center><img src="cats.png" width="500"></img></center>
+
+Held, R., & Hein, A. (1963). Movement-produced stimulation in the development of visually guided behavior. *Journal of Comparative and Physiological Psychology*, 56(5), 872–876. https://doi.org/10.1037/h0040546
+
+What does that mean? Quote from the paper: "*Self-produced movement with its concurrent visual feedback is necessary for the development of visually-guided behavior*". In other words, actively moving kittens were able to make an association of the world around by engaging with it, whereas passively moved kittens were not able to do so, although they both were kept in the same environment and saw the same objects. Development of the visually-guided behavior (for example, estimation of the distance to the object or discriminating the shallow objects) cannot be achieved just by observing the world around.
+
+Why do I bring this up here? We can abstractly transfer this to the programming learning. There are 1000+ different libraries and functions in Python and there is no course that can introduce them all to you. And more importantly **no Python course will make you a good programmer by simply watching the videos/slides without the interaction**. Programming is not a type of knowledge that can be learned by observing.
+
+This course will introduce basic concepts of programming with the example of some functions and problems but there are lots more! I highly encourage you to play around the problem sets apart from the tasks described. You could ask yourself questions like "What will change if I replace value X by value Y?" or "What does this argument do and what happens if I drop it?". Don't be afraid to change different parts of the code and see what happens. I promise you that your computer will not explode because of it (if it does, feel free to DM me on Twitter). In the worst case scenario you will get an error message from Python, which are usually very informative and tell you what exactly you did wrong.
+
+</exercise>
+
+<exercise id="7" title="Acknowledgments">
+
+Thank [Natasha](https://twitter.com/_apfeltasha) for creating a logo for the website.
+
+Thank [Ines Montani](https://twitter.com/_inesmontani) for providing the [website template](https://github.com/ines/course-starter-python) for the course.
+
+Thank researchers who are making their data and articles publicly available.
+
+Thank everyone who is making the knowledge freely accessible.
+
+And thank you for participating in the course.
+
 </exercise>

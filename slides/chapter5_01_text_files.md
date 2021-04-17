@@ -22,7 +22,7 @@ You can access text file in Python with the help of built-in `open()` function. 
 * `a+`: Opens a file for both appending and reading.
 * `ab+`: Opens a file for both appending and reading in binary mode.
 
-Notes: It happens more often than we wish it to happen, but from time to time we still have to deal with .txt files so we need to know how to import them. We do this with the help of `open()` function. Now comes the trick that you should specify in what `mode` do you want to open the file. There are a lot of different options, but they are all kind of intuitive:
+Notes: It happens more often than we wish it to happen, but from time to time we still have to deal with .txt files, so we need to know how to import them. We can do this with the help of `open()` function. Here comes the trick that you should specify in what `mode` do you want to open the file. There are a lot of different options, but they are all kind of intuitive:
 
 * `w`: Writing the file
 * `a`: Appending the file
@@ -43,7 +43,7 @@ with open("new_file.txt", mode="w") as file:
 
 <img src="io/hello_txt.png"></img>
 
-Notes: The trick is that we are using the `with` command here. Without going into much details, it is done to prevent open connection to the file. You can think of it as a `while` statement: "while we are opening the file and saving the resulted I/O object to the variable `file` we are `write`ing the file. When the `file.write()` is done we close the connection to the file".
+Notes: Without going into much details, we are using the `with` command here to prevent the open connection to the file. You can think of it as a `while` statement: "while we are opening the file and saving the resulted I/O object to the variable `file` we are `write`ing the file. When the `file.write()` is done we close the connection to the file".
 
 Note that if file with such name doesn't exist, Python will create it. If file exists already, then Python will **overwrite** the existing data in the file with the new data. If you don't want to erase the data, but rather add new lines to the file, you should use append mode.
 
@@ -62,13 +62,13 @@ with open("new_file.txt", mode="a") as file:
 
 <img src="io/hello_txt2.png"></img>
 
-Notes: To **add** new text into the file we use append mode (`mode='a'`). In this case Python will add new string to the very end of the file. The only thing that is changed here is the `mode`, still using the `.write()` method.
+Notes: To **add** new text into the file we use append mode (`mode='a'`). In this case Python will add new string to the very end of the file. The only thing that has changed here is the `mode`, we are still using the `.write()` method.
 
 ---
 
 # Reading the file (1)
 
-### Input file:
+#### Input file:
 
 <img src="io/hello_txt2.png"></img>
 
@@ -102,7 +102,7 @@ print(output)
 ['id011\n', 'id225\n', 'id331\n', 'id410\n', 'id597\n', 'id109\n']
 ```
 
-Notes: It happens quite often that we have data in the text file separated by new line (for example IDs of subjects). To read this type of file we can use `readlines()` method.
+Notes: It happens quite often that we have data in the text file separated by new lines (for example IDs of subjects). To read this type of file we can use `readlines()` method.
 
 ---
 

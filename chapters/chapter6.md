@@ -10,9 +10,9 @@ id: 6
 
 <exercise id="1" title="Disclaimer">
 
-The main goal of this chapter is not "how to perform a statistical analysis", but rather "how to perform a statistical analysis in Python, given that you are familiar with the concepts". If you are not familiar with some topics, you can check amazing tutorials/videos I include below. If you are familiar with statistics, you may be annoyed with the oversimplification. I skip most of the assumptions checking, data manipulation, etc. since that's not the goal here.
+The main goal of this chapter is not "how to perform a statistical analysis", but rather "how to perform a statistical analysis in Python, given that you are familiar with the math". If you are not familiar with some of the topics, you can check tutorials/videos I include below. If you are familiar with statistics, you may be annoyed with the oversimplification. I skip most of the assumptions checking, data manipulation, etc. since that's not the goal here.
 
-Also, we are not familiar with the study designs and how exactly the observations were collected in given data sets. All the results should not be taking serious and no generalization should be applied.
+Also, we are not really interested with the study designs and how exactly the observations were collected in given data sets. All the results should not be taking serious and no generalization should be applied.
 
 Further reading:
 
@@ -48,7 +48,7 @@ Another quite new but powerful package is Pingouin. It has much more informative
 
 As told before, SciPy has built functions to work with distribution of random variables, either discrete or continuous. Distributions represent a separate classes with usefule methods for manipulation. Here is the example for Normal distribution:
 
-#### Population distribution
+### Population distribution
 
 ```python
 import numpy as np
@@ -92,7 +92,7 @@ print(f"P(X>120) = {prob_x:.2f}")
 P(X>120) = 0.09
 ```
 
-#### Sample distribution
+### Sample distribution
 
 ```python
 sample_n = 100
@@ -171,7 +171,7 @@ Now let's perform the *t*-test on the same data but in more convenient way using
 <codeblock id="06_06">
 
 * this is a one-sided test and we are interested in a left tail (`"less"`);
-* two perform a one-sample test using `ttest` function pass a single value as a `y` argument;
+* two perform a one-sample test using `ttest()` function pass a null distribution value as a `y` argument;
 
 </codeblock>
 
@@ -336,7 +336,6 @@ In order to answer this question you have to:
 <codeblock id="06_01">
 
 * to find the critical value `threshold` you need to find such value X which has a following property: P(χ²<X) = 1-α or P(χ²>X) = α;
-* the `p`robability `d`ensity `f`unction is called as you would expect it to be called;
 
 </codeblock>
 

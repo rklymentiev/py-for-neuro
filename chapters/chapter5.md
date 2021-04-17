@@ -17,7 +17,7 @@ id: 5
 
 <exercise id="2" title="Text files I/O">
 
-**Exercise 1**. Here is an example showing how you can:
+**Exercise 1**.
 
 1. `w`rite the string to a txt file
 2. `a`ppend the file to add another string. **Note!** If you use method `"w"` instead of `"a"` the new string will **overwrite** the existing data in the file. So be careful when trying to add something to the file.
@@ -38,7 +38,7 @@ However, now if we read the file back into the Python using `read()` method it w
 "malignant\nmalignant\nbenign\nmalignant\nmalignant\nbenign\nbenign\nbenign"
 ```
 
-And that is clearly not the way we would like to see it. We can use `.readlines()` method which will return the list with the strings from each file line. The only problem that all values have the new line sign `"\n"` at the end (for example `"malignant\n"`). Can you fix it?
+And that is clearly not the way we would like to see it. We can use `.readlines()` method which will return the list with the strings from each file line. The only problem that all values have the new line sign `"\n"` at the end (`['malignant\n', 'malignant\n', 'benign\n', 'malignant\n', 'malignant\n', 'benign\n', 'benign\n', 'benign\n']`). Can you fix it?
 
 
 
@@ -59,7 +59,7 @@ And that is clearly not the way we would like to see it. We can use `.readlines(
 
 <exercise id="4" title="CSV & Excel files I/O">
 
-**Question 1**. Despite the name of file extension .csv which stands for Comma-Separated Values, you can use any delimiter you wish (like ';' or tabs).
+**Question**. Despite the name of file extension .csv which stands for Comma-Separated Values, you can use any delimiter you wish (like ';' or tabs).
 
 <choice id="1">
 
@@ -68,11 +68,11 @@ You can use literally any separator for a CSV file. But it's always a good idea 
 </opt>
 
 <opt text="False">
-Even though it's not very common, but you *can* use any delimiter.
+Even though it's not very common, you *can* use any delimiter.
 </opt>
 </choice>
 
-### Exercise 1. fMRI data set
+### Exercise. fMRI data set
 
 1. Load in the data from fMRI experiment. Path to file `"exercises/data/fmri_data.csv"`. Note that columns is a file are separated by `;`.
 2. Create a new DataFrame `parietal_df` with observations from the parietal region (`df["region"] == "parietal"`);
@@ -118,7 +118,7 @@ The resulted object is a dictionary. Each key represents saved variable from the
 
 [MATLAB Website](https://www.mathworks.com/products/matlab.html) || [SciPy Website](https://www.scipy.org/)
 
-#### Exercise 1. H1 neuron's firing rate
+#### Exercise. H1 neuron's firing rate
 
 1. Load in the MAT-file `H1_neuron.mat` that holds data from a fly H1 neuron response to an approximate white-noise visual motion stimulus. Path to the file: `"exercises/data/H1_neuron.mat"`;
 2. Make a plot of a stimulus values (line plot) and add vertical lines for those time points when the spike occurred. Use only first 250 observations for this plot for simplicity.
@@ -128,7 +128,7 @@ The resulted object is a dictionary. Each key represents saved variable from the
 * recall slicing `new_obj = old_obj[<start index>:<end index>]`;
 * time points is just a range of values from 0 to `n`;
 * to select only those time points when spike occurred you can use conditioning on `spikes` array;
-* `plt.vlines()` trick here is to add an array with desired time points. Lower and upper ends are just two values for a line positioning. Why don't use minimum and maximum values of a stimulus, so  the vertical lines take over the whole height?
+* [`plt.vlines()`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.vlines.html) trick here is to add an array with desired time points. Lower and upper ends are just two values for a line positioning. Why don't use minimum and maximum values of a stimulus, so  the vertical lines take over the whole height?
 
 </codeblock>
 
@@ -144,7 +144,7 @@ JSON file are useful for parameters specification. For example, all data sets on
 
 <center><img src="io/json.png"></img></center>
 
-The structure of the file is always key-value. For this example we have data set parameters such as name, authors and version. The values can be strings, lists, or another nested key-value object.
+The structure of the file is always in a "key-value" format. For this example we have data set parameters such as name, authors and version. The values can be strings, lists, or another nested key-value object.
 
 To read/write JSON files in Python we use `json` package, but the whole procedure is pretty the same as for working with text files. JSON files are loaded as a dictionary into Python.
 
@@ -168,7 +168,7 @@ with open(file="path/to/the/file.json", mode="w") as file:
 
 [JSON Package Documentation](https://docs.python.org/3/library/json.html)
 
-**Exercise**.
+#### Exercise
 
 1. Save a dictionary as a JSON file `"dataset_description.json"`.
 2. Read in the file you just saved.
@@ -193,7 +193,7 @@ Keep in mind that in this example value of the `Authors` key is a list with two 
 
 <exercise id="8" title="API requests practice">
 
-**Exercise 1**. **Open APIs From Space**
+### Exercise 1. Open APIs From Space
 
 **Open Notify** is an open source project to provide a simple programming interface for some of NASA’s awesome data. I do some of the work to take raw data and turn them into APIs related to space and spacecraft.
 
@@ -201,10 +201,7 @@ Keep in mind that in this example value of the `Authors` key is a list with two 
 
 There is an API that allows to get the number of people in space at the moment: [How Many People Are In Space Right Now](http://open-notify.org/Open-Notify-API/People-In-Space/). There is no authentication for this API, so we don't need any keys. Also, according to the documentation we cannot specify any parameters.
 
-API URL
-```
-http://api.open-notify.org/astros.json
-```
+API URL: `http://api.open-notify.org/astros.json`
 
 <codeblock id="05_07">
 
@@ -213,7 +210,7 @@ http://api.open-notify.org/astros.json
 </codeblock>
 
 
-**Exercise 2. Allen Brain Map**
+### Exercise 2. Allen Brain Map
 
 **The Allen Institute for Brain Science** uses a unique approach to generate data, tools and knowledge for researchers to explore the biological complexity of the mammalian brain. This portal provides access to high quality data and web-based applications created for the benefit of the global research community.
 
@@ -221,11 +218,7 @@ http://api.open-notify.org/astros.json
 
 [Image download API](http://help.brain-map.org/display/api/Downloading+an+Image#DownloadinganImage-ImageDownloadService) serves whole and partial two-dimensional images presented on the Allen Brain Atlas Web site. Some images can be downloaded with expression or projection data. Glioblastoma images' color block and boundary data can also be downloaded.
 
-API URL:
-
-```
-http://api.brain-map.org/api/v2/image_download/[SubImage.id]
-```
+API URL: `http://api.brain-map.org/api/v2/image_download/[SubImage.id]`
 
 This API returns an image, not a JSON/XML file and can take several parameters, for example:
 
@@ -250,7 +243,7 @@ You task is to:
 
 <exercise id="9" title="Working with pickled files">
 
-Imagine that you want to share a dictionary from your Python script with your co-worker. When the dictionary is relatively "simple" it easy just to copy and paste it values into the chat or email. But what if you dictionary holds array from EEG experiment with the shape `(64,1000,100)`. That's a lot of observations to copy. In such case sharing an object as a **pickled** file might become helpful.
+Imagine that you want to share a dictionary with your co-worker. When the dictionary is relatively "simple" you can just copy and paste it values into the chat or email. But what if you dictionary holds array from EEG experiment with the shape `(64,1000,100)`. That's a lot of observations to copy. In such case sharing an object as a **pickled** file might become helpful.
 
 The `pickle` module implements binary protocols for serializing and de-serializing a Python object structure. "Pickling" is the process whereby a Python object hierarchy is converted into a byte stream, and "unpickling" is the inverse operation, whereby a byte stream (from a binary file or bytes-like object) is converted back into an object hierarchy. Pickling (and unpickling) is alternatively known as "serialization", "marshalling", or "flattening"; however, to avoid confusion, the terms used here are "pickling" and "unpickling".
 
@@ -283,7 +276,7 @@ with open(file="path/to/the/file.pickle", mode="wb") as file:
 
 Note the pickle files are binary, that's why we are using binary modes for writing and reading.
 
-**Exercise**.
+#### Exercise
 
 1. Load in the dataset with fMRI data (`"exercises/data/fmri_data.csv"`). CSV file is separated by ";".
 2. Create a new dictionary `frmi` with two keys: `"parietal"` that holds a DataFrame with observations only from the parietal region and `"frontal"` that holds a DataFrame with observations only from the frontal region.
@@ -314,7 +307,7 @@ Some useful functions:
 * `os.remove(path)` - remove a file;
 * `os.path.join(dirpath, name)` -  extend the path to the directory/file.
 
-**Exercise**
+### Exercise
 
 1. Get the current working directory and save it to a variable `cwd` (this will be a string).
 2. Extend the current path (`cwd`) with `path_to_data` (the directory where all the data sets for the course are).

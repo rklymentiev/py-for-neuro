@@ -14,9 +14,9 @@ Credits: [Wikipedia](https://en.wikipedia.org/wiki/Comma-separated_values)
 
 <center><img src="io/csv_demo.png"></img></center>
 
-Notes: Even though it's called **comma**-separated values file, in reality you can use any separator to save a csv file (the most common ones are ";" and "\t" (tab sign)).
+Notes: Even though it's called **comma**-separated values file, in reality you can use any separator to save a CSV file (like ";" and "\t" (tab sign)).
 
-You can see an example of a tabular csv file in a "raw" view. Each line in the file represents an observation (in this particular case the very first line is a header with column names). Each column value is separated by the comma.
+You can see an example of a tabular CSV file in a "raw" view. Each line in the file represents an observation (in this particular case the very first line is a header with column names). Each column value is separated by the comma.
 
 ---
 
@@ -53,7 +53,7 @@ np.savetxt(fname="one_subject.csv", X=frmi_smpl[0,:], delimiter=",")
 
 <center><img src="io/one_subj.png" width="600"></img></center>
 
-Notes: To save `numpy` arrays to a CSV file we can use `np.savetxt` where file name, input array and (optionally) delimiter need to be specified.
+Notes: To save `numpy` arrays to a CSV file we can use `np.savetxt()` where file name, input array and (optionally) delimiter need to be specified.
 
 Here is the example of saving observations from one subject.
 
@@ -86,9 +86,9 @@ display(oasis_df.head())
 4  OAS1_0005_MR1   M    R   18   NaN  NaN   NaN  NaN  1737  0.848  1.010    NaN
 ```
 
-Notes: To read a CSV file we can use a `pd.read_csv()` function. As told before, even though CSV has "comma" in its name, other separators can be also used. In such case we have to specify the `sep` argument (default is `","`).
+Notes: To read a CSV file we can use a [`pd.read_csv()`](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html) function. As told before, even though CSV has "comma" in its name, other separators can be also used. In such case we have to specify the `sep` argument (default is `","`).
 
-To read en Excel file (.xls, .xlsx) we can use `pd.read_excel()` function. If Excel file has multiple sheets, the desired sheet can be specified by `sheet_name` argument by the actual name (as a string) or by a order number (as an integer).
+To read en Excel file (.xls, .xlsx) we can use [`pd.read_excel()`](https://pandas.pydata.org/docs/reference/api/pandas.read_excel.html) function. If Excel file has multiple sheets, the desired sheet can be specified by `sheet_name` argument by the actual name (as a string) or by a order number (as an integer).
 
 ---
 
