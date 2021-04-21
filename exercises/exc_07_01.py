@@ -1,6 +1,6 @@
-___
-___
-___
+from scipy.io import ___
+import ___.pyplot as ___
+import ___ as np
 
 # import the file
 h1_data = ___(

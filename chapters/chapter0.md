@@ -1,25 +1,27 @@
 ---
 title: 'Chapter 0: Introduction to the Course'
 description:
-  'Is this course worth your time? Let us find out!'
+  "Is this course worth your time? Let's find out!"
 prev: null
 next: /chapter1
 type: chapter
 id: 0
 ---
 
-<exercise id="1" title="Quick introduction">
+<exercise id="1" title="Introduction">
 
 Hello and welcome!
 
-My name is Ruslan and I feel passionate about Neuroscience. During my short experience in a neuroscience field I have already spotted the lack of programming/computer science knowledge among scientists. Given my background in Data Science and belief in the "open source knowledge", I decided to create a course to introduce other people to Python programming. In my opinion basic programming knowledge allows to (a) work with data in a more convenient way (there a whole new world away from Excel, you know); (b) automate repeated tasks; (c) make custom visualizations. And also programming is just fun.
+My name is Ruslan and I feel passionate about Neuroscience. During my short experience in this field I have already spotted the lack of programming/computer science knowledge among scientists. Given my background in Data Science and belief in the "open source knowledge", I decided to create a course to introduce other people to Python programming. In my opinion basic programming knowledge allows to (a) work with data in a more convenient way (there a whole new world away from Excel, you know); (b) automate repeated tasks; (c) make custom visualizations. And also programming is just fun.
+
+Even though course has a fancy name, it is not really different from any introduction Python course you can find online. The only difference is that I tried to create most the exercises and examples based on neuroscience related problems. However, you don't need any specific knowledge in order to take the course, since the course is about Python, not about the brain.
 
 #### What this course IS about:
 
-- getting familiar with programming basics;
-- working with most commonly used packages (such as NumPy, Pandas, Seaborn);
+- getting familiar with programming basics (loops, functions, etc);
+- working with most commonly used packages (NumPy, Pandas, Seaborn, etc);
 - building custom plots;
-- importing/exporting files of different formats;
+- importing/exporting files in different formats (.json, .csv, .mat, etc);
 - performing statistical analysis in Python.
 
 #### What this course IS NOT about:
@@ -154,8 +156,6 @@ This course will introduce basic concepts of programming with the example of som
 </exercise>
 
 <exercise id="7" title="Acknowledgments">
-
-Thank [Natasha](https://twitter.com/_apfeltasha) for creating a logo for the website.
 
 Thank [Ines Montani](https://twitter.com/_inesmontani) for providing the [website template](https://github.com/ines/course-starter-python) for the course.
 
