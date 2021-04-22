@@ -157,6 +157,8 @@ This course will introduce basic concepts of programming with the example of som
 
 <exercise id="7" title="Acknowledgments">
 
+Thank [Natasha](https://twitter.com/_apfeltasha) for creating a logo for the website.
+
 Thank [Ines Montani](https://twitter.com/_inesmontani) for providing the [website template](https://github.com/ines/course-starter-python) for the course.
 
 Thank researchers who are making their data and articles publicly available.
