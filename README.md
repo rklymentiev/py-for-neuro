@@ -1,6 +1,6 @@
 # Source code for "Python for Neuroscience" course
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1090c1da-0875-4da2-b300-d61460a2f3b9/deploy-status)](https://app.netlify.com/sites/py-for-neuro/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1090c1da-0875-4da2-b300-d61460a2f3b9/deploy-status)](https://app.netlify.com/sites/pyforneuro/deploys)
 
 Website was built using the template: [course-starter-python](https://github.com/ines/course-starter-python).
 

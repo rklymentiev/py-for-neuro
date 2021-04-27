@@ -1,5 +1,11 @@
-!pip install scikit-image
-from skimage import data, io, filters
-# URL = "https://storage.googleapis.com/kagglesdsdata/datasets/165566/377107/yes/Y108.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20210425%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20210425T140636Z&X-Goog-Expires=172799&X-Goog-SignedHeaders=host&X-Goog-Signature=b06e749f6d296355eac2ea6533ec5d8fe9db99cde6b6f4a88ba0659139d16f872227bedb882cea0229d5cc164495a845d1e6edc7388d98389bb2eb0cf3508c1e884e6055f143586468a4e302a1229b30401faf3992b54b77ee79d84912257b5aaf9ac656c148c4b0edad6564e8e6c4a2b496c9ea4bbe2bcdfb858be05ecf6e27d2da9e4bf81bf0ede40333add10938244a350c4a6ed1f5f3c78e03fa367fd9ca6cf140cd9b5ae87fe4309f269766e11fa05e2c8a9a7809de2f653df342e7d0b95100f14a4bb7c887e8c498cac745645ba8f64108dd7f378998fbbf2f90c42bf921221e7ea3dcb47d14ab1dfcfcdf4307f31d367eb666d88b82cfb2fcec377818"
-#
-# img = cv2.imread(URL)
+import pickle
+import numpy as np
+from scipy.fft import fft
+import matplotlib.pyplot as plt
+
+with open("exercises/data/eeg_sample.pickle", mode="rb") as f:
+    eeg = pickle.load(file=f)
+
+print(eeg.keys())
+
+fc_1 = np.fft.fft()
