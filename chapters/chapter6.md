@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 6: Statistics in Python'
 description:
-  "We will look how to perform statistical analysis using mainly scipy.stats module and pingouin package. "
+  "We will look how to perform statistical analysis such as ANOVA or Chi-squared test using mainly scipy.stats module and pingouin package. "
 prev: /chapter5
 next: /chapter7
 type: chapter
@@ -199,9 +199,7 @@ To build more intuition about Cohen *d* effect size checkout this visualization:
 
 <exercise id="6" title="Significance testing: ANOVA">
 
-### Exercise 1. ANOVA
-
-Is there differences in the average normalized whole-brain volume (`"nWBW"`) among patients with different clinical dementia rating (`"CDR"`)?
+### Is there difference in the average normalized whole-brain volume (`"nWBW"`) among patients with different clinical dementia rating (`"CDR"`)?
 
 * Null hypothesis: there are no differences between average values of nWBW among groups;
 * Alternative hypothesis: there is a difference and at least one pair is significantly different;
@@ -301,9 +299,9 @@ Are p-values greater than alpha?
 
 <exercise id="8" title="Significance testing: Chi-squared test">
 
-### Exercise 1. Chi-squared test
+### Does clinical dementia rating (`CDR`) depend on level of education (`Educ`)?
 
-Does clinical dementia rating (`CDR`) depend on level of education (`Educ`)? In order to do this we can use a [Chi-squared test](https://en.wikipedia.org/wiki/Chi-squared_test).
+In order to do this we can use a [Chi-squared test](https://en.wikipedia.org/wiki/Chi-squared_test).
 
 * Null hypothesis: clinical dementia rating and level of education are **independent** of each other;
 * Alternative hypothesis: clinical dementia rating and level of education are **dependent** (clinical dementia rating varies by level of education);

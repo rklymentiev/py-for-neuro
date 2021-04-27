@@ -112,7 +112,7 @@ h1_data
           24.11132812,   50.25390625])}
 ```
 
-The `squeeze_me` is responsible for squeezing unit matrix dimensions. For example, if Matlab variable was stored in a shape (5,1,1), setting `squeeze_me=True` will import it with the shape (5,) to Python.
+The `squeeze_me` is responsible for squeezing unit matrix dimensions. For example, if MATLAB variable was stored in a shape (5,1,1), setting `squeeze_me=True` will import it with the shape (5,) to Python.
 
 The resulted object is a dictionary. Each key represents saved variable from the MATLAB. Also, there are three additional keys with the file info. `rho` is a vector that gives the sequence of spiking events or nonevents at the sampled times (every 2 ms). When an element of `rho` is one, this indicates the presence of a spike at the corresponding time, whereas a zero value indicates no spike. The variable `stim` gives the sequence of stimulus values at the sampled times.
 

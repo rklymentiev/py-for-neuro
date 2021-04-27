@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 3: Packages for Data Manipulation'
 description:
-  'Here we will introduce two main packages for working with data. We are going to see how can we use NumPy to perform linear algebra calculations and how to perform data manipulations on tabular data using Pandas.'
+  'Here we will introduce two main packages for working with data. We are going to see how we can use NumPy to perform linear algebra calculations and how to perform data manipulations on tabular data using Pandas.'
 prev: /chapter2
 next: /chapter4
 type: chapter

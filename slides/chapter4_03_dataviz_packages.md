@@ -17,7 +17,7 @@ Matplotlib is a comprehensive library for creating static, animated, and interac
 ```python
 import matplotlib.pyplot as plt
 ```
-Notes: Matplotlib must be the most commonly used package for the data visualization in Python. If you have worked in Matlab, you might see a lot of similarities in the plotting syntax  (hence the name). Matplotlib has the gallery with the possible graphs you can make, which makes it easy to adopt the code for your own problem.
+Notes: Matplotlib must be the most commonly used package for the data visualization in Python. If you have worked in MATLAB, you might see a lot of similarities in the plotting syntax  (hence the name). Matplotlib has the gallery with the possible graphs you can make, which makes it easy to adopt the code for your own problem.
 
 Most of the time we don't need the whole package, but just a module `pyplot`, which has commonly used alias name `plt`.
 
@@ -101,7 +101,7 @@ plt.show()
 
 <img src="plt/area.png" width="400">
 
-Notes: Just like in Matlab you can add several variables to plot in one `plt.plot()` function.
+Notes: Just like in MATLAB you can add several variables to plot in one `plt.plot()` function.
 
 One of the ways to create an area chart is to use `plt.fill_between()` function. `alpha` is responsible for opacity (`0`: object is transparent, `1`: full color).
 

@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 7: More Examples'
 description:
-  "In this chapter we will look on the miscellaneous examples how Python can be used to deal with \"real-world\" problems."
+  "Miscellaneous examples of other awesome stuff you could do with Python to deal with \"real-world\" problems."
 prev: /chapter6
 next: null
 type: chapter
@@ -26,17 +26,21 @@ Here are 9 random stimulus values that lead to the spike in the H1 neuron:
 <br>
 <codeblock id="07_01">
 
-* everything you need is in the task;
+* to create an array with integers you can use [`np.arange()`](https://numpy.org/doc/stable/reference/generated/numpy.arange.html) function;
+* to include only spike times you need to apply a condition where `rho` array values equal `1`;
+* select only those times that are greater than `window`;
 
 </codeblock>
 
 </exercise>
 
-<exercise id="2" title="Finding structure in the data using Decision Tree model">
+<exercise id="2" title="Reducing the uncertainty with Decision Tree model">
 
 **Decision tree learning** is one of the predictive modelling approaches used in statistics, data mining and machine learning. It uses a decision tree (as a predictive model) to go from observations about an item (represented in the branches) to conclusions about the item's target value (represented in the leaves). Tree models where the target variable can take a discrete set of values are called classification trees; in these tree structures, leaves represent class labels and branches represent conjunctions of features that lead to those class labels. Decision trees where the target variable can take continuous values (typically real numbers) are called regression trees. Decision trees are among the most popular machine learning algorithms given their intelligibility and simplicity.
 
 Credits: [Wikipedia](https://en.wikipedia.org/wiki/Decision_tree_learning)
+
+<center><img src="https://defme.xyz/post/how-do-cart-models-work/trees.jpg" width="500"></center>
 
 Classification and regression trees (CART for short) models are not the first-choice models when it comes to **prediction** because they trend to overfit the data (in other words they can predict quite good on the training data, but much worse on the test data), but they are really good in **explaining** the data structure. If you are interested in the math behind the model, check out the links below. However, you don't need to know much to complete the exercise.
 
@@ -81,5 +85,28 @@ We go right (MMSE > 27.5), left (nWBW) <= 0.787 and left (Age < 84.5)
 </opt>
 </choice>
 
+</exercise>
+
+<exercise id="3" title="Fourier Transform of the EEG signals">
+
+In mathematics, the **discrete Fourier transform (DFT)** converts a finite sequence of equally-spaced samples of a function into a same-length sequence of equally-spaced samples of the discrete-time Fourier transform (DTFT), which is a complex-valued function of frequency.
+
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Fourier_transform_-_time_shifted_signal.gif" width="400"></center>
+
+Credits: [Wikipedia](https://en.wikipedia.org/wiki/Discrete_Fourier_transform)
+
+**Electroencephalography (EEG)** is an electrophysiological monitoring method to record electrical activity on the scalp that has been shown to represent the macroscopic activity of the surface layer of the brain underneath. It is typically non-invasive, with the electrodes placed along the scalp.
+
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spike-waves.png" width="400"></center>
+
+Credits: [Wikipedia](https://en.wikipedia.org/wiki/Electroencephalography)
+
+
+Simply speaking, Fourier transform is used to convert a signal from the time domain to a frequency domain.
+
+<codeblock id="07_03">
+
+
+</codeblock>
 
 </exercise>

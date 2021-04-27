@@ -2,7 +2,7 @@
 type: slides
 ---
 
-# Working with Matlab files
+# Working with MATLAB files
 
 ---
 
@@ -37,9 +37,9 @@ h1_data
 
 Notes: We can load MAT files into Python with the help of SciPy package. We are interested in `loadmat` function inside the `io` module.
 
-The `squeeze_me` is responsible for squeezing unit matrix dimensions. For example, if Matlab variable was stored in a shape (5,1,1), setting `squeeze_me=True` will import it with the shape (5,) to Python.
+The `squeeze_me` is responsible for squeezing unit matrix dimensions. For example, if MATLAB variable was stored in a shape (5,1,1), setting `squeeze_me=True` will import it with the shape (5,) to Python.
 
-The resulted object is a dictionary. Each key represents saved variable from the Matlab. Also, there are three additional keys with wile info.
+The resulted object is a dictionary. Each key represents saved variable from the MATLAB. Also, there are three additional keys with wile info.
 
 [SciPy Website](https://www.scipy.org/)
 

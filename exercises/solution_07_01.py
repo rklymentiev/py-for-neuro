@@ -5,7 +5,8 @@ import numpy as np
 # import the file
 h1_data = loadmat(
     file_name="exercises/data/H1_neuron.mat",
-    squeeze_me=True)
+    squeeze_me=True # squeeze the file to remove empty indexes
+    )
 
 # create a new key with the time points
 # from 0 to the length of the data

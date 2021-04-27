@@ -45,25 +45,13 @@ Path to the file: `"exercises/data/breast_cancer.csv"`
 
 <center><img src="breast_cancer.png"></center>
 
-Credits: W.N. Street, W.H. Wolberg and O.L. Mangasarian. Nuclear feature extraction for breast tumor diagnosis. IS&T/SPIE 1993 International Symposium on Electronic Imaging: Science and Technology, volume 1905, pages 861-870, San Jose, CA, 1993.
+Credits: W.N. Street, W.H. Wolberg and O.L. Mangasarian. Nuclear feature extraction for breast tumor diagnosis. *IS&T/SPIE 1993 International Symposium on Electronic Imaging: Science and Technology*, volume 1905, pages 861-870, San Jose, CA, 1993, doi: https://doi.org/10.1117/12.148698
 
 Notes: Description: Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image.
 
+Even though this data is not brain related, it is still a nice example of the numerical values extracted from the image data.
+
 Found at [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29).
-
----
-
-# Neuron's firing rate (lateral intraparietal area)
-
-Path to the file: `"exercises/data/dots.csv"`
-
-<center><img src="dots.png"></center>
-
-Credits: Roitman, JD and Shadlen, MN (2002), “Response of neurons in the lateral intraparietal area during a combined visual discrimination reaction time task”, *Journal of Neuroscience*, Vol. 22(21), 9475-9489.
-
-Notes: Description: Response of neurons in the lateral intraparietal area during a combined visual discrimination reaction time task.
-
-Found in the Seaborn package's datasets (`sns.load_dataset("dots")`). Full data set can be found [here](https://shadlenlab.columbia.edu/resources/RoitmanDataCode.html).
 
 ---
 

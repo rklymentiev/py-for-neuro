@@ -12,9 +12,9 @@ id: 0
 
 Hello and welcome!
 
-My name is Ruslan and I feel passionate about Neuroscience. During my short experience in this field I have already spotted the lack of programming/computer science knowledge among scientists. Given my background in Data Science and belief in the "open source knowledge", I decided to create a course to introduce other people to Python programming. In my opinion basic programming knowledge allows to (a) work with data in a more convenient way (there a whole new world away from Excel, you know); (b) automate repeated tasks; (c) make custom visualizations. And also programming is just fun.
+My name is Ruslan and I feel passionate about Neuroscience. During my short experience in this field I have already spotted the lack of programming/computer science knowledge among scientists. Given my background in Data Science and belief in the "open source knowledge", I decided to create a course to introduce other people to Python programming. Basic programming knowledge allows working with data in a more convenient way (there is a whole new world beyond Excel), automating repeated tasks or making custom visualizations. And programming is just fun.
 
-Even though course has a fancy name, it is not really different from any introduction Python course you can find online. The only difference is that I tried to create most the exercises and examples based on neuroscience related problems. However, you don't need any specific knowledge in order to take the course, since the course is about Python, not about the brain.
+Even though this course has a fancy name, it is not really different from any introduction Python course you can find online. The only difference is that I tried to create most the exercises and examples based on neuroscience related problems. However, you don't need any specific knowledge in order to take the course, since the course is about Python, not brain.
 
 #### What this course IS about:
 
@@ -42,7 +42,7 @@ A: Definitely! Most exercises are based on neuroscience related data sets (descr
 
 **Q: Is this a supervised course?**
 
-A: No, there is no supervision. I tried to make tasks and hints as clear as possible. There is also an open (but not that active) Discord server [Python for Neuroscience](https://discord.gg/yUq9sfHHDb) that was created for discussions about Python related problems in a neuroscience field.
+A: No, there is no supervision. I tried to make tasks and hints as clear as possible. There is an open (but not that active) Discord server [Python for Neuroscience](https://discord.gg/yUq9sfHHDb) that was created for discussions of Python related problems in a neuroscience field.
 
 **Q: Will I get a certificate after the completion of the course?**
 
@@ -50,11 +50,11 @@ A: No. But you will get the *knowledge*. Isn't it better?
 
 **Q: Do I need to have Python installed on my machine?**
 
-A: You don't have to install Python for this course since you can use Python code windows on this website (built on [Binder](https://mybinder.org/)). However, you have to install Python at some point to start doing your own analysis, otherwise what's the point? I will show the best way on how to install Python in the following part.
+A: You don't have to install Python for this course since you can use Python code windows on this website (built on [Binder](https://mybinder.org/)). However, you might install Python at some point to start doing your own analysis, otherwise what's the point? I will show the best way on how to install Python in the following part.
 
-**Q: Will this course make me a super proficient computational neuroscientist and increase my popularity in the academia?**
+**Q: Will this course make me a super proficient computational neuroscientist and increase my popularity in the industry?**
 
-A: Not quite. This course will introduce you to the basics of programming, but not the real applications of modeling of human behavior or neuronal processes.
+A: Not quite. This course will introduce you to the basics of programming, but later is your own choice if you want to use this knowledge in your work/research.
 
 **Q: Will this course introduce me to the Python programming so later I can apply this knowledge doing more advanced stuff, like Machine Learning?**
 
@@ -63,6 +63,10 @@ A: Exactly! This course will show you the main concepts of programming and most 
 **Q: I have spotted a typo/error, where do I report it?**
 
 A: Feel free to report an issue at the [GitHub page](https://github.com/ruslan-kl/py-for-neuro) or create a pull request.
+
+**Q: I have an idea of relevant exercises/demos/slides, can I contribute?**
+
+A: Definitely yes! Feel free to start a discussion at the [GitHub page](https://github.com/ruslan-kl/py-for-neuro) or contact me directly.
 
 </exercise>
 
@@ -157,14 +161,10 @@ This course will introduce basic concepts of programming with the example of som
 
 <exercise id="7" title="Acknowledgments">
 
-Thank [Natasha](https://twitter.com/_apfeltasha) for creating a logo for the website.
-
-Thank [Ines Montani](https://twitter.com/_inesmontani) for providing the [website template](https://github.com/ines/course-starter-python) for the course.
-
-Thank researchers who are making their data and articles publicly available.
-
-Thank everyone who is making the knowledge freely accessible.
-
-And thank you for participating in the course.
+* Thanks to [Natasha](https://twitter.com/_apfeltasha) for creating a logo for the website.
+* Thanks to [Ines Montani](https://twitter.com/_inesmontani) for providing the [website template](https://github.com/ines/course-starter-python) for the course.
+* Thanks to researchers who are making their data and articles publicly available.
+* Thanks to everyone who is making the knowledge freely accessible.
+* And thank you for participating in the course.
 
 </exercise>

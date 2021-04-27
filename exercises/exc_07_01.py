@@ -1,16 +1,17 @@
-from scipy.io import ___
+from scipy.___ import loadmat
 import ___.pyplot as ___
 import ___ as np
 
 # import the file
 h1_data = ___(
     file_name=___,
-    squeeze_me=___)
+    squeeze_me=___ # squeeze the file to remove empty indexes
+    )
 
-# create a new key with the time points
+# create a new key with the time points as integers
 # from 0 to the length of the data
 h1_data["timepnt"] = ___
-# select only those time point when spike occurred
+# select only those time points when spike occurred
 h1_data["spike_time"] = ___
 # set the window size (timepoints)
 window = ___
