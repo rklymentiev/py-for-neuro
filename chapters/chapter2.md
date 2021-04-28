@@ -8,21 +8,16 @@ type: chapter
 id: 2
 ---
 
-<exercise id="1" title="How to import a package">
-
-
-</exercise>
-
-<exercise id="2" title="Automating the routine" type="slides">
+<exercise id="1" title="Automating the routine" type="slides">
 
 <slides source="chapter2_01_loops">
 </slides>
 
 </exercise>
 
-<exercise id="3" title="Time to practice">
+<exercise id="2" title="Time to practice">
 
-**Exercise 1**. Given a string `my_sting` count all word characters, digits, and special symbols.
+**Exercise 1**. Given a string `my_sting` count all word characters, digits, and special symbols in it. For example, string `"h336^"` has 1 word character, 3 digits and 1 special symbol.
 
 <codeblock id="02_01">
 
@@ -53,14 +48,14 @@ Keep just first 10 digits for simplicity.
 
 </exercise>
 
-<exercise id="4" title="Writing custom functions" type="slides">
+<exercise id="3" title="Writing custom functions" type="slides">
 
 <slides source="chapter2_02_functions">
 </slides>
 
 </exercise>
 
-<exercise id="5" title="Functions practice (1): custom functions">
+<exercise id="4" title="Functions practice (1): custom functions">
 
 **Question 1**. Keep in mind that if your function holds non-default and default arguments at the time, you have to place **all** the default arguments at the end in the function header (`def function_name(arguments)`) after the non-default arguments. Given that, which of the function headers you think is **incorrect**?
 
@@ -113,7 +108,7 @@ Update your function by adding `df` argument that will specify how many degrees 
 
 </exercise>
 
-<exercise id="6" title="Functions practice (2): lambda functions">
+<exercise id="5" title="Functions practice (2): lambda functions">
 
 **Exercise 3**. You performed a learning task and got accuracy (number of correct trials divided by total number of trials) for 10 subjects stored in a dictionary. Now you want to save the IDs of those participants whose score was above 0.6 in a separate list. How could you solve it using `filter` and `lambda` function?
 
@@ -143,7 +138,7 @@ Then using `for` loop and `if` statement separate IDs into control and treatment
 
 </exercise> -->
 
-<exercise id="7" title="assert statement">
+<exercise id="6" title="assert statement">
 
 Recall the function to calculate the pi value. This was a pretty simple function and we know that we should use numeric objects for an input. But what if you decide to pass a string for example as a diameter value? In such case you get an Error, since operation `22/"some number"` is not supported (and doesn't make so much sense either).
 
@@ -206,7 +201,7 @@ Also, degrees of freedom should be a positive integer or 0. Raise an error if th
 
 </exercise>
 
-<exercise id="8" title="Documenting the code using docstrings">
+<exercise id="7" title="Documenting the code using docstrings">
 
 What if you publish your function or send it to someone so that can use it? Usually, people don't want to read all the code inside the function to understand how to use it. So it's nice to provide a brief documentation (a doc-string) along with your function. You can see example on the left. You start right after the function header and use a string (`"""this is still a string"""`) to write down some short explanations on how to use this function and what are the inputs/outputs. Although there are several ways of docsctring formats, you are free to write whatever you want.
 
@@ -285,7 +280,7 @@ def variance(input_list, df=1):
 
 </exercise>
 
-<exercise id="9" title="f-strings">
+<exercise id="8" title="f-strings">
 
 Imagine you running a loop over all values of the list and at each step you want to add each value to a string (for example to print out). You can do this using so called **f-strings** in a following way: `f"{<variable name>}"` which will **dynamically** paste the value of a given variable inside the string. For example:
 
@@ -329,7 +324,7 @@ If you want to know more about f-string and other formatting methods, check out 
 
 </exercise>
 
-<exercise id="10" title="Code style guidelines" type="slides">
+<exercise id="9" title="Code style guidelines" type="slides">
 
 <slides source="chapter2_04_pep8">
 </slides>

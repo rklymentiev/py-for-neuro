@@ -57,7 +57,7 @@ code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-select
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
-	background: #e6f2ff; /* base02 */
+	background: #000000; /* base02 */
 }
 
 /* Code blocks */
