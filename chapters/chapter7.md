@@ -101,8 +101,15 @@ Credits: [Wikipedia](https://en.wikipedia.org/wiki/Discrete_Fourier_transform)
 
 Credits: [Wikipedia](https://en.wikipedia.org/wiki/Electroencephalography)
 
+In this exercise we will convert a signal at FpZ channel from time domain to a frequency domain. Data represents a sample from Cavanagh et al. (2019) study. This sample consists of around 10 seconds of data measurements sample at 500 Hz frequency and measured at 66 channels.
 
-Simply speaking, Fourier transform is used to convert a signal from the time domain to a frequency domain.
+1. Load the pickled dictionary. Path to the file `"exercises/data/eeg_sample.pickle"`. Dictionary has 4 values, `ch_names`: 1D array with channel names; `data`: 2D array with EEG measurements, shape of the array (66, 50001); `srate`: sampling rate (Hz); `times`: time points.
+2. Find the index of `Fpz` channel from the channel names.
+3. Get the total amount of observations (need for normalization of Fourier coefficients).
+4. Pass the signal data from the `Fpz` channel to the `fft` functions. You can use both NumPy and SciPy functions, that will produce the same results.
+5. Plot the signal in time and frequency domains.
+
+Dictionary `eeg` looks as follows:
 
 ```out
 {'ch_names': array(['Fp1', 'Fpz', 'Fp2', 'AF3', 'AF4', 'F7', 'F5', 'F3', 'F1', 'Fz',
@@ -125,14 +132,27 @@ Simply speaking, Fourier transform is used to convert a signal from the time dom
          -1.63223759e-04, -1.51976764e-04, -1.50407239e-04],
         [-8.10325504e-04, -8.49075174e-04, -8.20144940e-04, ...,
          -2.83902613e-04, -2.62110763e-04, -2.61275838e-04]]),
- 'srate': 125,
+ 'srate': 500,
  'times': array([0.0000e+00, 8.0000e-03, 1.6000e-02, ..., 9.9976e+01, 9.9984e+01,
         9.9992e+01])}
 ```
 
+Position of FpZ channel on a skull:
+
+<center><img src="1020system.png" width="400"></center>
+
+Cavanagh, J. F., Bismark, A. W., Frank, M. J., & Allen, J. J. B. (2019). Multiple Dissociations Between Comorbid Depression and Anxiety on Reward and Punishment Processing: Evidence From Computationally Informed EEG. *Computational Psychiatry*, 3, 1–17. DOI: http://doi.org/10.1162/CPSY_a_00024
+
 <codeblock id="07_03">
 
+* remember that pickle files are binary;
+* [`np.where()`](https://numpy.org/doc/stable/reference/generated/numpy.where.html) functions takes a condition as an argument;
+* select only data from FpZ channel by selecting the needed index from the first dimension of `data` array;
 
 </codeblock>
+
+This was obviously a very sloppy example and there are lots and lots more what you could do with signal data. If you are interested in EEG analysis, I highly recommend [**Complete neural signal processing and analysis: Zero to hero**](https://www.udemy.com/course/solved-challenges-ants/) course at Udemy by Mike X Cohen.
+
+You can also check my blog post on working with this data using [MNE](https://mne.tools/stable/index.html) Python package: [Blog Post: EEG Data Analysis](https://defme.xyz/post/eeg-preprocessing-erp/).
 
 </exercise>

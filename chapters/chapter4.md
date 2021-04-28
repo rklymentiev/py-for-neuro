@@ -43,22 +43,22 @@ id: 4
 
 <exercise id="4" title="Check yourself" >
 
-**Question 1**. What combination of County and Year has the greatest value?
+**Question 1**. What combination has approximately the greatest value?
 
 <center><img src="data_viz/heat_map_test.png" width="500"></center>
 
 <choice id="1">
 
-<opt text="(STATEN ISLAND, 2010)">
+<opt text="(Clone B9, Vimentin)">
 Check the colorbar on the right.
 </opt>
 
-<opt text="(BROOKLYN, 2017)">
-Is it the darkest cell though?
+<opt text="(Clone B2, AMY)">
+Is it largest or the lowest value?
 </opt>
 
-<opt text="(BROOKLYN, 2016)" correct="true">
-The darker the color, the greater the value.
+<opt text="(Clone B2, CK18)" correct="true">
+It is hard to say if it's *the greatest*, but it's one of the largest values for sure.
 </opt>
 
 <opt text="It cannot be defined from this chart">
@@ -95,9 +95,9 @@ Check out this plot: https://en.wikipedia.org/wiki/Pie_chart#/media/File:Badpie.
 </opt>
 </choice>
 
-**Question 4**. What months have possible outlier values?
+**Question 4**. What groups have possible outlier values?
 
-<center><img src="data_viz/boxplot_outliers.png" width="500"></center>
+<center><img src="data_viz/boxplot_test.jpg" width="500"></center>
 
 <choice id="4">
 <opt text="All of them">
@@ -108,12 +108,12 @@ Do all the boxplots have values outside the [Q1 - 1.5IQR; Q3 + 1.5IQR] range?
 Look closer.
 </opt>
 
-<opt text="6 & 7" correct="true">
-There are one possible outlier for the 6th month and 2 possible outliers for the 7th month.
+<opt text="Control & SZ" correct="true">
+There are one possible outlier for the Insulin (Control) and Growth hormone (SZ) groups.
 </opt>
 
-<opt text="5 & 8 & 9">
-They might have some "extreme" values for sure, that we cannot see them from this plot.
+<opt text="Control">
+Is it the only group?
 </opt>
 </choice>
 
