@@ -2,7 +2,7 @@
 
 <center><img src="static/logo.svg"></img></center>
 
-[**Go to the Course Website**](www.pyforneuro.com/)
+[**Go to the Course Website**]((https://www.pyforneuro.com/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1090c1da-0875-4da2-b300-d61460a2f3b9/deploy-status)](https://app.netlify.com/sites/pyforneuro/deploys)
 
