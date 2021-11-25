@@ -451,7 +451,7 @@ You task is:
 
 </codeblock>
 
-What statement is **correct**?
+What statement is **false**?
 
 <choice id="1">
 <opt text="There are no possible outliers according to the boxplot and 1.5IQR method" >
