@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 5: I/O'
 description:
-  "Now that we know how to work with data it's time to learn how to actually import the data from external sources and files into the Python. We will see how to load files of different formats, such as txt, csv, mat and how to create API requests."
+  "Now that we know how to work with data it's time to learn how to actually import the data from external sources and files into Python. We will see how to load files of different formats, such as txt, csv, mat, and how to create API requests."
 prev: /chapter4
 next: /chapter6
 type: chapter
@@ -74,9 +74,9 @@ Even though it's not very common, you *can* use any delimiter.
 
 ### Exercise. fMRI data set
 
-1. Load in the data from fMRI experiment. Path to file `"exercises/data/fmri_data.csv"`. Note that columns is a file are separated by `;`.
+1. Load in the data from fMRI experiment. Path to file `"exercises/data/fmri_data.csv"`. Note that columns in a file are separated by `;`.
 2. Create a new DataFrame `parietal_df` with observations from the parietal region (`df["region"] == "parietal"`);
-3. Save the resulted DataFrame as an Excel file.
+3. Save the resulting DataFrame as an Excel file.
 
 <codeblock id="05_03">
 
@@ -114,7 +114,7 @@ h1_data
 
 The `squeeze_me` is responsible for squeezing unit matrix dimensions. For example, if MATLAB variable was stored in a shape (5,1,1), setting `squeeze_me=True` will import it with the shape (5,) to Python.
 
-The resulted object is a dictionary. Each key represents saved variable from the MATLAB. Also, there are three additional keys with the file info. `rho` is a vector that gives the sequence of spiking events or nonevents at the sampled times (every 2 ms). When an element of `rho` is one, this indicates the presence of a spike at the corresponding time, whereas a zero value indicates no spike. The variable `stim` gives the sequence of stimulus values at the sampled times.
+The resulted object is a dictionary. Each key represents a saved variable from MATLAB. Also, there are three additional keys with the file info. `rho` is a vector that gives the sequence of spiking events or nonevents at the sampled times (every 2 ms). When an element of `rho` is one, this indicates the presence of a spike at the corresponding time, whereas a zero value indicates no spike. The variable `stim` gives the sequence of stimulus values at the sampled times.
 
 [MATLAB Website](https://www.mathworks.com/products/matlab.html) || [SciPy Website](https://www.scipy.org/)
 
@@ -126,9 +126,9 @@ The resulted object is a dictionary. Each key represents saved variable from the
 <codeblock id="05_04">
 
 * recall slicing `new_obj = old_obj[<start index>:<end index>]`;
-* time points is just a range of values from 0 to `n`;
+* time points are just a range of values from 0 to `n`;
 * to select only those time points when spike occurred you can use conditioning on `spikes` array;
-* [`plt.vlines()`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.vlines.html) trick here is to add an array with desired time points. Lower and upper ends are just two values for a line positioning. Why don't use minimum and maximum values of a stimulus, so  the vertical lines take over the whole height?
+* [`plt.vlines()`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.vlines.html) trick here is to add an array with desired time points. Lower and upper ends are just two values for line positioning. Why don't use minimum and maximum values of a stimulus, so  the vertical lines take over the whole height?
 
 </codeblock>
 
@@ -140,11 +140,11 @@ The resulted object is a dictionary. Each key represents saved variable from the
 
 Credits: [Wikipedia](https://en.wikipedia.org/wiki/JSON)
 
-JSON file are useful for parameters specification. For example, all data sets on the [OpenNeuro website](https://openneuro.org/) have a JSON file with the description. Example of such file from Pavlov, Y. G., & Kotchoubey, B. (2021) data:
+JSON files are useful for parameters specification. For example, all data sets on the [OpenNeuro website](https://openneuro.org/) have a JSON file with the description. Example of such file from Pavlov, Y. G., & Kotchoubey, B. (2021) data:
 
 <center><img src="io/json.png"></img></center>
 
-The structure of the file is always in a "key-value" format. For this example we have data set parameters such as name, authors and version. The values can be strings, lists, or another nested key-value object.
+The structure of the file is always in a "key-value" format. For this example, we have data set parameters such as name, authors, and version. The values can be strings, lists, or another nested key-value object.
 
 To read/write JSON files in Python we use `json` package, but the whole procedure is pretty the same as for working with text files. JSON files are loaded as a dictionary into Python.
 
@@ -195,11 +195,11 @@ Keep in mind that in this example value of the `Authors` key is a list with two 
 
 ### Exercise 1. Open APIs From Space
 
-**Open Notify** is an open source project to provide a simple programming interface for some of NASA’s awesome data. I do some of the work to take raw data and turn them into APIs related to space and spacecraft.
+**Open Notify** is an open-source project to provide a simple programming interface for some of NASA’s awesome data. I do some of the work to take raw data and turn them into APIs related to space and spacecraft.
 
 [Open Notify Website](http://open-notify.org/)
 
-There is an API that allows to get the number of people in space at the moment: [How Many People Are In Space Right Now](http://open-notify.org/Open-Notify-API/People-In-Space/). There is no authentication for this API, so we don't need any keys. Also, according to the documentation we cannot specify any parameters.
+There is an API that allows getting the number of people in space at the moment: [How Many People Are In Space Right Now](http://open-notify.org/Open-Notify-API/People-In-Space/). There is no authentication for this API, so we don't need any keys. Also, according to the documentation, we cannot specify any additional parameters.
 
 API URL: `http://api.open-notify.org/astros.json`
 
@@ -227,11 +227,11 @@ This API returns an image, not a JSON/XML file and can take several parameters, 
 * `width`: *integer*, number of columns in the output image, specified in tier-resolution (desired tier) pixel coordinates.
 * `height`: *integer*, number of rows in the output image, specified in tier-resolution (desired tier) pixel coordinates.
 
-You task is to:
+Your task is to:
 
 1. Get the image for the subject ID `69750516`.
-2. Update the parameters of request: set the quality to 50%, set downsample to 2, the resulted image should have the size `(5000, 5000)`
-3. Print the status code and plot the resulted image.
+2. Update the parameters of request: set the quality to 50%, set downsample to 2, the resulting image should have the size `(5000, 5000)`
+3. Print the status code and plot the resulting image.
 
 <codeblock id="05_08">
 
@@ -243,13 +243,13 @@ You task is to:
 
 <exercise id="9" title="Working with pickled files">
 
-Imagine that you want to share a dictionary with your co-worker. When the dictionary is relatively "simple" you can just copy and paste it values into the chat or email. But what if you dictionary holds array from EEG experiment with the shape `(64,1000,100)`. That's a lot of observations to copy. In such case sharing an object as a **pickled** file might become helpful.
+Imagine that you want to share a dictionary with your co-worker. When the dictionary is relatively "simple" you can just copy and paste it values into the chat or email. But what if your dictionary holds an array from EEG experiment with the shape `(64,1000,100)`. That's a lot of observations to copy. In such a case sharing an object as a **pickled** file might become helpful.
 
 The `pickle` module implements binary protocols for serializing and de-serializing a Python object structure. "Pickling" is the process whereby a Python object hierarchy is converted into a byte stream, and "unpickling" is the inverse operation, whereby a byte stream (from a binary file or bytes-like object) is converted back into an object hierarchy. Pickling (and unpickling) is alternatively known as "serialization", "marshalling", or "flattening"; however, to avoid confusion, the terms used here are "pickling" and "unpickling".
 
 Credits: [Python documentation](https://docs.python.org/3/library/pickle.html)
 
-To put it in a simple words: you can save mostly **any** Python in a pickle file for sharing or later use. However, there are some big disadvantages of pickled files:
+To put it in simple words: you can save mostly **any** Python in a pickle file for sharing or later use. However, there are some big disadvantages of pickled files:
 
 1. **The pickle module is NOT secure**. Only unpickle data you trust.
 2. It is Python-only: pickles cannot be loaded in any other programming language (unlike JSON files).
@@ -281,7 +281,7 @@ Note the pickle files are binary, that's why we are using binary modes for writi
 1. Load in the dataset with fMRI data (`"exercises/data/fmri_data.csv"`). CSV file is separated by ";".
 2. Create a new dictionary `frmi` with two keys: `"parietal"` that holds a DataFrame with observations only from the parietal region and `"frontal"` that holds a DataFrame with observations only from the frontal region.
 3. Save the resulted dictionary to the pickle file `"frmi_dict.pickle"`.
-4. Read in back the resulted pickle file and print the first 5 rows of each of the DataFrames in a dictionary.
+4. Read in back the resulting pickle file and print the first 5 rows of each of the DataFrames in a dictionary.
 
 <codeblock id="05_06">
 
@@ -293,7 +293,7 @@ Note the pickle files are binary, that's why we are using binary modes for writi
 
 <exercise id="10" title="Finding local files">
 
-Sometimes it can be useful to find files through Python. For example, you want to make sure that CSV file exists in a current directory you are in. You want to make some changes in the file and then save resulted file in a new folder. Of course, you can manually copy-paste the file into the directory and create a folder by hand. But also there is a way to do this in Python using `os` module (Miscellaneous operating system interfaces).
+Sometimes it can be useful to find files through Python. For example, you want to make sure that CSV file exists in a current directory you are in. You want to make some changes in the file and then save resulting file in a new folder. Of course, you can manually copy-paste the file into the directory and create a folder by hand. But also there is a way to do this in Python using `os` module (Miscellaneous operating system interfaces).
 
 [Documentation](https://docs.python.org/3/library/os.html)
 
@@ -313,7 +313,7 @@ Some useful functions:
 2. Extend the current path (`cwd`) with `path_to_data` (the directory where all the data sets for the course are).
 3. Change the CWD to the `new_cwd`.
 4. Get the file names of a CWD and save it to the variable `fnames`.
-5. Calculate how many CSV files are there in CWD save it to the variable `n_csv`.
+5. Calculate how many CSV files are there in CWD save that count number to the variable `n_csv`.
 
 <codeblock id="05_09">
 

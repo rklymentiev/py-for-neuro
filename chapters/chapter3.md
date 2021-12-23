@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 3: Packages for Data Manipulation'
 description:
-  'Here we will introduce two main packages for working with data. We are going to see how we can use NumPy to perform linear algebra calculations and how to perform data manipulations on tabular data using Pandas.'
+  'We will introduce two main packages for working with data. We are going to see how we can use NumPy to perform linear algebra calculations and how to perform data manipulations on tabular data using Pandas.'
 prev: /chapter2
 next: /chapter4
 type: chapter
@@ -33,13 +33,13 @@ import numpy as CraZy_NaMe
 x = CraZy_NaMe.sqrt(4)
 ```
 
-Option 1 is pretty straight-forward. You import the whole package to the workspace and later you can access its content using `numpy.` prefix, for example `numpy.sqrt()`.
+Option 1 is pretty straightforward. You import the whole package to the workspace and later you can access its content using `numpy.` prefix, for example `numpy.sqrt()`.
 
-You might wonder what is that `as np` doing in the option 2. This is what called "aliasing". Most of the packages have the "short" alias name, that is commonly used. In this way we specify that we are going to load the NumPy library and will store it in `np` object. All the functions from the package will be called using `np.` prefix, for example `np.sqrt()`.
+You might wonder what is that `as np` doing in the option 2. This is what is called "aliasing". Most of the packages have the "short" alias name, that is commonly used. In this way, we specify that we are going to load the NumPy library and will store it in `np` object. All the functions from the package will be called using `np.` prefix, for example `np.sqrt()`.
 
-Basically you could also import the package as in option 3 and later you would call any function from it as `CraZy_NaMe.sqrt()`. Such method is not really recommended since it can be difficult for other to follow the code, but hey, you code = your rules.
+Basically, you could also import the package as in option 3 and later you would call any function from it as `CraZy_NaMe.sqrt()`. Such a method is not recommended since it can be difficult for others to follow the code.
 
-It can happen that you don't need the whole package imported into the workspace (due to the memory limitations for example). You can also import desired functions or modules (you can think of a module as "mini package" inside the package with functions) from the package in a following way:
+It can happen that you don't need the whole package imported into the workspace (due to the memory limitations for example). You can also import desired functions or modules (you can think of a module as "mini package" inside the package with functions) from the package in the following way:
 
 ```python
 from numpy import sqrt, linalg
@@ -155,7 +155,7 @@ Value <img src="https://latex.codecogs.com/gif.latex?(y_{\text{pred}}&space;-&sp
 
 To find RMSE, you have to :
 
-1. Find the **predicted** value of accuracy (`y`) for each TAI score (`X`). Keep in mind, that `X` array has two columns, first column consists of ones and second columns is the actual TAI scores.
+1. Find the **predicted** value of accuracy (`y`) for each TAI score (`X`). Keep in mind, that `X` array has two columns, the first column consists of ones and the second column is the actual TAI scores.
 2. Take the difference between the predicted and actual value of `y` (residuals) and square it.
 3. Take the average of all squared residual values and get a square root of that value.
 
@@ -226,7 +226,7 @@ Can you imagine a 5 dimensional csv file?
 </opt>
 </choice>
 
-**Exercise 1**. What is the average socioeconomic status (`SES`) for subjects without dementia? Do this in two methods (that will lead to the same outcome): through selection the column and filtering condition separately and by using `.loc` operator.
+**Exercise 1**. What is the average socioeconomic status (`SES`) for subjects without dementia? Do this in two methods (that will lead to the same outcome): through selection of the column and filtering condition separately and by using `.loc` operator.
 
 * Clinical Dementia Rating column (`CDR`) is represented in a following way: 0 = no dementia, 0.5 = very mild AD, 1 = mild AD, 2 = moderate AD.
 * Socioeconomic status is assessed by the Hollingshead Index of Social Position and classified into categories from 1 (highest status) to 5 (lowest status).
@@ -261,13 +261,13 @@ Can you imagine a 5 dimensional csv file?
 
 <exercise id="7" title="Joining practice">
 
-**Exercise 1**. You have two DataFrames loaded in. One has IDs of patients and the breast cancer status (malignant or benign). The other one has IDs of patients and some features for cell nucleus.
+**Exercise 1**. You have two DataFrames loaded in. One has IDs of patients and the breast cancer status (malignant or benign). The other one has IDs of patients and some features for the cell nucleus.
 
-* `radius_mean`: mean of distances from center to points on the perimeter;
+* `radius_mean`: mean of distances from the center to points on the perimeter;
 * `texture_mean`: standard deviation of gray-scale values;
 * `perimeter`: mean size of the core tumor.
 
-Is the average of `radius_mean` value is greater for malignant type?
+Is the average `radius_mean` value is greater for malignant type?
 
 | `table_1` | `table_2` |
 |:-:|:-:|
@@ -281,7 +281,7 @@ Is the average of `radius_mean` value is greater for malignant type?
 
 </codeblock>
 
-**Exercise 2**. This time get all the features for cell nucleus and label them with the type of cancer. When the cancer type is not specified mark it as "unknown". Don't change missing values in other columns.
+**Exercise 2**. This time get all the features for the cell nucleus and label them with the type of cancer. When the cancer type is not specified mark it as "unknown". Don't change missing values in other columns.
 
 The joined DataFrame will have two columns `"id"` and `"ID"`. Keep only the first column.
 

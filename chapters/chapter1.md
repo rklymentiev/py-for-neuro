@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 1: Python Basics'
 description:
-  'In this chapter you are going to learn how to define variables in Python and what are the main data types.'
+  'In this chapter, we are going to learn how to define variables in Python and what are the main data types.'
 prev: /chapter0
 next: /chapter2
 type: chapter
@@ -19,7 +19,7 @@ id: 1
 
 <center><img src="hello_world.jpg" width="300"></center>
 
-Good part about Python (and I assume about the most of the programming languages) is that function names are most of the times self explanatory. If you see a function called `print()`, it does exactly what you expect it to do. It prints out the object on a screen. Now, run your very first clean and beautiful code and greet the World!
+The good part about Python (and I assume about most of the programming languages) is that function names are most of the times self-explanatory. If you see a function called `print()`, it does exactly what you expect it to do. It prints out the object on a screen. Now, run your very first clean and beautiful code and greet the World!
 
 <codeblock id="01_01">
 
@@ -31,7 +31,7 @@ Giving up so early?
 
 <exercise id="3" title="Create your first variable">
 
-1. Create a new variable `x` and set it to be equal 4;
+1. Create a new variable `x` and set it to be equal to 4;
 2. assign the value of the square root of `x` to a new variable `y`;
 3. print the value of the variable `y` on the screen.
 
@@ -39,7 +39,7 @@ Giving up so early?
 
 <codeblock id="01_02">
 
-* square root of a number is the same as the power of 0.5;
+* The square root of a number is the same as the power of 0.5;
 
 </codeblock>
 
@@ -108,7 +108,7 @@ Are you trying to take 26% of 2?
 
 <exercise id="6" title="Filtering out the participants">
 
-**Exercise 1**. You run an experiment with two groups: control (`"control"`) and treatment (`"treatment"`). You want to filter out some participants **from the treatment**  group who don't meet the minimum BMI criteria (BMI should be equal or greater than 15). Does this participant meet this criteria?
+**Exercise 1**. You run an experiment with two groups: control (`"control"`) and treatment (`"treatment"`). You want to filter out some participants **from the treatment**  group who don't meet the minimum BMI criteria (BMI should be equal to or greater than 15). Does this participant meet this criterion?
 
 
 <codeblock id="01_04">
@@ -117,7 +117,7 @@ Are you trying to take 26% of 2?
 
 </codeblock>
 
-**Exercise 2**. Now you want to be more sophisticated (for whatever reason). You update your criteria for the treatment group. You want to keep the participant if he is older than 40 **or** his BMI equals or greater than 15. Does this participant fit for the updated conditions?
+**Exercise 2**. Now you want to be more sophisticated (for whatever reason). You update your criteria for the treatment group. You want to keep the participant if he is older than 40 **or** his BMI equals or greater than 15. Does this participant fit the updated conditions?
 
 
 <codeblock id="01_05">
@@ -161,7 +161,7 @@ True & False = False
 </opt>
 </choice>
 
-**Exercise 1**. An RNA string is a string formed from the alphabet containing 'A', 'C', 'G', and 'U'. Given a DNA string corresponding to a coding strand, its transcribed RNA string is formed by replacing all occurrences of 'T' in with 'U'. Get the transcribed RNA string in all capital letters.
+**Exercise 1**. An RNA string is a string formed from the alphabet containing 'A', 'C', 'G', and 'U'. Given a DNA string corresponding to a coding strand, its transcribed RNA string is formed by replacing all occurrences of 'T' with 'U'. Get the transcribed RNA string in all capital letters.
 
 <codeblock id="01_06">
 
@@ -171,7 +171,7 @@ True & False = False
 
 </codeblock>
 
-**Exercise 2**. A palindromic sequence is a nucleic acid sequence in a double-stranded DNA or RNA molecule wherein reading in a certain direction (e.g. 5' to 3') on one strand matches the sequence reading in the opposite direction (e.g. 5' to 3') on the complementary strand. Is given sequence a palindromic sequence?
+**Exercise 2**. A palindromic sequence is a nucleic acid sequence in a double-stranded DNA or RNA molecule wherein reading in a certain direction (e.g. 5' to 3') on one strand matches the sequence reading in the opposite direction (e.g. 5' to 3') on the complementary strand. Is tje given sequence a palindromic sequence?
 
 <codeblock id="01_07">
 
@@ -193,7 +193,7 @@ True & False = False
 
 <exercise id="10" title="Exercises with collections">
 
-**Exercise 1**. You performed EEG recordings from a subject in 10 trials total. However some trials have been marked as "BAD" due to eye blinks and bad electrodes' connection. Exclude bad trials from the total list of trials and save it as a new object. `good_trials` should be in a `list` format.
+**Exercise 1**. You performed EEG recordings from a subject in 10 trials total. However, some trials have been marked as "BAD" due to eye blinks and bad electrodes' connection. Exclude bad trials from the total list of trials and save it as a new object. `good_trials` should be in a `list` format.
 
 <codeblock id="01_08">
 
@@ -202,7 +202,7 @@ True & False = False
 
 </codeblock>
 
-**Exercise 2**. Count how many times adenine (A), cytosine (C), guanine (G), and thymine (T) nucleotides appear in the given DNA string. Save result as a dictionary with four keys, where keys represent the nucleotide and values represent the counts. *You can use either first letters for the dictionary keys (A) or the full names (Adenine).*
+**Exercise 2**. Count how many times adenine (A), cytosine (C), guanine (G), and thymine (T) nucleotides appear in the given DNA string. Save result as a dictionary with four keys, where keys represent the nucleotide and values represent the counts. *You can use either the first letters for the dictionary keys (A) or the full names (Adenine).*
 
 <codeblock id="01_09">
 

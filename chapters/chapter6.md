@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 6: Statistics in Python'
 description:
-  "We will look how to perform statistical analysis such as ANOVA or Chi-squared test using mainly scipy.stats module and pingouin package. "
+  "We will look at how to perform statistical analysis such as ANOVA or Chi-squared test using mainly scipy.stats module and pingouin package. "
 prev: /chapter5
 next: /chapter7
 type: chapter
@@ -10,9 +10,9 @@ id: 6
 
 <exercise id="1" title="Disclaimer">
 
-The main goal of this chapter is not "how to perform a statistical analysis", but rather "how to perform a statistical analysis in Python, given that you are familiar with the math". If you are not familiar with some of the topics, you can check tutorials/videos I include below. If you are familiar with statistics, you may be annoyed with the oversimplification. I skip most of the assumptions checking, data manipulation, etc. since that's not the goal here.
+The main goal of this chapter is not "how to perform a statistical analysis", but rather "how to perform a statistical analysis in Python, given that you are familiar with the math". If you are not familiar with some of the topics, you can check the tutorials/videos I include below. If you are familiar with statistics, you may be annoyed with the oversimplification. I skip most of the assumptions checking, data manipulation, etc. since that's not the goal here.
 
-Also, we are not really interested with the study designs and how exactly the observations were collected in given data sets. All the results should not be taking serious and no generalization should be applied.
+Also, we are not really interested in the study designs and how exactly the observations were collected in given data sets. All the results should not be taken seriously and no generalization should be applied.
 
 Further reading:
 
@@ -30,7 +30,7 @@ Further reading:
 
 <center><img src="https://www.fullstackpython.com/img/logos/scipy.png" width="300"></img></center>
 
-There are several Python packages with statistical functions but `stats` module in SciPy package probably is the most commonly used. It consists of functions to work with variety of continuous/discrete random variables (such as Normal distribution), functions for summary statistics (such as skewness), functions to perform statistical tests (such as Shapiro-Wilk test for normality) and many more possibilities.
+There are several Python packages with statistical functions but `stats` module in SciPy package probably is the most commonly used. It consists of functions to work with the variety of continuous/discrete random variables (such as Normal distribution), functions for summary statistics (such as skewness), functions to perform statistical tests (such as Shapiro-Wilk test for normality) and many more possibilities.
 
 [SciPy website](https://www.scipy.org/) || [Documentation](https://docs.scipy.org/doc/scipy/reference/index.html#) || [Stats module documentation](https://docs.scipy.org/doc/scipy/reference/stats.html)
 
@@ -114,11 +114,11 @@ plt.show()
 
 ### Exercise 1. Binomial distribution
 
-SSRI (Selective Serotonin Reuptake Inhibitor) is one of the most prescribed class of antidepressant (for example, Prozac) for patients with major depressive disorder (MDD). However, studies suggest that around 38% of patients have experienced at least one side effect (like sexual dysfunction, sleepiness or weight gain). You have prescribed SSRI antidepressant to 65 new patients.
+SSRI (Selective Serotonin Reuptake Inhibitor) is one of the most prescribed classes of antidepressants (for example, Prozac) for patients with major depressive disorder (MDD). However, studies suggest that around 38% of patients have experienced at least one side effect (like sexual dysfunction, sleepiness or weight gain). You have prescribed SSRI antidepressants to 65 new patients.
 
 1. What is the probability that 25 or more will experience at least one side effect?
-2. In fact, 20 patients of 65 have experienced side effects. What is the probability of such event?
-3. Plot the probability mass function (PMF) of the random variable *X*, where *X* is the amount of patients who can experience at least one side effect.
+2. In fact, 20 patients of 65 have experienced side effects. What is the probability of such an event?
+3. Plot the probability mass function (PMF) of the random variable *X*, where *X* is the number of patients who can experience at least one side effect.
 
 <codeblock id="06_04">
 
@@ -130,7 +130,7 @@ SSRI (Selective Serotonin Reuptake Inhibitor) is one of the most prescribed clas
 
 ### Exercise 2. *t* distribution
 
-You have performed a learning task on 20 animals and obtained accuracy values. You believe that the animals' performance is below chance level (50%), so you want to run a *t*-test to check your hypothesis.
+You have performed a learning task on 20 animals and obtained accuracy values. You believe that the animals' performance is below the chance level (50%), so you want to run a *t*-test to check your hypothesis.
 
 * Null distribution: average value of accuracy scores is not different from 0.5, <img src="https://latex.codecogs.com/gif.latex?\bar{x}&space;=&space;\mu_0&space;=&space;0.5" title="\bar{x} = \mu_0 = 0.5" />;
 * Alternative distribution:  average value of accuracy scores is below 0.5, <img src="https://latex.codecogs.com/gif.latex?\bar{x}<\mu_0" title="\bar{x}<\mu_0" />;
@@ -221,7 +221,7 @@ Your task:
 2. Make a boxplot with `CDR` levels on `x` axis and `nWBW` on the `y` axis to check the distribution. You will see that there are just two observations with `CDR = 2`. Filter them out from the DataFrame so they don't affect the result.
 3. Perform the ANOVA and establish the p-value.
 
-There is a function in `scipy.stats` module [`f_oneway()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html) which performs one-way ANOVA. however the result is just two objects: test statistic (*F*) and p-value. Alternative to that, there is an [`anova()`](https://pingouin-stats.org/generated/pingouin.anova.html) function (from `pingouin` package) which returns much more detailed outcome. Include them all to compare the output and make a decision about the test.
+There is a function in `scipy.stats` module [`f_oneway()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html) which performs one-way ANOVA. However, the result is just two objects: test statistic (*F*) and p-value. Alternative to that, there is an [`anova()`](https://pingouin-stats.org/generated/pingouin.anova.html) function (from `pingouin` package) which returns a much more detailed outcome. Include them all to compare the output and make a decision about the test.
 
 <codeblock id="06_02">
 
@@ -290,7 +290,7 @@ This could be the case for alpha = 0.01.
 Cohen's d 0.5+ is considered to be above medium effect size.
 </opt>
 
-<opt text="None of the groups showed statistically significant difference">
+<opt text="None of the groups showed a statistically significant difference">
 Are p-values greater than alpha?
 </opt>
 </choice>
@@ -301,7 +301,7 @@ Are p-values greater than alpha?
 
 ### Does clinical dementia rating (`CDR`) depend on level of education (`Educ`)?
 
-In order to do this we can use a [Chi-squared test](https://en.wikipedia.org/wiki/Chi-squared_test).
+In order to do this, we can use a [Chi-squared test](https://en.wikipedia.org/wiki/Chi-squared_test).
 
 * Null hypothesis: clinical dementia rating and level of education are **independent** of each other;
 * Alternative hypothesis: clinical dementia rating and level of education are **dependent** (clinical dementia rating varies by level of education);
@@ -337,7 +337,7 @@ In order to answer this question you have to:
 
 </codeblock>
 
-What does the result of Chi-squared test tell us in context of a problem?
+What does the result of Chi-squared test tell us in the context of a problem?
 
 <choice id="1">
 <opt text="Clinical dementia rating varies by the level of education (they are not independent)" correct="true">
@@ -361,16 +361,16 @@ In order to estimate the confidence interval (CI) for a continuous variable you 
 
 Where *SE* is a standard error of the mean, alpha is a significance level and *t* is a quantile of a *t* distribution.
 
-Quite often CI are estimated using **bootstrapping** technique (especially when sample size is small). Bootstrapping is any test or metric that uses random sampling with replacement (e.g. mimicking the sampling process), and falls under the broader class of resampling methods. Bootstrapping assigns measures of accuracy (bias, variance, confidence intervals, prediction error, etc.) to sample estimates. This technique allows estimation of the sampling distribution of almost any statistic using random sampling methods.
+Quite often CIs are estimated using **bootstrapping** technique (especially when the sample size is small). Bootstrapping is any test or metric that uses random sampling with replacement (e.g. mimicking the sampling process), and falls under the broader class of resampling methods. Bootstrapping assigns measures of accuracy (bias, variance, confidence intervals, prediction error, etc.) to sample estimates. This technique allows estimation of the sampling distribution of almost any statistic using random sampling methods.
 
 Credits: [Wikipedia](https://en.wikipedia.org/wiki/Bootstrapping_(statistics))
 
-The easiest way to perform a bootstrap CI is with the help of [`compute_bootci()`](https://pingouin-stats.org/generated/pingouin.compute_bootci.html) function from `pingouin` package. Function allows to estimate the CI for different statistics (such as Pearson correlation for bivariate data or standard deviation for univariate data) which is specified by `func` argument and returns a numpy array with lower and upper bounds.
+The easiest way to perform a bootstrap CI is with the help of [`compute_bootci()`](https://pingouin-stats.org/generated/pingouin.compute_bootci.html) function from `pingouin` package. The function allows estimating the CI for different statistics (such as Pearson correlation for bivariate data or standard deviation for univariate data) which is specified by `func` argument and returns a numpy array with lower and upper bounds.
 
 Your task:
 
 1. Read in the data with dementia cases (path to file: `"exercises/data/oasis_cross-sectional.csv"`);
-2. Calculate a 95% CI for the average values of normalized whole brain volume (`nWBW`) for each level of clinical dementia rating (`CDR`) and save the results in a dictionary in a following way:
+2. Calculate a 95% CI for the average values of normalized whole brain volume (`nWBW`) for each level of clinical dementia rating (`CDR`) and save the results in a dictionary in the following way:
 
 ```python
 {0: {'CI': array([0.7615, 0.777 ]), 'mean': 0.7692},
@@ -416,29 +416,29 @@ Further reading:
 
 <center><img src="outliers.png"></center>
 
-In statistics, an **outlier** is a data point that differs significantly from other observations. An outlier may be due to variability in the measurement or it may indicate experimental error; the latter are sometimes excluded from the data set. An outlier can cause serious problems in statistical analyses. There is no rigid mathematical definition of what constitutes an outlier; determining whether or not an observation is an outlier is ultimately a subjective exercise.
+In statistics, an **outlier** is a data point that differs significantly from other observations. An outlier may be due to variability in the measurement or it may indicate the experimental error; the latter are sometimes excluded from the data set. An outlier can cause serious problems in statistical analyses. There is no rigid mathematical definition of what constitutes an outlier; determining whether or not an observation is an outlier is ultimately a subjective exercise.
 
 Credits: [Wikipedia](https://en.wikipedia.org/wiki/Outlier)
 
-Outliers can occur due the variety of reasons:
+Outliers can occur due to the variety of reasons:
 
-* mistakes during the **entering the data** results (manually put one extra zero for an observation and, voilà!, you have an outlier);
-* mistakes during the **measuring the data** or **experimental design** (if you want to measure the average sleep duration for subjects, but haven't specify the starting point of the recording, actual "falling" into sleep or time when subjects goes to the bed but still can spend some time conscious);
-* **intentional outliers** (high-school students might to under report the marijuana usage);
+* mistakes during the **entering the data** results (manually put one extra zero for observation and, voilà!, you have an outlier);
+* mistakes during the **measuring the data** or **experimental design** (if you want to measure the average sleep duration for subjects, but haven't specified the starting point of the recording, actual "falling" into sleep or time when subjects goes to the bed but still can spend some time conscious);
+* **intentional outliers** (high-school students might to under-report the marijuana usage);
 * mistakes during the **data processing** (forgot to convert to kilograms from pounds and now one value is 2.2 bigger than the others);
-* **natural outliers** (that are not a mistake, but don't fit with the rest of observations).
+* **natural outliers** (that are not a mistake, but don't fit with the rest of the observations).
 
-If you can step back and fix the mistake (for example, remove extra 0 from the observation so now value is in a "normal" range), then you are good. However, if there is an extreme value(s) and you don't know why exactly it has occurred or/and how to fix it, then you might want to keep an eye on that observation so it doesn't affect your models/analysis. In the same way there is no definite way what values should we call outliers, there is also no "golden standard" way of how to deal with them.
+If you can step back and fix the mistake (for example, remove extra 0 from the observation so now the value is in a "normal" range), then you are good. However, if there is an extreme value(s) and you don't know why exactly it has occurred or/and how to fix it, then you might want to keep an eye on that observation so it doesn't affect your models/analysis. In the same way, there is no definite way what values should we call outliers, there is also no "golden standard" way of how to deal with them.
 
-However, there are some common way on how one could detect an outlier (note that cursive values are arbitrary and depend mostly on the observer):
+However, there are some common ways on how one could detect an outlier (note that cursive values are arbitrary and depend mostly on the observer):
 
-1. Any value that is *two or more* standard deviation away from mean (only for normal distribution);
+1. Any value that is *two or more* standard deviation away from the mean (only for normal distribution);
 2. Any value that is out of range of *5th* and *95th* percentile;
 3. Any value that is beyond the range of *[Q1 - 1.5 IQR; Q3 + 1.5 IQR]*, where *Q1* - first quartile, *Q3* - third quartile, *IQR* - interquartile range (*Q3-Q1*).
 
-The easiest way is to detect the outlier visually is through **histogram** of **boxplot**.
+The easiest way is to detect the outlier visually is through a **histogram** or a **boxplot**.
 
-You task is:
+Your task is:
 
 1. Read in the data with dementia cases (path to file: `"exercises/data/oasis_cross-sectional.csv"`);
 2. Calculate the threshold values (save as `lower_bound` and `upper_bound` variables) for outliers detection using *mean ± 2std* method in the atlas scaling factor variable (`"ASF"`);

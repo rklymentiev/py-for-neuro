@@ -12,9 +12,9 @@ id: 0
 
 Hello and welcome!
 
-My name is Ruslan and I feel passionate about Neuroscience. During my short experience in this field I have already spotted the lack of programming/computer science knowledge among scientists. Given my background in Data Science and belief in the "open source knowledge", I decided to create a course to introduce other people to Python programming. Basic programming knowledge allows working with data in a more convenient way (there is a whole new world beyond Excel), automating repeated tasks or making custom visualizations. And programming is just fun.
+My name is Ruslan and I feel passionate about Neuroscience. During my short experience in this field, I have already spotted the lack of programming/computer science knowledge among scientists. Given my background in Data Science and belief in the "open source knowledge", I decided to create a course to introduce other people to Python programming. Basic programming knowledge allows working with data in a more convenient way (there is a whole new world beyond Excel), automating repeated tasks, or making custom visualizations. And programming is just fun.
 
-Even though this course has a fancy name, it is not really different from any introduction Python course you can find online. The only difference is that I tried to create most the exercises and examples based on neuroscience related problems. However, you don't need any specific knowledge in order to take the course, since the course is about Python, not brain.
+Even though this course has a fancy name, it is not that different from any introduction Python course you can find online. The only difference is that I tried to create most of the exercises and examples based on neuroscience-related problems. However, you don't need any specific knowledge to take the course, since the course is about Python, not the brain.
 
 #### What this course IS about:
 
@@ -30,7 +30,7 @@ Even though this course has a fancy name, it is not really different from any in
 - performing (f)MRI or EEG analysis in Python;
 - building artificial neuronal networks.
 
-Course is divided into several chapters for specific topics which makes it easy to choose those you are interested in and skip parts that you already know. All solutions for exercises are already here, so you are free to check your answers. Keep in mind that if your code does exactly what was asked in the task, but the algorithm is different, that doesn't mean that your solution is wrong. It just means that this task (as most of the tasks in the world) has different ways of solving.
+The course is divided into several chapters for specific topics which makes it easy to choose those you are interested in and skip parts that you already know. All solutions for exercises are already here, so you are free to check your answers. Keep in mind that if your code does exactly what was asked in the task, but the algorithm is different, that doesn't mean that your solution is wrong. It just means that this task (as most of the tasks in the world) has different ways of solving.
 
 </exercise>
 
@@ -38,11 +38,11 @@ Course is divided into several chapters for specific topics which makes it easy 
 
 **Q: If I am not a neuroscientist and not planning to work in a life science field, can I benefit from the course?**
 
-A: Definitely! Most exercises are based on neuroscience related data sets (description of these data sets is provided in the next parts), but you are not required to have a neuroscience background to solve them since they are more about Python programming.
+A: Definitely! Most exercises are based on neuroscience-related data sets (description of these data sets is provided in the next parts), but you are not required to have a neuroscience background to solve them since they are more about Python programming.
 
 **Q: Is this a supervised course?**
 
-A: No, there is no supervision. I tried to make tasks and hints as clear as possible. There is an open (but not that active) Discord server [Python for Neuroscience](https://discord.gg/yUq9sfHHDb) that was created for discussions of Python related problems in a neuroscience field.
+A: No, there is no supervision. However, I tried to make tasks and hints as clear as possible.
 
 **Q: Will I get a certificate after the completion of the course?**
 
@@ -56,17 +56,17 @@ A: You don't have to install Python for this course since you can use Python cod
 
 A: Not quite. This course will introduce you to the basics of programming, but later is your own choice if you want to use this knowledge in your work/research.
 
-**Q: Will this course introduce me to the Python programming so later I can apply this knowledge doing more advanced stuff, like Machine Learning?**
+**Q: Will this course introduce me to Python programming so later I can apply this knowledge doing more advanced stuff, like Machine Learning?**
 
-A: Exactly! This course will show you the main concepts of programming and most popular Python packages, so later you can apply your knowledge to deal with more complex stuff, such as models building.
+A: Exactly! This course will show you the main concepts of programming and the most popular Python packages, so later you can apply your knowledge to deal with more complex stuff, such as models building.
 
 **Q: I have spotted a typo/error, where do I report it?**
 
-A: Feel free to report an issue at the [GitHub page](https://github.com/ruslan-kl/py-for-neuro) or create a pull request.
+A: Feel free to report an issue on the [GitHub page](https://github.com/ruslan-kl/py-for-neuro) or create a pull request.
 
 **Q: I have an idea of relevant exercises/demos/slides, can I contribute?**
 
-A: Definitely yes! Feel free to start a discussion at the [GitHub page](https://github.com/ruslan-kl/py-for-neuro) or contact me directly.
+A: Definitely yes! Feel free to start a discussion on the [GitHub page](https://github.com/ruslan-kl/py-for-neuro) or contact me directly.
 
 </exercise>
 
@@ -79,7 +79,7 @@ A: Definitely yes! Feel free to start a discussion at the [GitHub page](https://
 
 <exercise id="4" title="Python installation">
 
-If you don't have Python installed on your own computer, but you want to have it installed, I would suggest to check out Anaconda.
+If you don't have Python installed on your computer, but you want to have it installed, I would suggest to check out Anaconda.
 
 <center><img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png" width="300"></img></center>
 
@@ -89,7 +89,7 @@ Simply saying, after installation of Anaconda you will get Python and 95% of the
 
 [Download](https://www.anaconda.com/products/individual) || [Installation guides (macOS, Windows, Linux)](https://docs.anaconda.com/anaconda/install/)
 
-If you have never worked with Python, I would suggest start with [JupyterLab](https://jupyter.org/) environment. If you have installed Anaconda, you don't need any additional installations. Here is a nice video tutorial: [Jupyter Notebook Tutorial: Introduction, Setup, and Walkthrough](https://www.youtube.com/watch?v=HW29067qVWk)
+If you have never worked with Python, I would suggest starting with [JupyterLab](https://jupyter.org/) environment. If you have installed Anaconda, you don't need any additional installations. Here is a nice video tutorial: [Jupyter Notebook Tutorial: Introduction, Setup, and Walkthrough](https://www.youtube.com/watch?v=HW29067qVWk)
 
 <center><img src="https://jupyterlab.readthedocs.io/en/stable/_images/jupyterlab.png" width="600"></img></center>
 
@@ -114,7 +114,7 @@ You have Python interpreter built on Binder directly on the website, so you can 
 
 <center><img src="documentation.jpg" width="500"></img></center>
 
-What could you do if you know the name of the function (for example `print()`) but you don't know how to use it? You can look into the documentation of the function on the [website](https://docs.python.org/3/library/functions.html#print) or using [`help()`](https://docs.python.org/3/library/functions.html#help) function directly in Python:
+What could you do if you know the name of the function (for example `print()`) but you don't know how to use it? You can look into the documentation of the function on the [website](https://docs.python.org/3/library/functions.html#print) or use the [`help()`](https://docs.python.org/3/library/functions.html#help) function directly in Python:
 
 ```python
 help(print)
@@ -133,7 +133,7 @@ print(...)
     flush: whether to forcibly flush the stream.
 ```
 
-However, what should you do if you don't know which function can help if solving an issue (for example, how to calculate average in Python)? In such case Google search will help. Most of the questions the questions you have have been asked online before you. The best way to get the solution to your problem is Stack Overflow. Data Science has a great online community which is happy to help.
+However, what should you do if you don't know which function can help if solving an issue (for example, how to calculate average in Python)? In such a case Google search will help. Most of the questions you have were asked online before you. The best way to get the solution to your problem is Stack Overflow. Data Science has a great online community that is happy to help.
 
 <center><img src="stackoverflow.png" width="500"></img></center>
 
@@ -145,17 +145,17 @@ And of course cheat sheets might also become handy: [Data Science Cheat Sheets](
 
 <exercise id="6" title="A little bit of motivation">
 
-In the 1963 there was an experiment by Held and Hein where they put neonatal (newborn) kittens in a special device. One kitten was able to move around in a circle, the other one was kept in a basket so he couldn't moved around but could observe the world around due to the movements induced by actively moving kitten. Animals spent around 3 hours a day in that device and the rest of the time they spent in a cage with no light. Each animal was tested in several tests afterwards, such as avoidance of a visual cliff or blink to an approaching object. Study showed that passively moved kittens failed to show a response (blink) to an approaching object or discrimination of the cliff.
+In 1963 there was an experiment by Held and Hein where they put neonatal (newborn) kittens in a special device. One kitten was able to move around in a circle, the other one was kept in a basket so he couldn't move around but could observe the world around due to the movements induced by the actively moving kitten. Animals spent around 3 hours a day in that device and the rest of the time they spent in a cage with no light. Each animal was tested in several tests afterward, such as avoidance of a visual cliff or blink to an approaching object. The study showed that passively moved kittens failed to show a response (blink) to an approaching object or discrimination of the cliff.
 
 <center><img src="cats.png" width="500"></img></center>
 
 Held, R., & Hein, A. (1963). Movement-produced stimulation in the development of visually guided behavior. *Journal of Comparative and Physiological Psychology*, 56(5), 872–876. https://doi.org/10.1037/h0040546
 
-What does that mean? Quote from the paper: "*Self-produced movement with its concurrent visual feedback is necessary for the development of visually-guided behavior*". In other words, actively moving kittens were able to make an association of the world around by engaging with it, whereas passively moved kittens were not able to do so, although they both were kept in the same environment and saw the same objects. Development of the visually-guided behavior (for example, estimation of the distance to the object or discriminating the shallow objects) cannot be achieved just by observing the world around.
+What does that mean? Quote from the paper: "*Self-produced movement with its concurrent visual feedback is necessary for the development of visually-guided behavior*". In other words, actively moving kittens were able to make an association of the world around them by engaging with it, whereas passively moved kittens were not able to do so, although they both were kept in the same environment and saw the same objects. Development of the visually-guided behavior (for example, estimation of the distance to the object or discriminating the shallow objects) cannot be achieved just by observing the world around.
 
-Why do I bring this up here? We can abstractly transfer this to the programming learning. There are 1000+ different libraries and functions in Python and there is no course that can introduce them all to you. And more importantly **no Python course will make you a good programmer by simply watching the videos/slides without the interaction**. Programming is not a type of knowledge that can be learned by observing.
+Why do I bring this up here? We can abstractly transfer this to programming learning. There are 1000+ different libraries and functions in Python and there is no course that can introduce them all to you. And more importantly, **no Python course will make you a good programmer by simply watching the videos/slides without the interaction**. Programming is not a type of knowledge that can be learned by observing.
 
-This course will introduce basic concepts of programming with the example of some functions and problems but there are lots more! I highly encourage you to play around the problem sets apart from the tasks described. You could ask yourself questions like "What will change if I replace value X by value Y?" or "What does this argument do and what happens if I drop it?". Don't be afraid to change different parts of the code and see what happens. I promise you that your computer will not explode because of it (if it does, feel free to DM me on Twitter). In the worst case scenario you will get an error message from Python, which are usually very informative and tell you what exactly you did wrong.
+This course will introduce basic concepts of programming with the example of some functions and problems but there are lots more! I highly encourage you to play around with the problem sets apart from the tasks described. You could ask yourself questions like "What will change if I replace value X with value Y?" or "What does this argument do and what happens if I drop it?". Don't be afraid to change different parts of the code and see what happens. I promise you that your computer will not explode because of it (if it does, feel free to complain about it in DM on Twitter). In the worst-case scenario, you will get an error message from Python, which is usually very informative and tell you what exactly you did wrong.
 
 </exercise>
 

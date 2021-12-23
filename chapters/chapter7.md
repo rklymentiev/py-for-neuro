@@ -36,13 +36,13 @@ Here are 9 random stimulus values that lead to the spike in the H1 neuron:
 
 <exercise id="2" title="Reducing the uncertainty with Decision Tree model">
 
-**Decision tree learning** is one of the predictive modelling approaches used in statistics, data mining and machine learning. It uses a decision tree (as a predictive model) to go from observations about an item (represented in the branches) to conclusions about the item's target value (represented in the leaves). Tree models where the target variable can take a discrete set of values are called classification trees; in these tree structures, leaves represent class labels and branches represent conjunctions of features that lead to those class labels. Decision trees where the target variable can take continuous values (typically real numbers) are called regression trees. Decision trees are among the most popular machine learning algorithms given their intelligibility and simplicity.
+**Decision tree learning** is one of the predictive modeling approaches used in statistics, data mining and machine learning. It uses a decision tree (as a predictive model) to go from observations about an item (represented in the branches) to conclusions about the item's target value (represented in the leaves). Tree models where the target variable can take a discrete set of values are called classification trees; in these tree structures, leaves represent class labels and branches represent conjunctions of features that lead to those class labels. Decision trees where the target variable can take continuous values (typically real numbers) are called regression trees. Decision trees are among the most popular machine learning algorithms given their intelligibility and simplicity.
 
 Credits: [Wikipedia](https://en.wikipedia.org/wiki/Decision_tree_learning)
 
 <center><img src="https://defme.xyz/post/how-do-cart-models-work/trees.jpg" width="500"></center>
 
-Classification and regression trees (CART for short) models are not the first-choice models when it comes to **prediction** because they trend to overfit the data (in other words they can predict quite good on the training data, but much worse on the test data), but they are really good in **explaining** the data structure. If you are interested in the math behind the model, check out the links below. However, you don't need to know much to complete the exercise.
+Classification and regression trees (CART for short) models are not the first-choice models when it comes to **prediction** because they tend to overfit the data (in other words they can predict quite good on the training data, but much worse on the test data), but they are really good in **explaining** the data structure. If you are interested in the math behind the model, check out the links below. However, you don't need to know much to complete the exercise.
 
 To build a classification tree we are going to use a [`tree`](https://scikit-learn.org/stable/modules/tree.html) module from the [scikit-learn](https://scikit-learn.org/stable/index.html) package (which is the most popular library for machine learning in Python).
 
@@ -50,11 +50,11 @@ To build a classification tree we are going to use a [`tree`](https://scikit-lea
 
 1. Read in the data with dementia cases (path to file: `"exercises/data/oasis_cross-sectional.csv"`);
 2. Drop the redundant columns: `"ID"` (ID label shouldn't be a predictor of Alzheimer's, should it?), `"Hand"` (all observations are right-handed) and `"Delay"` (most of the values are missing) and save it in the new data frame `model_data` (even though the columns might be meaningless, it's a good idea to keep the raw data);
-3. Drop the rows with missing values. Note, this is a sloppy solution for a missing data problem. There are several methods on how you can artificially replace the missing values and some new algorithms can handle missing data during modelling, however this is beyond this exercise;
-4. We are going to build a binary classification tree: `0` for no dementia (CDR is 0) and `1` for dementia status (CDR is 0.5, 1 or 2). Create a new binary column `dementia` and drop the `"CDR"` column;
+3. Drop the rows with missing values. Note, this is a sloppy solution for a missing data problem. There are several methods on how you can artificially replace the missing values and some new algorithms can handle missing data during modeling, however, this is beyond this exercise;
+4. We are going to build a binary classification tree: `0` for no dementia (CDR is 0) and `1` for dementia status (CDR is 0.5, 1 or 2). Create new binary column `dementia` and drop the `"CDR"` column;
 5. scikit-learn models don't allow string columns (unlike models in R), that's why we often have to perform some sort of feature engineering. In our case we just need to convert gender column `M/F` to numerical binary - `1` if female, `0` otherwise;
-6. Split the `model_data` into data frame with independent variables (all features, `X`) and a series with dependent variable (binary, `y`) for later use;
-7. Build a model using entropy for split criteria and set maximum depth of the tree to 3;
+6. Split the `model_data` into data frame with independent variables (all features, `X`) and a series with the dependent variable (binary, `y`) for later use;
+7. Build a model using entropy for split criteria and set the maximum depth of the tree to 3;
 8. Fit the data to the model and make a plot.
 
 Further readings:
@@ -67,9 +67,9 @@ Further readings:
 
 </codeblock>
 
-You can read this plot from top to bottom. The very first node is the initial data (`X` and `y`). 61.6% of the observations have no dementia (`dementia` = 0). At this node model splits the data according to the Mini-Mental State Examination score (`MMSE`). If it's less than 27.5 we go left, if it's greater we go right (left arrow is `True`, right arrow is `False` for the `MMSE <= 27.5` condition). At each node you can see the entropy in the `y` variable, fraction of observations from total and ratio of two classes. Note that tree could be even more complicated, but we reduced it to 3 splits (or levels).
+You can read this plot from top to bottom. The very first node is the initial data (`X` and `y`). 61.6% of the observations have no dementia (`dementia` = 0). At this node, model splits the data according to the Mini-Mental State Examination score (`MMSE`). If it's less than 27.5 we go left, if it's greater we go right (the left arrow is `True`, the right arrow is `False` for the `MMSE <= 27.5` condition). At each node, you can see the entropy in the `y` variable, fraction of observations from total and ratio of two classes. Note that the tree could be even more complicated, but we reduced it to 3 splits (or levels).
 
-What is the expected outcome for the 50 year old subject with Mini-Mental State Examination score (`MMSE`) 28, normalized whole brain volume (`nWBW`) 0.65?
+What is the expected outcome for the 50-year-old subject with Mini-Mental State Examination score (`MMSE`) 28, normalized whole brain volume (`nWBW`) 0.65?
 
 <choice id="1">
 <opt text="Dementia (with probability 28.6%)" >
@@ -101,12 +101,12 @@ Credits: [Wikipedia](https://en.wikipedia.org/wiki/Discrete_Fourier_transform)
 
 Credits: [Wikipedia](https://en.wikipedia.org/wiki/Electroencephalography)
 
-In this exercise we will convert a signal at FpZ channel from time domain to a frequency domain. Data represents a sample from Cavanagh et al. (2019) study. This sample consists of around 10 seconds of data measurements sample at 500 Hz frequency and measured at 66 channels.
+In this exercise, we will convert a signal at FpZ channel from the time domain to a frequency domain. Data represents a sample from Cavanagh et al. (2019) study. This sample consists of around 10 seconds of data measurements sample at 500 Hz frequency and measured at 66 channels.
 
 1. Load the pickled dictionary. Path to the file `"exercises/data/eeg_sample.pickle"`. Dictionary has 4 values, `ch_names`: 1D array with channel names; `data`: 2D array with EEG measurements, shape of the array (66, 50001); `srate`: sampling rate (Hz); `times`: time points.
 2. Find the index of `Fpz` channel from the channel names.
 3. Get the total amount of observations (need for normalization of Fourier coefficients).
-4. Pass the signal data from the `Fpz` channel to the `fft` functions. You can use both NumPy and SciPy functions, that will produce the same results.
+4. Pass the signal data from the `Fpz` channel to the `fft` functions. You can use both NumPy and SciPy functions that will produce the same results.
 5. Plot the signal in time and frequency domains.
 
 Dictionary `eeg` looks as follows:

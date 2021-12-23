@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 4: Data Visualization'
 description:
-  'Making plots from the raw data is powerful and somewhat underestimated tool that could give you a better understanding of what is going on in your data and some interesting insights. In this chapter we will look at the main plot types and how to create them in Python using Matplotlib and Seaborn packages.'
+  'Making plots from the raw data is a powerful and somewhat underestimated tool that could give you a better understanding of what is going on in your data and some interesting insights. In this chapter we will look at the main plot types and how to create them in Python using Matplotlib and Seaborn packages.'
 prev: /chapter3
 next: /chapter5
 type: chapter
@@ -24,20 +24,19 @@ id: 4
 
 <exercise id="3" title="References">
 
-* Sabine Gosselke Berthelsen, Merle Horne, Yury Shtyrov, Mikael Roll, Different neural mechanisms for rapid acquisition of words with grammatical tone in learners from tonal and non-tonal backgrounds: ERP evidence, *Brain Research*, Volume 1729, 2020, 146614, ISSN 0006-8993, https://doi.org/10.1016/j.brainres.2019.146614.
-* Maxwell A. Bertolero, Jordan D. Dworkin, Sophia U. David, Claudia López Lloreda, Pragya Srivastava, Jennifer Stiso, Dale Zhou, Kafui Dzirasa, Damien A. Fair, Antonia N. Kaczkurkin, Bianca Jones Marlin, Daphna Shohamy, Lucina Q. Uddin, Perry Zurn, Danielle S. Bassett, Racial and ethnic imbalance in neuroscience reference lists and intersections with gender, bioRxiv 2020.10.12.336230; doi: https://doi.org/10.1101/2020.10.12.336230
-* van Atteveldt, Nienke M. AND van Aalderen-Smeets, Sandra I. AND Jacobi, Carina AND Ruigrok, Nel, Media Reporting of Neuroscience Depends on Timing, Topic and Newspaper Type, *PLOS ONE*, Volume 9, 2014, doi: https://doi.org/10.1371/journal.pone.0104780
-* O'Connell, Garret & De Wilde, Janet & Haley, Jane & Shuler, Kirsten & Schafer, Burkhard & Sandercock, Peter & Wardlaw, Joanna. (2011). The brain, the science and the media. *EMBO reports*. 12. 630-6. https://doi.org/10.1038/embor.2011.115.
-* Chataway, Jeremy & Angelis, Floriana & Connick, Peter & Parker, Richard & Plantone, Domenico & Doshi, Anisha & John, Nevin & Stutters, Jonathan & Macmanus, David & Carrasco, Ferran & Barkhof, Frederik & Ourselin, Sebastien & Braisher, Marie & Ross, Moira & Cranswick, Gina & Pavitt, Sue & Giovannoni, Gavin & Wheeler-Kingshott, Claudia & Hawkins, Clive & McLean, Brendan. (2020). Efficacy of three neuroprotective drugs in secondary progressive multiple sclerosis (MS-SMART): a phase 2b, multiarm, double-blind, randomised placebo-controlled trial. *The Lancet Neurology*. 19. https://doi.org/10.1016/S1474-4422(19)30485-5.
-* Carole Leung, Ka-Shun Lei, Shu-Mei Wang, Bess Yin-Hung Lam, Theory of mind in schizotypy: A behavioral and event-related potential (ERP) study, *Schizophrenia Research: Cognition*, Volume 23, 2021, 100190, ISSN 2215-0013, https://doi.org/10.1016/j.scog.2020.100190.
-* Callard, Felicity & Smallwood, Jonathan & Golchert, Johannes & Margulies, Daniel. (2013). The era of the wandering mind? Twenty-first century research on self-generated mental activity. *Frontiers in psychology*. 4. 891. https://doi.org/10.3389/fpsyg.2013.00891.
-* Farinelli, Marina & Panksepp, Jaak & Gestieri, Laura & Leo, Maria & Agati, Raffaele & Maffei, Monica & Leonardi, Marco & Northoff, Georg. (2013). SEEKING and depression in stroke patients: An exploratory study. *Journal of clinical and experimental neuropsychology*. 35. https://doi.org/10.1080/13803395.2013.776009.
-* Nivard, Michel & Gage, Suzi & Hottenga, Jouke & van beijsterveldt, Toos & Abdellaoui, Abdel & Baselmans, Bart & Ligthart, Lannie & St. Pourcain, B. & Boomsma, Dorret & Munafoò, Marcus & Middeldorp, Christel. (2016). Genetic overlap between schizophrenia and developmental psychopathology: a longitudinal approach applied to common childhood disorders between age 7 and 15 years. https://doi.org/10.1101/052829.
-* B.J. Casey, Tariq Cannonier, May I. Conley, Alexandra O. Cohen, Deanna M. Barch, Mary M. Heitzeg, Mary E. Soules, Theresa Teslovich, Danielle V. Dellarco, Hugh Garavan, Catherine A. Orr, Tor D. Wager, Marie T. Banich, Nicole K. Speer, Matthew T. Sutherland, Michael C. Riedel, Anthony S. Dick, James M. Bjork, Kathleen M. Thomas, Bader Chaarani, Margie H. Mejia, Donald J. Hagler, M. Daniela Cornejo, Chelsea S. Sicat, Michael P. Harms, Nico U.F. Dosenbach, Monica Rosenberg, Eric Earl, Hauke Bartsch, Richard Watts, Jonathan R. Polimeni, Joshua M. Kuperman, Damien A. Fair, Anders M. Dale, The Adolescent Brain Cognitive Development (ABCD) study: Imaging acquisition across 21 sites,
-*Developmental Cognitive Neuroscience*, Volume 32, 2018, Pages 43-54, ISSN 1878-9293, https://doi.org/10.1016/j.dcn.2018.03.001.
-* Amir H. Meghdadi, Chris Berka, Christian Richard, Greg Rupp, Stephanie Smith, Marija Stevanović Karić, Kevin McShea, Emily Sones, Ksenija Marinković, Thomas Marcotte, EEG event related potentials in sustained, focused and divided attention tasks: Potential biomarkers for cognitive impairment in HIV patients, *Clinical Neurophysiology*, Volume 132, Issue 2, 2021, Pages 598-611, ISSN 1388-2457, https://doi.org/10.1016/j.clinph.2020.11.026.
-* Schiro MM, Stauber SE, Peterson TL, Krueger C, Darnell SJ, et al. (2011) Mutations in Protein-Binding Hot-Spots on the Hub Protein Smad3 Differentially Affect Its Protein Interactions and Smad3-Regulated Gene Expression. *PLOS ONE* 6(9): e25021. https://doi.org/10.1371/journal.pone.0025021
-* Tobias U. Hauser, Laurence T. Hunt, Reto Iannaccone, Susanne Walitza, Daniel Brandeis, Silvia Brem and Raymond J. Dolan *Journal of Neuroscience* 12 August 2015, 35 (32) 11209-11220; DOI: https://doi.org/10.1523/JNEUROSCI.0560-15.2015
+1. Bertolero, M. A., Dworkin, J. D., David, S. U., Lloreda, C. L., Srivastava, P., Stiso, J., Zhou, D., Dzirasa, K., Fair, D. A., Kaczkurkin, A. N., Marlin, B. J., Shohamy, D., Uddin, L. Q., Zurn, P., & Bassett, D. S. (2020). Racial and ethnic imbalance in neuroscience reference lists and intersections with gender. *BioRxiv*. https://doi.org/10.1101/2020.10.12.336230
+2. Callard, F., Smallwood, J., Golchert, J., & Margulies, D. S. (2013). The era of the wandering mind? Twenty-first century research on self-generated mental activity. *Frontiers in Psychology, 4*. https://doi.org/10.3389/fpsyg.2013.00891
+3. Casey, B., Cannonier, T., Conley, M. I., Cohen, A. O., Barch, D. M., Heitzeg, M. M., Soules, M. E., Teslovich, T., Dellarco, D. V., Garavan, H., Orr, C. A., Wager, T. D., Banich, M. T., Speer, N. K., Sutherland, M. T., Riedel, M. C., Dick, A. S., Bjork, J. M., Thomas, K. M., . . . Dale, A. M. (2018). The Adolescent Brain Cognitive Development (ABCD) study: Imaging acquisition across 21 sites. *Developmental Cognitive Neuroscience, 32*, 43–54. https://doi.org/10.1016/j.dcn.2018.03.001
+4. Chataway, J., de Angelis, F., Connick, P., Parker, R. A., Plantone, D., Doshi, A., John, N., Stutters, J., MacManus, D., Prados Carrasco, F., Barkhof, F., Ourselin, S., Braisher, M., Ross, M., Cranswick, G., Pavitt, S. H., Giovannoni, G., Gandini Wheeler-Kingshott, C. A., Hawkins, C., . . . Bastow, R. (2020). Efficacy of three neuroprotective drugs in secondary progressive multiple sclerosis (MS-SMART): a phase 2b, multiarm, double-blind, randomised placebo-controlled trial. *The Lancet Neurology, 19*(3), 214–225. https://doi.org/10.1016/s1474-4422(19)30485-5
+5. Farinelli, M., Panksepp, J., Gestieri, L., Leo, M. R., Agati, R., Maffei, M., Leonardi, M., & Northoff, G. (2013). SEEKING and depression in stroke patients: An exploratory study. *Journal of Clinical and Experimental Neuropsychology, 35*(4), 348–358. https://doi.org/10.1080/13803395.2013.776009
+6. Gosselke Berthelsen, S., Horne, M., Shtyrov, Y., & Roll, M. (2020). Different neural mechanisms for rapid acquisition of words with grammatical tone in learners from tonal and non-tonal backgrounds: ERP evidence. *Brain Research, 1729*, 146614. https://doi.org/10.1016/j.brainres.2019.146614
+7. Hauser, T. U., Hunt, L. T., Iannaccone, R., Walitza, S., Brandeis, D., Brem, S., & Dolan, R. J. (2015). Temporally Dissociable Contributions of Human Medial Prefrontal Subregions to Reward-Guided Learning. *Journal of Neuroscience, 35*(32), 11209–11220. https://doi.org/10.1523/jneurosci.0560-15.2015
+8. Leung, C., Lei, K. S., Wang, S. M., & Lam, B. Y. H. (2021). Theory of mind in schizotypy: A behavioral and event-related potential (ERP) study. *Schizophrenia Research: Cognition, 23*, 100190. https://doi.org/10.1016/j.scog.2020.100190
+9. Meghdadi, A. H., Berka, C., Richard, C., Rupp, G., Smith, S., Stevanović Karić, M., McShea, K., Sones, E., Marinković, K., & Marcotte, T. (2021). EEG event related potentials in sustained, focused and divided attention tasks: Potential biomarkers for cognitive impairment in HIV patients. *Clinical Neurophysiology, 132*(2), 598–611. https://doi.org/10.1016/j.clinph.2020.11.026
+10. Nivard, M. G., Gage, S. H., Hottenga, J. J., van Beijsterveldt, C. E., Abdellaoui, A., Baselmans, B. M., Ligthart, L., St Pourcain, B., Boomsma, D. I., Munafoò, M. M., & Middeldorp, C. M. (2016). Genetic overlap between schizophrenia and developmental psychopathology: a longitudinal approach applied to common childhood disorders between age 7 and 15 years. *BioRxiv*. https://doi.org/10.1101/052829
+11. O’Connell, G., de Wilde, J., Haley, J., Shuler, K., Schafer, B., Sandercock, P., & Wardlaw, J. M. (2011). The brain, the science and the media. *EMBO Reports, 12*(7), 630–636. https://doi.org/10.1038/embor.2011.115
+12. Schiro, M. M., Stauber, S. E., Peterson, T. L., Krueger, C., Darnell, S. J., Satyshur, K. A., Drinkwater, N. R., Newton, M. A., & Hoffmann, F. M. (2011). Mutations in Protein-Binding Hot-Spots on the Hub Protein Smad3 Differentially Affect Its Protein Interactions and Smad3-Regulated Gene Expression. *PLoS ONE, 6*(9), e25021. https://doi.org/10.1371/journal.pone.0025021
+13. van Atteveldt, N. M., van Aalderen-Smeets, S. I., Jacobi, C., & Ruigrok, N. (2014). Media Reporting of Neuroscience Depends on Timing, Topic and Newspaper Type. *PLoS ONE, 9*(8), e104780. https://doi.org/10.1371/journal.pone.0104780
 
 </exercise>
 
@@ -125,9 +124,9 @@ Is it the only group?
 
 1. Think about what answer should you visualization answer.
 2. Choose the right chart for your data.
-3. Make it clear and human readable.
-4. Don’t put to much information on one chart.
-5. Describe it with titles, labels and annotations.
+3. Make it clear and human-readable.
+4. Don’t put too much information on one chart.
+5. Describe it with titles, labels, and annotations.
 6. Don’t go crazy with colors.
 
 **[Cheat-sheet](http://2.bp.blogspot.com/-6D6p5m-iEsE/W5mMGKBa_xI/AAAAAAAABI4/9zF4sNy7V6QOy__CDFe-kY_xnLVKyijxgCK4BGAYYCw/s1600/98510-728109.jpg)** that can help with choosing the appropriate plot type.
@@ -152,7 +151,7 @@ Sample of the data set:
 
 1. Load the data with breast cancer observations (path to the file `"exercises/data/breast_cancer.csv"`);
 2. Make a **scatter plot** of `radius_mean` on the `x` axis against `texture_mean` on the `y` axis along with the **regression line**. You can do this in one line of code using [`sns.regplot()`](https://seaborn.pydata.org/generated/seaborn.regplot.html) function. Specify standard deviation as an error term (`x_ci="sd"`);
-3. Add vertical line with average radius and horizontal line with average texture. Set both if them to be dashed, black and of width 1.
+3. Add a vertical line with average radius and horizontal line with average texture. Set both of them to be dashed, black, and of width 1.
 
 <codeblock id="04_01">
 
@@ -176,7 +175,7 @@ Is there really no relationship between variables?
 </opt>
 </choice>
 
-**Exercise 2**. It's always a good idea to check for relationship among variables in the data before applying Machine Learning algorithms. One of possible ways to do this is to check the correlation. Looking at the raw numbers of correlation may be not that productive and that's when **heatmap** becomes handy.
+**Exercise 2**. It's always a good idea to check for a relationship among variables in the data before applying Machine Learning algorithms. One of the possible ways to do this is to check the correlation. Looking at the raw numbers of correlation might be not that productive and that's when **heatmap** becomes handy.
 
 1. Load the data with breast cancer observations (path to the file `"exercises/data/breast_cancer.csv"`);
 2. Select only columns the average values (with the `"mean"` in the name);
@@ -222,7 +221,7 @@ Sample of the data set:
 
 <center><img src="oasis.png"></center>
 
-* Load the data with dementia patients observations (path to the file `"exercises/data/oasis_cross-sectional.csv"`).
+* Load the data with dementia patients' observations (path to the file `"exercises/data/oasis_cross-sectional.csv"`).
 * Create 4 grouped bar charts at the same figure (using `plt.subplot()`). Variables to plot:
     * `y` axis: age (`"Age"`), years of education (`"Educ"`), socioeconomic status (`"SES"`), Mini-Mental State Examination score (`"MMSE"`);
     * `x` axis: Clinical Dementia Rating (`"CDR"`)
@@ -235,7 +234,7 @@ CDR classification:
 * 1 = Mild Dementia
 * 2 = Moderate Dementia
 
-Additionally create a `summary_stats` DataFrame with count of observations (`"ID"` column) and aggregated values (mean and standard deviation of these four variables).
+Additionally, create a `summary_stats` DataFrame with the count of observations (`"ID"` column) and aggregated values (mean and standard deviation of these four variables).
 
 <codeblock id="04_03">
 
@@ -282,7 +281,7 @@ plt.show()
 
 #### Exercise 2
 
-Seaborn package is really powerful and it allows to create complex plots in a simple way. Let's look at the [`sns.relplot()`](https://seaborn.pydata.org/generated/seaborn.relplot.html) (relational plot) for example. By default it creates a scatter plot between two variables with possibility to add additional grouping variables.
+Seaborn package is really powerful and it allows to create complex plots in a simple way. Let's look at the [`sns.relplot()`](https://seaborn.pydata.org/generated/seaborn.relplot.html) (relational plot) for example. By default, it creates a scatter plot between two variables with a possibility to add additional grouping variables.
 
 1. Plot the relationship between estimated total intracranial volume (`"eTIV"`) and normalized whole-brain volume (`nWBV`);
 2. Split plots to separate columns according to the clinical dementia rating (`"CDR"`) using `col` argument;
