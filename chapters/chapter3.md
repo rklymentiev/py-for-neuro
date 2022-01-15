@@ -234,7 +234,7 @@ Can you imagine a 5 dimensional csv file?
 
 <codeblock id="03_03">
 
-- to get the `avg_ses1` you can select the column first, and then specify the filtering condition. After this is done you can apply `.mean()` function on a resulted Series;
+- to get the `avg_ses1` you can select the column first, and then specify the filtering condition. After this is done you can apply `.mean()` function on a resulting Series;
 - to get the `avg_ses2` you can specify the condition in a **row** selection (in other words, what columns should `.loc` take) and a column name in a **column** selection. This will result again in Series.
 
 </codeblock>
@@ -275,7 +275,7 @@ Is the average `radius_mean` value is greater for malignant type?
 
 <codeblock id="03_05">
 
-- basically any type of join would be appropriate here, since we are interested in matching breast cancer type with `radius_mean` and we could have missing values that don't affect calculations for the average value;
+- basically any type of join would be appropriate here since we are interested in matching breast cancer type with `radius_mean` and we could have missing values that don't affect calculations for the average value;
 - keep in mind that joining column names are different;
 - to get the average `radius_mean` you have to filter the data by a condition and then perform `.mean()` function on a selected column.
 

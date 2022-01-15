@@ -35,13 +35,13 @@ Further reading:
 
 * **Access**: are you allowed to get access?
 * **Request**: what do you want to get?
-* **Response**: the resulted data
+* **Response**: the resulting data
 
 Notes: Not all APIs are publicly available. Some APIs require some sort of authentication. It can be a secret key that proves that you have an **access** to the server.
 
 **Requests** are usually done by URL, where you can specify some additional **parameters**. For example, parameters could be the dates you want to get your tweets from.
 
-And finally you get the resulted data as the **response**.
+And finally you get the resulting data as the **response**.
 
 ---
 
@@ -120,7 +120,7 @@ print(response.json())
 }
 ```
 
-Notes: After we saw that status code was `200` (meaning that request was fulfilled) we can extract the resulted data. There is an attribute `.content` to extract the **raw** data as a binary string (note `b` letter in front of the string), which is not really useful in that case. However, we know that API returns data as JSON file (we know that from the documentation of the API and there is `.json` part in the API URL).
+Notes: After we saw that status code was `200` (meaning that request was fulfilled) we can extract the resulting data. There is an attribute `.content` to extract the **raw** data as a binary string (note `b` letter in front of the string), which is not really useful in that case. However, we know that API returns data as JSON file (we know that from the documentation of the API and there is `.json` part in the API URL).
 
 There is a method `.json()` to convert raw data into Python dictionary.
 

@@ -205,7 +205,7 @@ In this example we specified that final plot will consists of `1` row and `2` co
 Some comments:
 
 * `hue` allows to add a grouping variable;
-* we don't have to calculate the average to `weight` in order to pass the values to the [`sns.barplot()`](https://seaborn.pydata.org/generated/seaborn.barplot.html) function, since Seaborn doesn this for us. In fact, we can change function to another one using `estimator` argument.
+* we don't have to calculate the average to `weight` in order to pass the values to the [`sns.barplot()`](https://seaborn.pydata.org/generated/seaborn.barplot.html) function since Seaborn doesn this for us. In fact, we can change function to another one using `estimator` argument.
 * [Matplotlib subplots and axes objects](http://www.math.buffalo.edu/~badzioch/MTH337/PT/PT-matplotlib_subplots/PT-matplotlib_subplots.html)
 
 ---

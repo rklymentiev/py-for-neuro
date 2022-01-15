@@ -662,7 +662,7 @@ Python code is written in regular scripts while importing packages per usual.
 
 #### Let's talk about importing functions!
 
-If you want to import a function you made, the script can be stored in the `exercises` folder. However, since you are running everything from the root of the directory you must locate yourself into the `exercises` folder. You can do this with the following code. 
+If you want to import a function you made, the script can be stored in the `exercises` folder. However since you are running everything from the root of the directory you must locate yourself into the `exercises` folder. You can do this with the following code. 
 ```
 import sys
 sys.path.insert(0, 'exercises/')

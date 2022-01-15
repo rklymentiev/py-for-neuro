@@ -102,7 +102,7 @@ Update your function by adding `df` argument that will specify how many degrees 
 
 <codeblock id="02_05">
 
-- remember to put `df` at the end of the arguments list in the header, since it has a default value;
+- remember to put `df` at the end of the arguments list in the header since it has a default value;
 
 </codeblock>
 
@@ -140,7 +140,7 @@ Then using `for` loop and `if` statement separate IDs into control and treatment
 
 <exercise id="6" title="assert statement">
 
-Recall the function to calculate the pi value. This was a pretty simple function and we know that we should use numeric objects for an input. But what if you decide to pass a string for example as a diameter value? In such casem you get an Error, since operation `22/"some number"` is not supported (and doesn't make so much sense either).
+Recall the function to calculate the pi value. This was a pretty simple function and we know that we should use numeric objects for an input. But what if you decide to pass a string for example as a diameter value? In such casem you get an Error since operation `22/"some number"` is not supported (and doesn't make so much sense either).
 
 ```python
 def get_pi(circumference, diameter, digits_to_round=2):
@@ -194,7 +194,7 @@ Also, degrees of freedom should be a positive integer or 0. Raise an error if th
 
 - type of the `df` object should be an integer *and* it should be >= 0;
 - one of the ways to do this is by help of `map()` and `lambda()` functions. You can check that type of each value in a list is either `int` or `float` by calling `in` operator in `lambda()`\'s expression.
-- `sum([True, False, True])` equals 2, since `True` = 1, `False` = 0;
+- `sum([True, False, True])` equals 2 since `True` = 1, `False` = 0;
 - if sum (or we can call it count) of numeric values in a list doesn't equal the length of a list, what does it tell us?
 
 </codeblock>
@@ -225,7 +225,7 @@ def get_pi(circumference, diameter, digits_to_round=2):
     Returns
     ----------
     pi : float
-        Resulted pi value. """
+        resulting pi value. """
 
     assert type(circumference) in [int, float], \
     "Check the type of the circumference argument."
@@ -255,7 +255,7 @@ def variance(input_list, df=1):
     Returns
     ----------
     Variance: float
-        Resulted variance.
+        resulting variance.
     """
 
     # get the list of booleans that were a result of checking

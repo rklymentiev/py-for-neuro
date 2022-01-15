@@ -4,7 +4,7 @@ type: slides
 
 # Writing custom functions
 
-Notes: A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result.
+Notes: A function is a block of code that only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result.
 
 ---
 
@@ -30,11 +30,11 @@ print(mean(input_list=l))
 ```out
 3.0
 ```
-Notes: You have seen the examples of several built-in functions like `len()`, `max()`, `sorted()`, etc. These functions allow you to perform some desired calculations. But what if you want to make a sophisticated calculations and there is no function for this? For example, you want to take an average value from the list. There is no built-in function for that, but you can create it yourself, since average value of a list of numbers is the sum of the list divided by its length.
+Notes: You have seen the examples of several built-in functions like `len()`, `max()`, `sorted()`, etc. These functions allow you to perform some desired calculations. But what if you want to make sophisticated calculations and there is no function for this? For example, you want to take an average value from the list. There is no built-in function for that, but you can create it yourself.
 
-In a `mean()` function (again, name of the function is your choice, but try to keep it meaningful) we specified that there is going to be just one argument (`input_list`). That will hold the value of an object we pass to the function when we call it.
+In the `mean()` function (again, the name of the function is your choice, but try to keep it meaningful) we specified that there is going to be just one argument (`input_list`). That will hold the value of an object we pass to the function when we call it.
 
-In the function's body we create two new variables that hold the values of sum and length. And at the end we return the value of a division. The last step is very important since now `mean()` function returns an object, that could be passed to a variable and used later. Try creating a function without the `return` statement on your own and see what happens.
+In the function's body, we create two new variables that hold the values of sum and length. And at the end, we return the value of a division. The last step is very important since now `mean()` function returns an object, that could be passed to a variable and used later. Try creating a function without the `return` statement on your own and see what happens.
 
 ---
 
@@ -64,11 +64,11 @@ print(get_pi(circumference=22, diameter=7, digits_to_round=1))
 3.1
 ```
 
-Notes: Functions can take no input arguments, like in the `get_pi()` example. In such case the result of the function will be always the same.
+Notes: Functions can take no input arguments, like in the `get_pi()` example. In such a case, the result of the function will be always the same.
 
-You can specify as many input arguments as you wish. Also, arguments can have default values (like `digits_to_round=2`). This means that if you don't specify it's value in the function run, it will be taken from the default value.
+You can specify as many input arguments as you wish. Also, arguments can have default values (like `digits_to_round=2`). This means that if you don't specify its value in the function run, it will be taken from the default value.
 
-`digits_to_round` was used inside the `round()` function and specified the amount of numbers we want to keep after the coma. In the first run we didn't specify `digits_to_round`, so it was set to `2`. In the first run we set it to `1` in the function call.
+`digits_to_round` was used inside the `round()` function and specified the numbers we want to keep after the coma. In the first run, we didn't specify `digits_to_round`, so it was set to `2`. In the first run, we set it to `1` in the function call.
 
 ---
 
@@ -101,7 +101,7 @@ list(filter(greater_than_two, stdev))
 [4, 4]
 ```
 
-Notes: `map()` function is used to apply a function on all the elements of specified iterable and return map object. Python map object is an iterator, so we can iterate over its elements. We can also convert map object to sequence objects such as list, tuple etc.
+Notes: `map()` function is used to apply a function on all the elements of specified iterable object and to return map object. Python map object is an iterator, so we can iterate over its elements. We can also convert a map object to a sequence object such as list, tuple etc.
 
 In the first example we applied function `squared` to **every** object from the list `stdev` and converted the result to a list.
 
@@ -133,11 +133,11 @@ list(filter(lambda x: x>2, stdev))
 ```out
 [4, 4]
 ```
-Notes: On the previous slide we created two new functions `squared()` and `greater_than_two()` that we used only once and will not need them later at all. This might look like not a big deal for now, but imagine you have 100 of such "temporary" functions that do it's own one-time-task. This can result in unnecessary memory usage. We can fix this with the help of `lambda` functions.
+Notes: On the previous slide, we created two new functions `squared()` and `greater_than_two()` that we used only once and will not need them later at all. This might look like not a big deal for now, but imagine you have 100 of such "temporary" functions that do its own one-time task. This can result in unnecessary memory usage. We can fix this with the help of `lambda` functions.
 
-In the first example we created a `lambda` function that takes `x` as an input and returns `x**2`. If you compare it to `square` function, you can notice that they are basically the same, but `lambda` function have no name and you cannot access it later after since it's not saved in the environment.
+In the first example we created a `lambda` function that takes `x` as an input and returns `x**2`. If you compare it to `square` function, you can notice that they are basically the same, but `lambda` function has no name and you cannot access it later since it's not saved in the environment.
 
-In the first example we created a `lambda` function that takes `x` as an input and returns the result of a comparison `x>2`.
+In the second example, we created a `lambda` function that takes `x` as an input and returns the result of a comparison `x>2`.
 
 ---
 

@@ -75,7 +75,7 @@ print(i_am_valid_list)
 
 Notes: There are some trivial built-in functions like `sum()`, `max()`, `min()` that could be applied to lists. There is no built-in `avg()` or `mean()` function, but you could easily calculate it yourself.
 
-Keep in mind, that list can hold objects of different type, even another lists. Some functions like `sum()` wouldn't work in that case since you cannot take sum of string and number for obvious reasons.
+Keep in mind, that list can hold objects of different types, even another lists. Some functions like `sum()` wouldn't work in that case since you cannot take the sum of string and number for obvious reasons.
 
 ---
 
@@ -111,7 +111,7 @@ print(participants.index('Max'))  # returns index of first instance;
 3
 ```
 
-Notes: You heard terms "method" and "function" already and most of the times they were be used interchangeably. Confusing, isn't it? Think of methods as a function, that could be applied only for specific data type. Whereas function `len()` for example can be applied on strings, lists and many other objects. We call function by `function(object)` and method by `object.method()`.
+Notes: You heard the terms "method" and "function" already and most of the time they could be used interchangeably. But in fact, they are not the same. Think of methods as a function, that could be applied only on a specific data type. Whereas function `len()` for example can be applied on strings, lists and many other objects. We call function by `function(object)` and method by `object.method()`.
 
 On this slide you can see some of the methods, that are unique for the lists.  It's important to note that all of these methods change the initial string. You can see how the string changes in comment lines.
 
@@ -122,7 +122,7 @@ l = [1,2,3]
 l = l.append(4)
 ```
 
-However, this is not always the case. Some methods don't change the method (or have an argument that allow to specify it). The best way to know whether method changes the object or returns a new objects is the documentation.
+Keep in mind that this is not always the case. Some methods don't change the method (or have an argument that allows to specify it). The best way to know whether the method changes the object or returns new objects is the documentation.
 
 ---
 
@@ -131,11 +131,11 @@ However, this is not always the case. Some methods don't change the method (or h
 Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
 
 ```python
-colors = ("green", "black", "orange")
+brain_lobes = ('frontal', 'parietal', 'temporal', 'occipital')
 # or:
-# colors_list = ["green", "black", "orange"]
-# colors = tuple(colors_list)
-print(type(colors))
+# brain_lobes_list = ['frontal', 'parietal', 'temporal', 'occipital']
+# brain_lobes = tuple(brain_lobes_list)
+print(type(brain_lobes))
 ```
 
 ```out
@@ -143,7 +143,7 @@ tuple
 ```
 
 ```python
-my_tuple[0] = "pink"
+brain_lobes[0] = 'anterior'
 ```
 
 ```out
@@ -153,7 +153,7 @@ TypeError: 'tuple' object does not support item assignment
 
 Notes: Another collection type in Python is tuple. We defined lists using the square brackets (`[1,2,3]`), but for tuples we use parentheses (`(1,2,3)`).
 
-Tuples are quite boring, since they don't have so much methods that can be applied on them. But there is a reason for that. Tuples are **unchangeable**. This means that no function or method can change objects in the tuple.
+Tuples are quite "boring" since they don't have so many methods that can be applied to them. But there is a reason for that. Tuples are **unchangeable**. This means that no function or method can change objects in the tuple.
 
 ---
 
@@ -190,9 +190,9 @@ languages - snakes # set difference
 {'java', 'r'}
 ```
 
-Notes: Figure brackets are the indicator for sets, another collection type. You cannot access items in a set by referring to an index, since sets are unordered and have **no index**. But you can loop through the set items using a `for` loop, or ask if a specified value is present in a set, by using the `in` keyword.
+Notes: Figure brackets are the indicator for sets, another collection type. You cannot access items in a set by referring to an index since sets are unordered and have **no index**. But you can loop through the set items using a `for` loop, or ask if a specified value is present in a set, by using the `in` keyword.
 
-You can apply basic sets commands (like union or intersection). Note that we didn't get `'python'` twice for the union, since sets don't allow duplicate values. This fact can become handy used when looking for the unique values in a list.
+You can apply basic sets commands (like union or intersection). Note that we didn't get `'python'` twice for the union since sets consist only of unique values. This fact can become handy used when looking for the unique values in a list.
 
 ---
 
@@ -201,38 +201,38 @@ You can apply basic sets commands (like union or intersection). Note that we did
 Dictionaries are: unordered, iterable, mutable.
 
 ```python
-my_dict = {'name': 'Bob', 'planet': 'X', 'age': 42}
-print(my_dict['name'])
+participant = {'name': 'Jon Doe', 'group': 'Control', 'age': 42}
+print(participant['name'])
 ```
 
 ```out
-Bob
+Jon Doe
 ```
 
 ```python
 # add new key-value pair to the dictionary
-my_dict['last_name'] = 'Smith'
-print(my_dict)
+participant['ID'] = 'CJD'
+print(participant)
 ```
 ```out
-{'name': 'Bob', 'planet': 'X', 'age': 42, 'last_name': 'Smith'}
+{'name': 'Jon Doe', 'group': 'Control', 'age': 42, 'ID': 'CJD'}
 ```
 
 ```python
-my_dict.keys()
+participant.keys()
 ```
 ```out
-['name', 'planet', 'age', 'last_name']
+['name', 'group', 'age', 'ID']
 ```
 
 ```python
 my_dict.values()
 ```
 ```out
-['Bob', 'X', 42, 'Smith']
+['Jon Doe', 'Control', 42, 'CJD']
 ```
 
-Notes: Dictionaries are structures which can contain multiple data types, and is ordered with key-value pairs: for each (unique) key, the dictionary outputs one value. Keys can be strings, numbers, or tuples, while the corresponding values can be any Python object.
+Notes: Dictionaries are structures which can contain multiple data types, and is ordered with key-value pairs: for each unique key, the dictionary has one value. Keys can be strings, numbers, or tuples, while the corresponding values can be any Python object.
 
 ```python
 dict_obj = {

@@ -10,7 +10,7 @@ frmi = {
     "frontal": fmri_df[fmri_df["region"] == "frontal"]
 }
 
-# write the resulted dictionary as pickle file
+# write the resulting dictionary as pickle file
 with open(file="frmi_dict.pickle", mode="wb") as file:
     pickle.dump(obj=frmi, file=file)
 

@@ -43,7 +43,7 @@ with open("new_file.txt", mode="w") as file:
 
 <img src="io/hello_txt.png"></img>
 
-Notes: Without going into much details, we are using the `with` command here to prevent the open connection to the file. You can think of it as a `while` statement: "while we are opening the file and saving the resulted I/O object to the variable `file` we are `write`ing the file. When the `file.write()` is done we close the connection to the file".
+Notes: Without going into much details, we are using the `with` command here to prevent the open connection to the file. You can think of it as a `while` statement: "while we are opening the file and saving the resulting I/O object to the variable `file` we are `write`ing the file. When the `file.write()` is done we close the connection to the file".
 
 Note that if file with such name doesn't exist, Python will create it. If file exists already, then Python will **overwrite** the existing data in the file with the new data. If you don't want to erase the data, but rather add new lines to the file, you should use append mode.
 
@@ -82,7 +82,7 @@ print(output)
 Hello, Python! How are you doing today, Python?
 ```
 
-Notes: To read the file in we use `mode='r'` and `read()` method. Remember to assign the result to the new variable to save the resulted string.
+Notes: To read the file in we use `mode='r'` and `read()` method. Remember to assign the result to the new variable to save the resulting string.
 
 ---
 

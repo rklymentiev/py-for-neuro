@@ -10,7 +10,7 @@ Notes: Strings are another awesome built-in data type. It's very likely that som
 
 # What are strings?
 
-In a fancy way we can say that strings are **immutable** sequences of Unicode code points. In a simple way we can say that strings are the sequences of "characters", that cannot be changed.
+In a fancy way, we can say that strings are **immutable** sequences of Unicode code points. In a simple way, we can say that strings are the sequences of "characters", that cannot be changed.
 
 ```python
 x = "Neuroscience Rocks!"
@@ -47,7 +47,7 @@ What are the differences? There is absolutely no difference which type of bracke
 
 # Slicing
 
-Python allows to get slices from the string by calling
+Python allows getting slices from the string by calling
 
 ```python
 string[start:end:step]
@@ -73,17 +73,17 @@ Neur
 Nuocec ok!
 !skcoR ecneicsorueN
 ```
-Notes: You can take a slice from the string by calling its index(es) in square brackets. It's important to remember, that indexes in Python start with 0 (letter `N` in a string `Neuroscience` stands on a 0th index, not the 1st one).
+Notes: You can take a slice from the string by calling its index(es) in square brackets. It's important to remember, that indexes in Python start with 0 (the letter `N` in a string `Neuroscience` stands on a 0th index, not the 1st one).
 
 In the first example we are taking all the characters from 5th index to 11th included. We can drop the `:step` part if we want to take all the values.
 
 In the second example we provide only starting index. In such case we return just one character, that stands on a 5th index.
 
-In the third example we drop starting index, but provided end index. That means that Python takes all the values from the beginning till 3th index included.
+In the third example we drop starting index but provided the end index. That means that Python takes all the values from the beginning till 3th index is included.
 
-In the fourth example we drop both starting and end index, meaning that we want to take elements from the beginning till the end (all values basically). However, step is set to 2, meaning that we take every second value.
+In the fourth example, we drop both starting and end indexes, meaning that we want to take elements from the beginning till the end (all values basically). However, the step is set to 2, meaning that we take every second value.
 
-In the last example we are taking again all the values. Step of `-1` returns reversed string.
+In the last example, we are taking again all the values. Step of `-1` returns reversed string.
 
 ---
 
@@ -118,7 +118,7 @@ leucine_codon in mRNA
 False
 ```
 
-Notes: Another useful trick is to check whether a string hold some other sting using `in` operator. Note, that strings are case sensitive so `"CUC"` and `"cuc"` are two different strings.
+Notes: Another useful trick is to check whether a string hold some other sting using the `in` operator. Note, that strings (and Python in general) are case sensitive, so `"CUC"` and `"cuc"` are two different strings.
 
 ---
 
@@ -146,12 +146,17 @@ Neuroscience Rocks!
 
 Notes:
 
-Note that some (or even most) of the methods (aka functions), don't change the original object. In our example we applied multiple methods on the string `s`, but at the end it was still the same. If we want to save the modification after method application we need to assign it to a variable.
+Note that some (or even most) of the methods (aka functions), don't change the original object. In our example we applied multiple methods on the string `s`, but in the end it was still the same. If we want to save the modification after the method application we need to assign it to a variable.
 
 ```python
 s = "Neuroscience Rocks!"
 # rewrite the variable
 s = s.upper()
+print(s)
+```
+
+```out
+'NEUROSCIENCE ROCKS!'
 ```
 
 ---

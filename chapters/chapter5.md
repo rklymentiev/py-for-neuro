@@ -114,7 +114,7 @@ h1_data
 
 The `squeeze_me` is responsible for squeezing unit matrix dimensions. For example, if MATLAB variable was stored in a shape (5,1,1), setting `squeeze_me=True` will import it with the shape (5,) to Python.
 
-The resulted object is a dictionary. Each key represents a saved variable from MATLAB. Also, there are three additional keys with the file info. `rho` is a vector that gives the sequence of spiking events or nonevents at the sampled times (every 2 ms). When an element of `rho` is one, this indicates the presence of a spike at the corresponding time, whereas a zero value indicates no spike. The variable `stim` gives the sequence of stimulus values at the sampled times.
+The resulting object is a dictionary. Each key represents a saved variable from MATLAB. Also, there are three additional keys with the file info. `rho` is a vector that gives the sequence of spiking events or nonevents at the sampled times (every 2 ms). When an element of `rho` is one, this indicates the presence of a spike at the corresponding time, whereas a zero value indicates no spike. The variable `stim` gives the sequence of stimulus values at the sampled times.
 
 [MATLAB Website](https://www.mathworks.com/products/matlab.html) || [SciPy Website](https://www.scipy.org/)
 
@@ -205,7 +205,7 @@ API URL: `http://api.open-notify.org/astros.json`
 
 <codeblock id="05_07">
 
-* resulted dictionary has a key `"people"` with the list as a value. Each value from a list is a dictionary with two keys: `"craft"` and `"name"`
+* resulting dictionary has a key `"people"` with the list as a value. Each value from a list is a dictionary with two keys: `"craft"` and `"name"`
 
 </codeblock>
 
@@ -280,7 +280,7 @@ Note the pickle files are binary, that's why we are using binary modes for writi
 
 1. Load in the dataset with fMRI data (`"exercises/data/fmri_data.csv"`). CSV file is separated by ";".
 2. Create a new dictionary `frmi` with two keys: `"parietal"` that holds a DataFrame with observations only from the parietal region and `"frontal"` that holds a DataFrame with observations only from the frontal region.
-3. Save the resulted dictionary to the pickle file `"frmi_dict.pickle"`.
+3. Save the resulting dictionary to the pickle file `"frmi_dict.pickle"`.
 4. Read in back the resulting pickle file and print the first 5 rows of each of the DataFrames in a dictionary.
 
 <codeblock id="05_06">

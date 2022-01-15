@@ -4,7 +4,7 @@ type: slides
 
 # Code style guidelines
 
-Notes: It's important to keep your code "organized" so it is easy for other people in your team to go through it. The most common guide for Python code style guidelines is **PEP 8**. Here we will look at some points on how to make your code readable. If you want to learn, check out these links:
+Notes: It's important to keep your code "organized" so it is easy for other people in your team to go through it. The most common guide for Python code style guidelines is **PEP 8**. Here we will look at some points on how to make your code readable. If you want to learn more, check out these links:
 
 * [PEP 8](https://www.python.org/dev/peps/pep-0008/)
 * Blog post on [How to Write Beautiful Python Code With PEP 8](https://realpython.com/python-pep8/)
@@ -31,7 +31,7 @@ Notes: Here you see the recommendations on how to call the variables in your Pyt
 
 <center><img src="names_meme.jpg" width="400"></center>
 
-Notes: There is nothing wrong to call your variables `test`, `x`, `my_func` when performing some quick task, but try to keep names as clear as possible when you are working on a code for a broader audience (and even for yourself, since after several days you probably won't remember the purpose of the functions you created). If you saw a function `get_average_size()` in someone's code, you could assume that it has to do something with array size or something. But what would `function_version_1_test_fixed()` function do?
+Notes: There is nothing wrong with calling your variables `test`, `x`, or `my_func` when performing some quick task, but try to keep names as clear as possible when you are working on a code for a broader audience (after several days even you probably will not remember the purpose of the functions you created). If you saw a function `get_average_size()` in someone's code, you could assume that it has to do something with array size. But what could `function_version_1_test_fixed()` function do?
 
 ---
 
@@ -89,7 +89,7 @@ def long_function_name(
 
 Notes: The indentation level of lines of code in Python determines how statements are grouped together. Use 4 spaces per indentation level.
 
-Continuation lines should align wrapped elements either vertically using Python's implicit line joining inside parentheses, brackets and braces, or using a hanging indent. When using a hanging indent the following should be considered; there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line
+Continuation lines should align wrapped elements either vertically using Python's implicit line joining inside parentheses, brackets and braces, or using a hanging indent. When using a hanging indent the following should be considered; there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line.
 
 ---
 
@@ -168,7 +168,7 @@ if x >5 and x% 2== 0:
     print('x is larger than 5 and divisible by 2!')
 ```
 
-Notes: Keep in mind, that most of the recommendations described in this presentation don't affect the performance of your code. Or in other words, you code will still run as supposed to, but by following PEP-8 guidelines you make your code more friendly for other people.  
+Notes: Keep in mind, that most of the recommendations described in this presentation don't affect the performance of your code. Or in other words, your code will still run as supposed to, but by following PEP-8 guidelines you make your code more friendly for other people.  
 
 ---
 

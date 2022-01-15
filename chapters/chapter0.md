@@ -12,9 +12,9 @@ id: 0
 
 Hello and welcome!
 
-My name is Ruslan and I feel passionate about Neuroscience. During my short experience in this field, I have already spotted the lack of programming/computer science knowledge among scientists. Given my background in Data Science and belief in the "open source knowledge", I decided to create a course to introduce other people to Python programming. Basic programming knowledge allows working with data in a more convenient way (there is a whole new world beyond Excel), automating repeated tasks, or making custom visualizations. And programming is just fun.
+My name is Ruslan and I feel passionate about Neuroscience. During my experience in this field, I have noticed the lack of programming/computer science knowledge among (young) scientists. Given my background in Data Science and belief in the "open source knowledge", I decided to create a course to introduce other people to Python programming. Basic programming knowledge allows working with data in a more convenient way (there is a whole new world beyond Excel), automating repeated tasks, or making custom visualizations. And programming is just fun.
 
-Even though this course has a fancy name, it is not that different from any introduction Python course you can find online. The only difference is that I tried to create most of the exercises and examples based on neuroscience-related problems. However, you don't need any specific knowledge to take the course, since the course is about Python, not the brain.
+Even though this course has a fancy name, it is not that different from any introduction Python course you can find online. The only difference is that I tried to create most of the exercises and examples based on neuroscience-related problems (to possibly make it more interesting for neuroscientists). However, you don't need any specific knowledge to take the course since the course is about Python, not the brain.
 
 #### What this course IS about:
 
@@ -52,13 +52,17 @@ A: No. But you will get the *knowledge*. Isn't it better?
 
 A: You don't have to install Python for this course since you can use Python code windows on this website (built on [Binder](https://mybinder.org/)). However, you might install Python at some point to start doing your own analysis, otherwise what's the point? I will show the best way on how to install Python in the following part.
 
-**Q: Will this course make me a super proficient computational neuroscientist and increase my popularity in the industry?**
+**Q: Will this course make me a super proficient computational neuroscientist and increase my popularity in the industry/academia?**
 
-A: Not quite. This course will introduce you to the basics of programming, but later is your own choice if you want to use this knowledge in your work/research.
+A: Not quite. This course will introduce you to the basics of programming, but later is your own choice if you want to apply this knowledge in your work/research.
 
 **Q: Will this course introduce me to Python programming so later I can apply this knowledge doing more advanced stuff, like Machine Learning?**
 
 A: Exactly! This course will show you the main concepts of programming and the most popular Python packages, so later you can apply your knowledge to deal with more complex stuff, such as models building.
+
+**Q: Will this course be updated and include more advanced topics in the future (e.g., fMRI data processing, calcium imaging data analysis)?**
+
+A: No, mainly for the reasons described in the previous answer.
 
 **Q: I have spotted a typo/error, where do I report it?**
 

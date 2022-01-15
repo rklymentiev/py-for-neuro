@@ -10,7 +10,7 @@ frmi = {
     "frontal": ___
 }
 
-# write the resulted dictionary as pickle file
+# write the resulting dictionary as pickle file
 with open(file="frmi_dict.pickle", mode="wb") as ___:
     pickle.dump(obj=___, file=___)
 

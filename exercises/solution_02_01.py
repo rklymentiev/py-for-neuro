@@ -14,7 +14,7 @@ for val in my_string:
     else:               # the rest are symbols ('%', '@', '+')
         symbols_count += 1
 
-# add resulted values to a dictionary
+# add resulting values to a dictionary
 counts = {
     "Word Characters": word_characters_count,
     "Digits": digits_count,

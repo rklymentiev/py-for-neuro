@@ -14,7 +14,7 @@ for ___ in ____:
     else:      # the rest are symbols ('%', '@', '+')
         symbols_count = ___
 
-# add resulted values to a dictionary
+# add resulting values to a dictionary
 counts = {
     "Word Characters": ___,
     "Digits": ___,

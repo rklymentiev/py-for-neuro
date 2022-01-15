@@ -325,7 +325,7 @@ In order to answer this question you have to:
 
 1. Read in the data with dementia cases (path to file: `"exercises/data/oasis_cross-sectional.csv"`);
 2. Create a cross table of counts of observations between education level (`"Educ"`) and clinical dementia rating (`"CDR"`). This can be done using [`pd.crosstab()`](https://pandas.pydata.org/docs/reference/api/pandas.crosstab.html) function;
-3. Pass the resulted cross table into [`stats.chi2_contingency()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2_contingency.html) function. The function returns three values: test statistic, p-value of the test, degrees of freedom and expected frequencies;
+3. Pass the resulting cross table into [`stats.chi2_contingency()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2_contingency.html) function. The function returns three values: test statistic, p-value of the test, degrees of freedom and expected frequencies;
 4. Find the critical value of Chi-squared for these degrees of freedom and desired significance level;
 5. Create values `x` and `y` to plot the null distribution;
 6. Make a plot;
@@ -463,7 +463,7 @@ outliers_df consists of 19 observations.
 </opt>
 
 <opt text="1.5IQR and mean±2std methods result in the same amount of possible outliers" correct="true">
-mean±2std method resulted in a larger amount of possible outliers (19) compared to 1.5IQR method (2).
+mean±2std method resulting in a larger amount of possible outliers (19) compared to 1.5IQR method (2).
 </opt>
 </choice>
 

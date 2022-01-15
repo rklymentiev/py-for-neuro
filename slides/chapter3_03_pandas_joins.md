@@ -15,12 +15,12 @@ type: slides
 | Right Join | Returns all records from the right table, <br> and the matched records from the left table | <img src="https://www.w3schools.com/sql/img_rightjoin.gif" width="100"> |
 | Full Join | Returns all records when there is a match <br> in either left or right table | <img src="https://www.w3schools.com/sql/img_fulljoin.gif" width="100"> |
 
-Notes: Imagine now that you have not just one data in a table format. You can join all the tables together together to analyze everything at once.
+Notes: Imagine now that you have not just one data in a table format. You can join all the tables together to analyze everything at once.
 
 There are three main ways of doing this:
 
 1. Inner Join
-2. Left Join or Right Join (*depending which table you call "left" and "right"*)
+2. Left Join or Right Join (*depending on which table you call "left" and "right"*)
 3. Full Join
 
 Note that it's important that you have a shared column to join the data.
@@ -38,9 +38,9 @@ Notes: In this example we have two tables:
 * **Table A**: holds IDs and subjects' names
 * **Table B**: holds IDs and subjects' occupation
 
-We will join the data by the column `Id`. *Think what would happen if we didn't have the `Id` column in the Table B. Would we be able to join these two tables together?*
+We will join the data by the column `Id`. *Think what would happen if we didn't have the `Id` column in table B. Would we be able to join these two tables together?*
 
-With inner join we take only those observations that have matching `Id` value in both tables (these observations are marked with green ticks). Note that there were two observations in a Table B with `Id` "1", so in a resulted table (bottom right) we have two observations for "Bob".
+With inner join, we take only those observations that have matching `Id` values in both tables (these observations are marked with green ticks). Note that there were two observations in table B with `Id` "1", so in a resulting table (bottom right) we have two observations for "Bob".
 
 ---
 
@@ -48,11 +48,11 @@ With inner join we take only those observations that have matching `Id` value in
 
 <center><img src="left_join.png" width="600"></center>
 
-Notes: By performing a **left join** we have to define one table as "left" and the other one as "right". In this example Table A is "left", Table B is "right". We take **all** the observations from the Table A and join matching observations from the Table B (matched by the `Id` column).
+Notes: By performing a **left join** we have to define one table as "left" and the other one as "right". In this example, table A is "left" and table B is "right". We take **all** the observations from table A and join matching observations from table B (matched by the `Id` column).
 
-Some observations from Table A didn't have matching observations in the Table B, that's why we see a missing values in a table.
+Some observations from table A didn't have matching observations in table B, that's why we see missing values in a table.
 
-**Right join** idea is basically the same, but in this case we would take all the observations from the right table and add matches from the left table. So if we did a right join with  Table A is "right" and Table B is "left" we would end up with the same results.
+**Right join** idea is basically the same, but in this case, we would take all the observations from the right table and add matches from the left table. So if we did a right join with table A is "right" and table B is "left" we would end up with the same results.
 
 ---
 

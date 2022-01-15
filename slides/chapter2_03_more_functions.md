@@ -27,7 +27,7 @@ print(get_pi(circumference=22, diameter="some number"))
 TypeError: unsupported operand type(s) for /: 'int' and 'str'
 ```
 
-Notes: Recall the function to calculate the pi value. This was a pretty simple function and we know that we should use numeric objects for an input. But what if you decide to pass a string for example as a diameter value? In such case you get an Error, since operation `22/"some number"` is not supported (and doesn't make so much sense either). There is a way to check your values using `assert` statement.
+Notes: Recall the function to calculate the pi value. This was a pretty simple function and we know that we should use numeric objects for an input. But what if you decide to pass a string for example as a diameter value? In such case you get an Error since operation `22/"some number"` is not supported (and doesn't make so much sense either). There is a way to check your values using `assert` statement.
 
 ---
 
@@ -84,7 +84,7 @@ def get_pi(circumference, diameter, digits_to_round=2):
     Returns
     ----------
     pi : float
-        Resulted pi value. """
+        resulting pi value. """
 
     assert type(circumference) in [int, float], "Check the type of the circumference argument."
     assert type(diameter) in [int, float], "Check the type of the diameter argument."

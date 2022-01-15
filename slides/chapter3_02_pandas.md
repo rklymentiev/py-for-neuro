@@ -18,11 +18,11 @@ type: slides
 import pandas as pd
 ```
 
-Notes: Even though NumPy is extremely useful when it comes to numerical operations, sometimes we are dealing with the mixed data types and most of the time it comes in a tabular format. For these cases NumPy is not really helpful, but Pandas comes into play.
+Notes: Even though NumPy is extremely useful when it comes to numerical operations, sometimes we are dealing with mixed data types and most of the time it comes in a tabular format. For these cases, NumPy is not really helpful, but Pandas comes into play.
 
 To put it simply, Pandas allows you to work with the table data the same way you work with tables in Excel but with much more benefits!
 
-Commonly used alias name for Pandas is `pd`.
+The commonly used alias name for Pandas is `pd`.
 
 ---
 
@@ -49,11 +49,11 @@ print(temperature_series)
 dtype: float64
 ```
 
-Notes: The same way NumPy has its object data type `ndarray`, in the same Pandas has two main data types which allow you to perform all the cool stuff. We start with Series.
+Notes: In the same way NumPy has its object data type `ndarray`, in the same Pandas has two main data types which allow you to perform all the cool stuff. We start with Series.
 
-Series are basically **one**-dimensional array, that has a name and index name. Names could be integers or strings, but they have to be unique. To put it simple, remember built-in lists objects? Lists consists of different values that could be called by an integer index. Series are almost the same, but they also allow using specified names instead of ordering index. We will look at the example of this a bit later. Another key difference is that Series don't allow mixed data types within one object.
+Series are basically **one**-dimensional array, that has a name and index name. Names could be integers or strings, but they have to be unique. To put it simply, remember built-in lists objects? Lists consist of different values that could be called by an integer index. Series are almost the same, but they also allow using specified names instead of ordering index. We will look at the example of this a bit later. Another key difference is that Series don't allow mixed data types within one object.
 
-On our example we have a Series with the values of `float64` type and indexes from `0` to `7`.
+In our example, we have a Series with the values of `float64` type and indexes from `0` to `7`.
 
 ---
 
@@ -95,7 +95,7 @@ Notes: Pandas Series allow slicing like more of the objects with the `[<start in
 
 They also allow performing numerical operations in a simple "vectored" way without looping over all values.
 
-And of course Series have their own unique methods that can be applied on them.
+And of course Series have their own unique methods that can be applied to them.
 
 ---
 
@@ -108,11 +108,11 @@ display(dementia_df)
 
 <img src="dataframe.png" width="600">
 
-Notes: Second data type is Pandas DataFrames. It is basically a collection of multiple Series that represent columns. DataFrames have column names and row names (indexes) and can be only **two** dimensional.
+Notes: The second data type is Pandas DataFrames. It is basically a collection of multiple Series that represent columns. DataFrames have column names and row names (indexes) and can be only **two** dimensional.
 
-You can see example of a csv file being uploaded into Python and converted into DataFrame. The data is from Vos et al. (2013)\* experiment and represents the data of patients with different levels of dementia.
+You can see an example of a csv file being uploaded into Python and converted into DataFrame. The data is from Vos et al. (2013) experiment and represents the data of patients with different levels of dementia.
 
-Note that now the type is the same within each column but overall types are different for the whole DataFrame. And that's what you would probably expect. Usually, each row represents a particular observation or subject data, whereas column represent different features of that observation. So you would expect that for the column (feature) "Age" all subjects have a numeric values and strings for the column "Name".
+Note that now the type is the same within each column but overall types are different for the whole DataFrame. And that's what you would probably expect. Usually, each row represents a particular observation or subject data, whereas the column represents different features of that observation. So you would expect that for the column (feature) "Age" all subjects have numeric values and strings for the column "Name".
 
 ---
 
@@ -143,9 +143,9 @@ dtypes: float64(7), int64(2), object(3)
 memory usage: 41.0+ KB
 ```
 
-Notes: Calling a `.info()` method is always a good place to start working with your data. It gives you a brief overview what's inside your DataFrame. As you can see, here we have 436 rows (observations) and 12 columns (features).
+Notes: Calling the `.info()` method is always a good place to start working with your data. It gives you a brief overview of what's inside your DataFrame. As you can see, here we have 436 rows (observations) and 12 columns (features).
 
-In the columns table you see the column name, how many non-null values are present (in other words, how many values are **not** missing) and what are the type of variables in each column. Note that Pandas marks strings as `object`.
+In the columns table you see the column name, how many non-null values are present (in other words, how many values are **not** missing), and what is the type of variables in each column. Note that Pandas marks strings as `object`.
 
 We can already notice that column `Delay` has only 20 values, meaning that `436-20=416` values are missing. Missing values are represented as `np.NaN`, which stands for Non A Number.
 ---
@@ -180,9 +180,9 @@ dementia_df[['Age', 'Educ', 'SES']]
 [436 rows x 3 columns]
 ```
 
-Notes: You can easily select any column to work with by specifying its name as string inside the indexing brackets. In such case you get a `pandas` Series.
+Notes: You can easily select any column to work with by specifying its name as a string inside the indexing brackets. In such a case, you get a `pandas` Series.
 
-If you want to select two or more columns at the time you can pass a list with column names inside the brackets. In this case you get a Pandas DataFrame object.
+If you want to select two or more columns at a time, you can pass a list with column names inside the brackets. In this case, you get a Pandas DataFrame object.
 
 ---
 
@@ -192,10 +192,10 @@ If you want to select two or more columns at the time you can pass a list with c
 
 *Image credit: [Shane Lynn](https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/)*
 
-Notes: DataFrames have also another a bit specific way of indexing. Remember that you can index by the columns and rows at the same time. There are two options:
+Notes: DataFrames have a bit specific way of indexing. Remember that you can index by the columns and rows at the same time. There are two options:
 
 1. Index the the **index** (or `i`nteger-`loc`ation). In this case we use `<DataFrame>.iloc[<row position(s)>, <column position(s)>]`. You can specify one position as an integer, or multiple positions as a list or use slicing `<position1>:<position2>`. All the columns/rows will be selected (excluding the `position2`) in the slice.
-2. Index by the **name** (or `loc`ation). In this case we use `<DataFrame>.loc[<row name(s)>, <column name(s)>]`. You can specify one name as a string, or multiple names as a list or use slicing `<name1>:<name2>`. All the columns/rows will be selected (including the `name2`) in the slice. Also you can specify the Boolean list index where all the rows/columns that correspond to the `True` value will be included.
+2. Index by the **name** (or `loc`ation). In this case, we use `<DataFrame>.loc[<row name(s)>, <column name(s)>]`. You can specify one name as a string, or multiple names as a list or use slicing `<name1>:<name2>`. All the columns/rows will be selected (including the `name2`) in the slice. Also, you can specify the Boolean list index where all the rows/columns that correspond to the `True` value will be included.
 
 ---
 
@@ -229,11 +229,11 @@ dementia_df['ID'][dementia_df['nWBV'].between(0.7, 0.8)]
 Name: ID, Length: 162, dtype: object
 ```
 
-Notes: To filter the data you have to specify the condition to filter on. In the same way as we did before, you can combine multiple condition with `&` (AND) or `|` (OR) operations.
+Notes: To filter the data you have to specify the condition to filter on. In the same way, as we did before, you can combine multiple condition with `&` (AND) or `|` (OR) operations.
 
 In the first example we are taking all the observations that meet the criteria: gender is female and age is greater than 60. Note that you don't have to create a separate object (`condition`), it was done only for a better visual representation.
 
-In the second example first we take the column `ID` and then we filter the Series by the condition that normalized whole-brain volume (`nWBV`) should be in a range between 0.7 and 0.8.
+In the second example, first we take the column `ID` and then we filter the Series by the condition that normalized whole-brain volume (`nWBV`) should be in a range between 0.7 and 0.8.
 
 ---
 
@@ -255,9 +255,9 @@ CDR M/F
     M    1512  0.665000
 ```
 
-Notes: Another useful tool is grouping and aggregation of the data. In this example we want to see the minimum estimated total intracranial volume (`eTIV`) and average normalized whole-brain volume (`nWBV`) for each gender and clinical dementia rating (`CDR`). This line of code might seem a bit complicated, but we can split it in parts:
+Notes: Another useful tool is the grouping and aggregation of the data. In this example, we want to see the minimum estimated total intracranial volume (`eTIV`) and average normalized whole-brain volume (`nWBV`) for each gender and clinical dementia rating (`CDR`). This line of code might seem a bit complicated, but we can split it into parts:
 
-1. Group by a list of column names. If you wanted to split just by one column, you could specify just a string with column name, for example `by="CDR"`.
+1. Group by a list of column names. If you wanted to split just by one column, you could specify just a string with a column name, for example, `by="CDR"`.
 2. Right now we have a "grouped" DataFrame object, which is not that interesting. We apply aggregation method and specify a dictionary in a following way: `{"<column name>": "<aggregation function>"}`. If you wanted to apply multiple functions on the same column you could specify a list, for example, `{"eTIV": ["min", "max"]}`.
 
 *Clinical Dementia Rating: 0 = no dementia, 0.5 = very mild AD, 1 = mild AD, 2 = moderate AD*

@@ -33,13 +33,13 @@ Notes: Comparison always return a Boolean object which can be either `True` or `
 | x & y | if x is False, then x, else y |
 | not x | if x is False, then True, else False |
 
-Notes: This might seems confusing at first, but that's important to keep in mind when dealing with multiple comparisons. Imagine you want to select only males who are older than 45 years for your data analysis. Your code would look something like that:
+Notes: This might seem confusing at first, but that's important to keep in mind when dealing with multiple comparisons. Imagine you want to select only males who are older than 45 years for your data analysis. Your code would look something like that:
 
 ```python
 (sex == "Male") & (age > 45)
 ```
 
-Female who is 50 years old would have `False & True` result of two comparisons, resulting in final `False` result. And that's exactly what you wanted since you want two conditions to be `True` at the same time.
+A female who is 50 years old would have `False & True` result of two comparisons, resulting in the final `False` result. And that's exactly what you wanted since you want two conditions to be `True` at the same time.
 
 ---
 
@@ -77,9 +77,9 @@ False
 bool
 ```
 
-Notes: Example #1 is pretty straight forward. `x` is indeed smaller than 100, so the result is `True`.
+Notes: Example #1 is pretty straightforward. `x` is indeed smaller than 100, so the result is `True`.
 
-In the second example the left condition was `True` (`x` is greater than 10) and the right condition was `False` (`y` is not less than 5), which resulted in the final `True` result (in other words, at least one condition was `True`).
+In the second example the left condition was `True` (`x` is greater than 10) and the right condition was `False` (`y` is not less than 5), which resulting in the final `True` result (in other words, at least one condition was `True`).
 
 In the third example we want to check if **both** conditions are `True`, which is not the case, that's why the final result is `False`. You can also save the result of a condition operation to a new object (like `result` in this example) for later use.
 

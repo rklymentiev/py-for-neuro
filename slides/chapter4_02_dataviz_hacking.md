@@ -74,8 +74,6 @@ Notes: By a quick glance at the plot it may look like Yang has a much large prop
 
 Notes: Nice example on how to make us feel that Biden had more votes than Trump, when in fact it was not true.
 
-*saying in Rihanna voice: scale, scale, scale, scale, scale*
-
 ---
 
 #  Don't let them fool you!

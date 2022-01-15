@@ -25,7 +25,7 @@ print(np.sqrt(4))
 2.0
 ```
 
-Notes: NumPy is one of the most fundamental packages for numerical computing in Python. It has hundreds of functions, but in this chapter we will not go through all of them. The main goal is to introduce the main idea of working with NumPy so you can continue exploring package's possibilities on your own.
+Notes: NumPy is one of the most fundamental packages for numerical computing in Python. It has hundreds of functions, but in this chapter, we will not go through all of them. The main goal is to introduce the main idea of working with NumPy so you can continue exploring the package's possibilities on your own.
 ---
 
 # Arrays
@@ -61,9 +61,9 @@ print(c.shape)
 (2,2)
 ```
 
-Notes: Array is the basic NumPy type which has lots of benefits over lists. Important to remember, that objects in array should be **the same type**. If it's not the case (like in `b` array), NumPy will convert all object to one data type it finds most convenient. For the `b` case it converted all the objects to the string, since there was already one string. Usually we don't work with strings in NumPy so our array consist of numeric values most (if not 100\%) of the time.
+Notes: The array is the basic NumPy type which has lots of benefits over lists. Important to remember, that objects in the array should be **the same type**. If it's not the case (like in `b` array), NumPy will convert all objects to one data type it finds most convenient. For the `b` case it converted all the objects to the string since there was already one string. Usually, we don't work with strings in NumPy so our arrays consist of numeric values most (if not 100\%) of the time.
 
-Just as lists, numpy array can have nested structure. `c` array is 2 dimensional array with the shape 2x2, meaning it has two rows and two columns.
+Just as lists, numpy array can have a nested structure. `c` array is a 2-dimensional array with the shape 2x2, meaning it has two rows and two columns.
 
 ---
 
@@ -91,7 +91,7 @@ print(temperature_array)
 [64.4, 70.7, 69.8, 69.8, 65.84, 63.68, 69.62, 68.0]
 ```
 
-Notes: You can a simple example of numeric operations on lists vs arrays. NumPy makes life easier and we can apply those operations directly on an array (in the same way we would apply them on a vector) without calling any mapping functions, loops or so on.
+Notes: You can see a simple example of numeric operations on lists vs arrays. NumPy makes life easier through [vectorization](https://blog.paperspace.com/numpy-optimization-vectorization-and-broadcasting/). We can apply operations directly on an array (in the same way we would apply them on a vector) without calling any mapping functions, loops, or so on.
 
 ---
 
@@ -103,7 +103,7 @@ Notes: You can a simple example of numeric operations on lists vs arrays. NumPy 
 
 <span>Photo by <a href="https://unsplash.com/@natcon773?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Natasha Connell</a> on <a href="https://unsplash.com/s/photos/brain?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
-Notes: The best way to visualize the multidimensional array is through image. We don\'t care at the moment how we imported image in Python. The most important is that now image is a 3-D array `array` with the shape `(3024, 4032, 3)`, meaning that now we have original image had 3024 pixel height, 4032 pixels width and 3 layers (red, green and blue). The array is filled with values in a range [0, 255] that correspond to pixel intensity of each layer. In the next slide you will see how slicing affects the image.
+Notes: The best way to visualize the multidimensional array is through an image. We don\'t care at the moment how we imported this image in Python. The most important is that now the image is a 3-D array `array` with the shape `(3024, 4032, 3)`, meaning that the original image had 3024 pixel height, 4032 pixels width and 3 layers (red, green and blue). The array is filled with values in a range [0, 255] that correspond to a pixel intensity of each layer. You will see how slicing affects the image in the next slide.
 
 ---
 
@@ -111,13 +111,13 @@ Notes: The best way to visualize the multidimensional array is through image. We
 
 <center><img src="brain_slice.png" width="500"></center>
 
-Notes: On the first plot you see the Python visualization of the array without any slicing.
+Notes: On the first plot, you see the Python visualization of the array without any slicing.
 
-On the second plot we took `100:1200` values from the first dimension (*height*), all values (`:`) from the second dimension (*width*) and all values (`:`) from the third dimension (*layers*).
+On the second plot, we took `100:1200` values from the first dimension (*height*), all values (`:`) from the second dimension (*width*), and all values (`:`) from the third dimension (*layers*).
 
-On the third plot we took all values (`:`) from the first dimension (*height*), `1300:2400` values from the second dimension (*width*) and all values (`:`) from the third dimension (*layers*).
+On the third plot, we took all values (`:`) from the first dimension (*height*), `1300:2400` values from the second dimension (*width*) and all values (`:`) from the third dimension (*layers*).
 
-On the fourth plot we took `1100:1350` values from the first dimension (*height*), `1200:1500` values from the second dimension (*width*) and all values (`:`) from the third dimension (*layers*).
+On the fourth plot, we took `1100:1350` values from the first dimension (*height*), `1200:1500` values from the second dimension (*width*) and all values (`:`) from the third dimension (*layers*).
 
 ---
 
@@ -151,10 +151,10 @@ Inverse of A:
 
 Notes: The Linear Algebra module of NumPy offers various methods to apply linear algebra on any numpy array. One can find:
 
-* rank, determinant, trace, etc. of an array.
-* eigen values/vector of matrices
-* matrix and vector products (dot, inner, outer,etc. product), matrix exponentiation
-* solve linear or tensor equations and much more!
+* rank, determinant, trace, etc. of an array;
+* eigenvalues/vectors of matrices;
+* matrix and vector products (dot, inner, outer product), matrix exponentiation;
+* solve linear or tensor equations, and much more!
 
 ---
 

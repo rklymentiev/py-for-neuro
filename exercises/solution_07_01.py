@@ -29,7 +29,7 @@ for end_index in h1_data["spike_time"][h1_data["spike_time"]>window]:
     # add the slice to the STA vector
     h1_data["sta"] += sample
 
-# divide the resulted STA vector on the amount of time points
+# divide the resulting STA vector on the amount of time points
 # to get the actual average
 h1_data["sta"] /= len(h1_data["spike_time"][h1_data["spike_time"]>window])
 
