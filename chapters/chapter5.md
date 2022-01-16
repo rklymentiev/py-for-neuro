@@ -366,51 +366,56 @@ This function creates a new folder.
 
 ```python
 {
-    'quiz': {
-        'maths': {
-            'q1': {
-                'answer': '12',
-                'options': ['10', '11', '12', '13'],
-                'question': '5 + 7 = ?'
-            },
-            'q2': {
-                'answer': '4',
-                'options': ['1', '2', '3', '4'],
-                'question': '12 - 8 = ?'
-            }
-        },
-        'sport': {
-            'q1': {
-                'answer': 'Huston Rocket',
-                'options': ['New York Bulls', 'Los Angeles Kings',
-                            'Golden State Warriros', 'Huston Rocket'],
-                'question': 'Which one is correct team name in NBA?'
-            }
-        }
-    }
+	"brain": {
+		"cerebrum": {
+			"lobes": {
+				"frontal": {
+					"location": "front part of the brain",
+					"functions": ["emotions", "reasoning", "planning", "movement"]
+				},
+				"parietal": {
+					"location": "at the top back of the brain",
+					"functions": {
+						"senses": ["touch", "pain", "taste", "pressure", "temperature"]
+					}
+				},
+				"temporal": {
+					"location": "right above the ears",
+					"functions": ["hearing", "memory", "meaning", "language"]
+				},
+				"occipital": {
+					"location": "front part of the brain",
+					"functions": "vision"
+				}
+			}
+		},
+		"cerebellum": {
+			"functions": ["movement", "balance", "posture", "coordination"]
+		}
+	}
 }
 ```
 
 What is the output of the following command?
 
 ```python
-sample_json['sport']['q1']['options']
+sample_json['brain']['lobes']['parietal']['functions']
 ```
 <choice id="3">
-<opt text="['New York Bulls', 'Los Angeles Kings', 'Golden State Warriros', 'Huston Rocket']">
+<opt text="['emotions', 'reasoning', 'planning', 'movement']">
+Are you sure you followed the hierarchy correctly?
+</opt>
+
+<opt text="['touch', 'pain', 'taste', 'pressure', 'temperature']" >
+That would have been the true, if we specified ['senses'] key at the end. But something else is also missing.
+</opt>
+
+<opt text="{'senses': ['touch', 'pain', 'taste', 'pressure', 'temperature']}">
 Check the keys hierarchy. Aren't we missing something?
 </opt>
 
-<opt text="{'sport': {'q1': {'options': ['New York Bulls', 'Los Angeles Kings', 'Golden State Warriros', 'Huston Rocket']}}}" >
-Hm...
-</opt>
-
-<opt text="New York Bulls">
-That would be the true if specified the index of a list at the end. But something else is also missing.
-</opt>
-
 <opt text="Key Error" correct="true">
-"quiz" key is missing. The correct command would be `sample_json['quiz']['sport']['q1']['options']`
+"cerebrum" key is missing. The correct command would be sample_json['brain']['cerebrum']['lobes']['parietal']['functions']
 </opt>
 </choice>
 

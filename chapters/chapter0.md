@@ -42,7 +42,7 @@ A: Definitely! Most exercises are based on neuroscience-related data sets (descr
 
 **Q: Is this a supervised course?**
 
-A: No, there is no supervision. However, I tried to make tasks and hints as clear as possible.
+A: Yes and no. There is no real-time supervision. However, you can check if your code matches the solution when doing the exercises and possibly get an error feedback when something is wrong.
 
 **Q: Will I get a certificate after the completion of the course?**
 

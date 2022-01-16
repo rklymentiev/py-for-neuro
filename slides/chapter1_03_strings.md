@@ -35,13 +35,13 @@ Or even multiply!Or even multiply!Or even multiply!
 Notes: You might have seen codes like this:
 
 ```python
-x = "Hello" # single brackets
+x = "Hello" # single quotes
 ```
 ```python
-x = 'Hello' # double brackets
+x = 'Hello' # double quotes
 ```
 
-What are the differences? There is absolutely no difference which type of brackets you are going to use, as long you are consistent within one string (for example, `"hello'` would raise an Error).
+What are the differences? There is absolutely no difference which type of quotes you are going to use, as long you are consistent within one string (for example, `"hello'` would raise an Error).
 
 ---
 
