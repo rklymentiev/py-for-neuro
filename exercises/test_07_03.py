@@ -8,6 +8,5 @@ def test():
     assert fpz_index == 1, "Check FPz electrode index."
     assert N == 50001, "Number of observations N is not correct."
     assert fc_np.shape == (50001,), "Did you select the electrode before applying FFT?"
-    assert fc_sp.shape == (50001,), "Did you select the electrode before applying FFT?"
 
     __msg__.good("Well done!")

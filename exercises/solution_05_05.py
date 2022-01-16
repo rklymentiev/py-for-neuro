@@ -1,4 +1,5 @@
 import json
+import pprint
 
 dataset_description = {
     "Name": "Our cool data set",
@@ -23,7 +24,7 @@ with open(file="dataset_description.json", mode="w") as file:
 with open(file="dataset_description.json", mode="r") as file:
     output = json.load(fp=file)
 
-print(output)
+pprint.pprint(output)
 
 # get the name of the first author
 first_author_name = output["Authors"][0]["Name"]

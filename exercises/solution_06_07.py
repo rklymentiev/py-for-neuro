@@ -1,3 +1,4 @@
+import pprint
 import pandas as pd
 from pingouin import compute_bootci
 
@@ -21,4 +22,4 @@ for cdr_level in [0, 0.5, 1]: # iterate over possible CDR values
     # uodate the dictinary value
     nwbv_estimation[cdr_level].update({"CI": ci})
 
-print(nwbv_estimation)
+pprint.pprint(nwbv_estimation)

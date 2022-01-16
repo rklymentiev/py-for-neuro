@@ -1,3 +1,4 @@
+import pprint
 import ___ as pd
 from ___ import compute_bootci
 
@@ -21,4 +22,4 @@ for ___ in [0, 0.5, 1]: # iterate over possible CDR values
     # uodate the dictinary value
     nwbv_estimation[___].___({"CI": ci})
 
-print(nwbv_estimation)
+pprint.pprint(nwbv_estimation)
