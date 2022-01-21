@@ -5,8 +5,8 @@ def test():
     # in the meta.json for details.
 
     # If an assertion fails, the message will be displayed
-    assert "heatmap" in __solution__, 'Did you call the heatmap function?'
-    assert len(selected_columns) == 10, 'Did you include only the columns with average values in a list selected_columns?'
-    assert corr_matrix.shape == (10,10), "Did you filter out the DataFrame before calling corr function?"
+    assert window == 150, "Did you chose the right window size?"
+    assert h1_data["sta"].shape == (150, ), "Shape of the STA array is not correct."
+    assert round(h1_data["sta"][0], 5) == -0.2129, "STA values are not correct."
 
     __msg__.good("Well done!")

@@ -5,8 +5,9 @@ def test():
     # in the meta.json for details.
 
     # If an assertion fails, the message will be displayed
-    assert "heatmap" in __solution__, 'Did you call the heatmap function?'
-    assert len(selected_columns) == 10, 'Did you include only the columns with average values in a list selected_columns?'
-    assert corr_matrix.shape == (10,10), "Did you filter out the DataFrame before calling corr function?"
+    assert Qs.shape == (101, 3), "Shape of Qs array is not correct"
+    assert sum(Qs[-1, :].round(3) == [0.212, 0.726, 0.467]) == 3, "Value function values don't match the solution."
+    assert cum_rew[-1] == 64, "Cumulative reward doesn't match the solution."
+    assert sum(counts == [20, 26, 54]) == 3, "Counts of chosen arms doesn't match the solution."
 
     __msg__.good("Well done!")

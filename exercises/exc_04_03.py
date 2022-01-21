@@ -1,6 +1,6 @@
-import ___
-import ___
-import ___
+import ___ as pd
+import ___ as sns
+import ___.___ as plt
 
 # read in the data
 dementia_df = ___

@@ -6,6 +6,6 @@ def test():
 
     # If an assertion fails, the message will be displayed
     assert parietal_df.shape == (532, 5), 'Did you filter only observation from parietal region?'
-    assert "to_excel" in __solution__, 'Did you save resulted DataFrame as an Excel file?'
+    assert "to_excel" in __solution__, 'Did you save resulting DataFrame as an Excel file?'
 
     __msg__.good("Well done!")

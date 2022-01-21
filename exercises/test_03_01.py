@@ -5,7 +5,7 @@ def test():
     # in the meta.json for details.
 
     # If an assertion fails, the message will be displayed
-    b_corr = np.load("exercises/numpy/b.npy")
-    assert b == b_corr, 'Did you use formula from above?'
+    b_corr = np.load("exercises/data/b.npy")
+    assert sum(b == b_corr) == 2, 'Did you use formula from above?'
 
     __msg__.good("Well done!")

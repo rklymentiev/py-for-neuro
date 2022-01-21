@@ -1,44 +1,11 @@
-def variance(input_list, df=1):
-    """ Function returns the variance of a given lists.
+accuracy_scores = {
+    'id1': 0.2665, 'id2': 0.7523, 'id3': 0.6123, 'id4': 0.053, 'id5': 0.389,
+    'id6': 0.6732, 'id7': 0.692, 'id8': 0.5184, 'id9': 0.743, 'id10': 0.3111
+    }
 
-    Parameters
-    ----------
-    input_list : list
-        List of numeric values
+for (key, value) in accuracy_scores.items():
+    print(f"Accuracy for subject {key} is {value:.2f}.")
 
-    df : int, default is 1
-        Degrees of freedom to subtract.
-        When `df=0` formula is for the population variance.
-        When `df=1` formula is for the sample variance.
-
-    Returns
-    ----------
-    Variance: float
-        Resulted variance.
-    """
-
-    # get the list of booleans that were a result of checking
-    # if value from a list is either int or float
-    is_type_numeric = map(lambda x: type(x) in [int, float], input_list)
-    # if the sum of that list doesn't equal the length of an input list
-    # that means, that one of more objects were not numeric
-    assert sum(is_type_numeric) == len(input_list), \
-    "Some of the values in the list are not numeric"
-    assert (type(df) == int) & (df >= 0), "Degrees of freedom should be a positive integer or 0"
-
-    N = len(input_list)                # calculate the sample size
-    x_bar = sum(input_list) / N        # calculate the average value
-
-    numerator = []                     # empty list with the values from the numerator
-    for x in input_list:               # iterate over all values in the given list
-        numerator.append((x-x_bar)**2) # subtract average value from x,
-                                       # square it, and add to the numerator list
-    return sum(numerator) / (N-df)     # return the sum of the numerator divided by (N - df)
-
-
-try:
-    participants_height = [167, 185, 179, 191, 178, 180, 175, 188, "170"]
-    height_var = variance(input_list=participants_height)
-    print(height_var)
-except:
-    height_var = None
+# alternative
+# for key in accuracy_scores.keys():
+#     print(f"Accuracy for subject {key} is {accuracy_scores[key]:.2f}.")

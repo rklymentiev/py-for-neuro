@@ -5,8 +5,8 @@ def test():
     # in the meta.json for details.
 
     # If an assertion fails, the message will be displayed
-    assert "heatmap" in __solution__, 'Did you call the heatmap function?'
-    assert len(selected_columns) == 10, 'Did you include only the columns with average values in a list selected_columns?'
-    assert corr_matrix.shape == (10,10), "Did you filter out the DataFrame before calling corr function?"
+    assert max(v) < v_thresh, "Did you use the threshold value to reset the potential value?"
+    assert min(v) == v_reset, "Did you use reset value to reset potential values?"
+    assert round(sum(v)) == -57438, "Resulting v list doesn't match the solution."
 
     __msg__.good("Well done!")

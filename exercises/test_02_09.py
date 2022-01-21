@@ -5,9 +5,6 @@ def test():
     # in the meta.json for details.
 
     # If an assertion fails, the message will be displayed
-    assert height_var == None, 'Does your function check the type?'
-    assert "assert" in __solution__, "Did you use assert statement?"
-    assert "type(df)" in __solution__.replace(" ", ""), \
-    "Do you check the type of degrees of freedom?"
+    assert ".2f" in __solution__, "Did you round the accuracy scores?"
 
     __msg__.good("Well done!")

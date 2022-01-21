@@ -1,3 +1,3 @@
 DNA = "gatggaacttgactacgtaaatt"
-RNA = ___
+RNA = ___.___("t", ___).upper()
 print(RNA)

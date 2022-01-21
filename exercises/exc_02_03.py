@@ -5,9 +5,9 @@ accuracy_scores = {
 # store the top 3 values from the dictionary as a list
 max_accs = ___
 # create an empty list that will hold ids of participants with the highes accuracy
-max_ids = ___
+max_ids = ___         # create an empty list
 for ___ in ___:       # iterate over all keys in the dictionary
-    if ___ in ___:    # if the value of by this key is in top 3
-        ____          # then append the list
+    if ___ in ___:    # check if the value of this key is in top 3
+        ____          # if so, append the list
 
 print(max_ids)

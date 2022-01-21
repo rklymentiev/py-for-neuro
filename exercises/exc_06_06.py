@@ -15,5 +15,5 @@ print(f"t score={t_score:.3f}, p-val={p_val:.3f}")
 
 # pingouin implementation
 print("\n==pingouin implementation==")
-result = ttest(x=___, y=___, tail=___)
+result = ttest(x=___, y=___, alternative=___)
 display(result.round(3))

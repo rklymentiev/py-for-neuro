@@ -1,4 +1,7 @@
 def variance(input_list, df=1):
+
+    assert (type(df) == int) & (df >= 0), \
+    "Degrees of freedom should be a positive integer or 0"
     # get the list of booleans that were a result of checking
     # if value from a list is either int or float
     is_type_numeric = map(lambda x: type(x) in [int, float], input_list)
@@ -6,7 +9,6 @@ def variance(input_list, df=1):
     # that means, that one of more objects were not numeric
     assert sum(is_type_numeric) == len(input_list), \
     "Some of the values in the list are not numeric"
-    assert (type(df) == int) & (df >= 0), "Degrees of freedom should be a positive integer or 0"
 
     N = len(input_list)                # calculate the sample size
     x_bar = sum(input_list) / N        # calculate the average value
@@ -21,6 +23,7 @@ def variance(input_list, df=1):
 try:
     participants_height = [167, 185, 179, 191, 178, 180, 175, 188, "170"]
     height_var = variance(input_list=participants_height)
-    print(height_var)
 except:
     height_var = None
+
+print(height_var)

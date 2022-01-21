@@ -1,5 +1,4 @@
 import pandas as pd
-# !pip install openpyxl
 
 # read in the data
 df = pd.read_csv("exercises/data/fmri_data.csv", sep=';')
