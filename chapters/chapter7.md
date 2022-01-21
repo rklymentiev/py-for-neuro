@@ -101,7 +101,7 @@ Credits: [Wikipedia](https://en.wikipedia.org/wiki/Discrete_Fourier_transform)
 
 Credits: [Wikipedia](https://en.wikipedia.org/wiki/Electroencephalography)
 
-In this exercise, we will convert a signal at FpZ channel from the time domain to a frequency domain. Data represents a sample from Cavanagh et al. (2019) study. This sample consists of around 10 seconds of data measurements sample at 500 Hz frequency and measured at 66 channels.
+In this exercise, we will convert a signal at FpZ channel from the time domain to a frequency domain. Data represents a sample from Cavanagh et al. (2019) study. This sample consists of around 10 seconds of data measurements sampled at 500 Hz frequency and measured at 66 channels.
 
 1. Load the pickled dictionary. Path to the file `"exercises/data/eeg_sample.pickle"`. Dictionary has 4 values, `ch_names`: 1D array with channel names; `data`: 2D array with EEG measurements, shape of the array (66, 50001); `srate`: sampling rate (Hz); `times`: time points.
 2. Find the index of `Fpz` channel from the channel names.
