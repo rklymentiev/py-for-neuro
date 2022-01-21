@@ -147,7 +147,7 @@ Is it the only group?
 
 Sample of the data set:
 
-<center><img src="breast_cancer.png"></center>
+<center><img src="imgs/breast_cancer.png"></center>
 
 1. Load the data with breast cancer observations (path to the file `"exercises/data/breast_cancer.csv"`);
 2. Make a **scatter plot** of `radius_mean` on the `x` axis against `texture_mean` on the `y` axis along with the **regression line**. You can do this in one line of code using [`sns.regplot()`](https://seaborn.pydata.org/generated/seaborn.regplot.html) function. Specify standard deviation as an error term (`x_ci="sd"`);
@@ -219,7 +219,7 @@ Credits: [Wikipedia](https://en.wikipedia.org/wiki/Exploratory_data_analysis)
 
 Sample of the data set:
 
-<center><img src="oasis.png"></center>
+<center><img src="imgs/oasis.png"></center>
 
 * Load the data with dementia patients' observations (path to the file `"exercises/data/oasis_cross-sectional.csv"`).
 * Create 4 grouped bar charts at the same figure (using `plt.subplot()`). Variables to plot:
@@ -331,7 +331,7 @@ Compare the numerical values and the actual circle proportion.
 </opt>
 
 <opt text="No, proportion and numerical values do not agree" correct="true">
-42& looks more like 33%.
+42% look more like 33%.
 </opt>
 
 <opt text="No, total sum is not 100%">

@@ -106,7 +106,7 @@ dementia_df = pd.read_csv("/content/oasis_cross-sectional.csv")
 display(dementia_df)
 ```
 
-<img src="dataframe.png" width="600">
+<img src="imgs/dataframe.png" width="600">
 
 Notes: The second data type is Pandas DataFrames. It is basically a collection of multiple Series that represent columns. DataFrames have column names and row names (indexes) and can be only **two** dimensional.
 

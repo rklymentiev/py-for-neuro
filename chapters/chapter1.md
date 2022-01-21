@@ -17,7 +17,7 @@ id: 1
 
 <exercise id="2" title="Say hello to the world">
 
-<center><img src="hello_world.jpg" width="300"></center>
+<center><img src="imgs/hello_world.jpg" width="300"></center>
 
 The good part about Python (and I assume about most of the programming languages) is that function names are most of the times self-explanatory. If you see a function called `print()`, it does exactly what you expect it to do. It prints out the object on a screen. Now, run your very first clean and beautiful code and greet the World!
 
@@ -208,6 +208,27 @@ True & False = False
 
 - recall the `string_obj.count()` function;
 - you can count and create a dictionary at the same time: `d = {'key': str_obj.count('x')}`
+
+</codeblock>
+
+**Exercise 3**. The leaky integrate-and-fire (LIF) model is one of the most simplest mathematical model that tried to explain neuron's behavior. LIF model represents neuron as a parallel combination of a "leaky" resistor with a conductance *g_L* and a membrane capacitor with a capacitance *C_m*. If the input current *I* is sufficiently strong enough such that membrane potential *V* reaches a certain threshold value *V_thresh*, *V* is reset to *V_reset*.
+
+The membrane potential dynamics can be described by:
+
+<center><img src="https://latex.codecogs.com/svg.image?\tau_m\frac{dV}{dt}&space;=&space;-(V-E_L)&space;&plus;&space;\frac{I}{g_L}" title="\tau_m\frac{dV}{dt} = -(V-E_L) + \frac{I}{g_L}" /></center>
+
+* *E_L* is the resting potential;
+* <img src="https://latex.codecogs.com/svg.image?\tau_m=C_m/g_L" title="\tau_m=C_m/g_L" />, membrane time constant.
+
+Use this equation to simulate the LIF neuron. Store membrane voltage value in a list to visualize the results at the end.
+
+More information about LIF model can be found here: [Neuronal Dynamics book](https://neuronaldynamics.epfl.ch/online/Ch1.S3.html).
+
+<codeblock id="01_10">
+
+- once you calculated the `dv` value, you have to add it to the last value in the list;
+- negative indexes return values from the end of a list. For example, `<list object>[-2]` returns value that is second to the last;
+- to add new value to the list, you can use the `.append()` method.
 
 </codeblock>
 

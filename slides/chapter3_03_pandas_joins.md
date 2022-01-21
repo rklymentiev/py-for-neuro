@@ -31,7 +31,7 @@ Note that it's important that you have a shared column to join the data.
 
 # Inner Join
 
-<center><img src="inner_join.png" width="600"></center>
+<center><img src="imgs/inner_join.png" width="600"></center>
 
 Notes: In this example we have two tables:
 
@@ -46,7 +46,7 @@ With inner join, we take only those observations that have matching `Id` values 
 
 # Left Join
 
-<center><img src="left_join.png" width="600"></center>
+<center><img src="imgs/left_join.png" width="600"></center>
 
 Notes: By performing a **left join** we have to define one table as "left" and the other one as "right". In this example, table A is "left" and table B is "right". We take **all** the observations from table A and join matching observations from table B (matched by the `Id` column).
 
@@ -58,7 +58,7 @@ Some observations from table A didn't have matching observations in table B, tha
 
 # Full Join
 
-<center><img src="full_join.png" width="600"></center>
+<center><img src="imgs/full_join.png" width="600"></center>
 
 Notes: By joining the tables by full join we take all observations from both tables. In this example we have observations that don't have matching observations, that's why we see more missing values.
 

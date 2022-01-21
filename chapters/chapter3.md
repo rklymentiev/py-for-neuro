@@ -60,7 +60,7 @@ In this way we import function `sqrt()` and module `linalg` (which has multiple 
 
 <exercise id="3" title="NumPy exercises">
 
-**Question 1**. What is **not the right way** to import `numpy` package?
+**Question**. What is **not the right way** to import `numpy` package?
 
 <choice>
 <opt text="import numpy">
@@ -79,6 +79,76 @@ There is nothing wrong with that line. In fact, this is the most common way.
 We use `from ___ import ___` when we want to import a specific module or function from a package. This would be a valid line of code, if `numpy` package had a `np` module/function.
 </opt>
 </choice>
+
+**Exercise**. You have a sample from EEG data from Cavanagh et al. (2019) study. This sample consists of around 10 seconds of data measurements sampled at 500 Hz frequency and measured at 66 channels.
+
+Dictionary `eeg` looks as follows:
+
+```out
+{'ch_names': array(['Fp1', 'Fpz', 'Fp2', 'AF3', 'AF4', 'F7', 'F5', 'F3', 'F1', 'Fz',
+        'F2', 'F4', 'F6', 'F8', 'FT7', 'FC5', 'FC3', 'FC1', 'FCz', 'FC2',
+        'FC4', 'FC6', 'FT8', 'T7', 'C5', 'C3', 'C1', 'Cz', 'C2', 'C4',
+        'C6', 'T8', 'M1', 'TP7', 'CP5', 'CP3', 'CP1', 'CPz', 'CP2', 'CP4',
+        'CP6', 'TP8', 'M2', 'P7', 'P5', 'P3', 'P1', 'Pz', 'P2', 'P4', 'P6',
+        'P8', 'PO7', 'PO5', 'PO3', 'POz', 'PO4', 'PO6', 'PO8', 'CB1', 'O1',
+        'Oz', 'O2', 'CB2', 'HEOG', 'VEOG'], dtype='<U4'),
+ 'data': array([[-1.12866123e-05, -2.65288681e-05, -3.23824174e-06, ...,
+          6.55850833e-05,  7.62328967e-05,  7.86320545e-05],
+        [-9.48798291e-05, -9.65151415e-05, -8.66185865e-05, ...,
+          4.31979958e-05,  5.25620877e-05,  5.46391135e-05],
+        [-1.21921364e-04, -1.29915695e-04, -1.07801338e-04, ...,
+          2.84674664e-05,  3.79869374e-05,  4.41835641e-05],
+        ...,
+        [-1.64447760e-05, -3.41811068e-05, -3.15895534e-05, ...,
+         -7.30873812e-06, -2.43853666e-05, -2.39186260e-05],
+        [ 3.65203953e-05,  3.22641733e-05,  3.86147172e-05, ...,
+         -1.63223759e-04, -1.51976764e-04, -1.50407239e-04],
+        [-8.10325504e-04, -8.49075174e-04, -8.20144940e-04, ...,
+         -2.83902613e-04, -2.62110763e-04, -2.61275838e-04]]),
+ 'srate': 500,
+ 'times': array([0.0000e+00, 8.0000e-03, 1.6000e-02, ..., 9.9976e+01, 9.9984e+01,
+        9.9992e+01])}
+```
+
+* `eeg['ch_names']`: numpy array of shape (66,). Represents the channel names.
+* `eeg['data']`: numpy array of shape (66, 50001). Represents the actual data in a (channel, time) format.
+* `eeg['srate']`: int. Represents the sampling rate [Hz].
+* `eeg['times']`: numpy array of shape (50001,). Represents the time vector [s].
+
+Your task is:
+
+1. Find the index of the C1 electrode in `eeg['ch_names']` array.
+2. Use the location of the C1 electrode and indexes `(1000:2001)` for the time axis to slice the signal for the channel C1 from 2s to 4s of recording. Note that the resulting array will have the shape (1, 1001).
+3. Find the maximum, minimum, and mean values of the resulting array `c1_data`.
+4. Find the indexes that correspond to these values in the `c1_data` array using [`np.where()`](https://numpy.org/doc/stable/reference/generated/numpy.where.html) function.
+5. Print out the results using f-string. Convert values to micro Volts and round up to the 2nd digit.
+
+<codeblock id="03_07">
+
+- to filter out just one channel you can use the following structure: `<np.array>[<condition>]`;
+- NumPy arrays have lots of useful methods for descriptive statistics, such as `<np.array>.var()`, `<np.array>.std()`, etc.
+
+</codeblock>
+
+You could notice that solution using `c1_data[0, :]` for finding the time points of max and min values. Why did we include only `0` value for the 1-st dimension in the slicing? Let's take a look at two cases:
+
+```python
+t_1 = np.where(c1_data == max_v)
+t_2 = np.where(c1_data[0, :] == max_v)
+print(t_1)
+print(t_2)
+```
+
+```out
+(array([0]), array([524]))
+(array([524]),)
+```
+
+In the first case for `t_1`, function `np.where()` found the maximum value in the *whole* array and returned a tuple, which tells us that the maximum element is located on the 0th index for the first dimension and 524-th index for the second dimension. But since we know that our data doesn't have any other indexes in the first dimension, we can search for the index using `0` index as a slicing value to avoid redundant results as we did for `t_2` example. In this case, we also reshape the `c1_data` array from a 2-D array with the shape (1, 1001) to a 1-D array with the shape (1001,).
+
+</exercise>
+
+<exercise id="4" title="NumPy exercises: Linear Regression">
 
 **Exercise 1**. You performed a learning task for subjects with anxiety (anxiety level was measured according to Speilberger Trait Anxiety Inventory (TAI)). Variable `X` is the corresponding TAI of each subject. Variable `y` is the accuracy score (0-100% range).
 
@@ -118,9 +188,9 @@ print(y)
 [53.9 42.8 52.9 43.3 77.5 39. 43.6 54.8 64.6 43.1 63. 35.4 42.6 60.8 60.6 59.8 64.6 57. 70.3 55.3]
 ```
 
-<center><img src="regression_anxiety.png" width="500"></center>
+<center><img src="imgs/regression_anxiety.png" width="500"></center>
 
-Build a linear regression model:
+Build a linear regression model using [Ordinary Least Squares method](https://en.wikipedia.org/wiki/Ordinary_least_squares):
 
 <center><img src="https://latex.codecogs.com/gif.latex?\text{Accuracy}&space;=&space;b_0&space;&plus;&space;b_1&space;\times&space;\text{TAI}" title="\text{Accuracy} = b_0 + b_1 \times \text{TAI}" /></center>
 
@@ -151,7 +221,7 @@ Note that `X` array has (20,2) shape where the first column is column of ones. T
 
 Value <img src="https://latex.codecogs.com/gif.latex?(y_{\text{pred}}&space;-&space;y_{\text{true}})" title="(y_{\text{pred}} - y_{\text{true}})" /> is called a **residual** (or error). Example of such value is shown in red on the plot below.
 
-<center><img src="regression_anxiety_line.png" width="500"></center>
+<center><img src="imgs/regression_anxiety_line.png" width="500"></center>
 
 To find RMSE, you have to :
 
@@ -168,14 +238,14 @@ To find RMSE, you have to :
 
 </exercise>
 
-<exercise id="4" title="Pandas" type="slides">
+<exercise id="5" title="Pandas" type="slides">
 
 <slides source="chapter3_02_pandas">
 </slides>
 
 </exercise>
 
-<exercise id="5" title="Pandas exercises">
+<exercise id="6" title="Pandas exercises">
 
 **Question 1**. How many missing values are in the socioeconomic status column (`SES`)?
 
@@ -252,14 +322,14 @@ Can you imagine a 5 dimensional csv file?
 
 </exercise>
 
-<exercise id="6" title="Joining data in Pandas" type="slides">
+<exercise id="7" title="Joining data in Pandas" type="slides">
 
 <slides source="chapter3_03_pandas_joins">
 </slides>
 
 </exercise>
 
-<exercise id="7" title="Joining practice">
+<exercise id="8" title="Joining practice">
 
 **Exercise 1**. You have two DataFrames loaded in. One has IDs of patients and the breast cancer status (malignant or benign). The other one has IDs of patients and some features for the cell nucleus.
 
@@ -271,7 +341,7 @@ Is the average `radius_mean` value is greater for malignant type?
 
 | `table_1` | `table_2` |
 |:-:|:-:|
-| <center><img src="table1.png"></center> | <center><img src="table2.png" ></center> |
+| <center><img src="imgs/table1.png"></center> | <center><img src="imgs/table2.png" ></center> |
 
 <codeblock id="03_05">
 

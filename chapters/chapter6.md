@@ -78,7 +78,7 @@ plt.title("Population PDF", fontsize=18)
 plt.show()
 ```
 
-<center><img src="stats_pop.png" width="500"></img></center>
+<center><img src="imgs/stats_pop.png" width="500"></img></center>
 
 What is the value of survival function at point 120? Or in other words, what is the probability that random variable *X* will be greater than 120?
 
@@ -106,7 +106,7 @@ plt.title("Histogram of sample distribution", fontsize=18)
 plt.show()
 ```
 
-<center><img src="stats_sample.png" width="500"></img></center>
+<center><img src="imgs/stats_sample.png" width="500"></img></center>
 
 </exercise>
 
@@ -164,7 +164,7 @@ If you have done everything correct in exercise 2 in part 4, your results should
 ```out
 t score=-2.36, p-val=0.01
 ```
-<center><img src="stats_t.png" width="500"></img></center>
+<center><img src="imgs/stats_t.png" width="500"></img></center>
 
 Now let's perform the *t*-test on the same data but in more convenient way using [`ttest_1samp()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_1samp.html) function from `scipy.stats` module and [`ttest()`](https://pingouin-stats.org/generated/pingouin.ttest.html) function from `pingouin` package.
 
@@ -414,7 +414,7 @@ Further reading:
 
 <exercise id="10" title="Outliers in the data">
 
-<center><img src="outliers.png"></center>
+<center><img src="imgs/outliers.png"></center>
 
 In statistics, an **outlier** is a data point that differs significantly from other observations. An outlier may be due to variability in the measurement or it may indicate the experimental error; the latter are sometimes excluded from the data set. An outlier can cause serious problems in statistical analyses. There is no rigid mathematical definition of what constitutes an outlier; determining whether or not an observation is an outlier is ultimately a subjective exercise.
 

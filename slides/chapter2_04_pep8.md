@@ -29,7 +29,7 @@ Notes: Here you see the recommendations on how to call the variables in your Pyt
 
 # Names should be meaningful
 
-<center><img src="names_meme.jpg" width="400"></center>
+<center><img src="imgs/names_meme.jpg" width="400"></center>
 
 Notes: There is nothing wrong with calling your variables `test`, `x`, or `my_func` when performing some quick task, but try to keep names as clear as possible when you are working on a code for a broader audience (after several days even you probably will not remember the purpose of the functions you created). If you saw a function `get_average_size()` in someone's code, you could assume that it has to do something with array size. But what could `function_version_1_test_fixed()` function do?
 

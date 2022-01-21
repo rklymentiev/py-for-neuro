@@ -99,7 +99,7 @@ Notes: You can see a simple example of numeric operations on lists vs arrays. Nu
 
 | Image as we see it | Image as Python sees it |
 |:-:|:--|
-| <img src="brain_photo.jpg" width="300"> |  <code> import numpy as np<br>from skimage import io<br>IMG_URL = 'brain_photo.jpg'<br>image = io.imread(IMG_URL)<br>image.shape</code><br><code>(3024, 4032, 3)</code> |
+| <img src="imgs/brain_photo.jpg" width="300"> |  <code> import numpy as np<br>from skimage import io<br>IMG_URL = 'brain_photo.jpg'<br>image = io.imread(IMG_URL)<br>image.shape</code><br><code>(3024, 4032, 3)</code> |
 
 <span>Photo by <a href="https://unsplash.com/@natcon773?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Natasha Connell</a> on <a href="https://unsplash.com/s/photos/brain?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
@@ -109,7 +109,7 @@ Notes: The best way to visualize the multidimensional array is through an image.
 
 # Slicing
 
-<center><img src="brain_slice.png" width="500"></center>
+<center><img src="imgs/brain_slice.png" width="500"></center>
 
 Notes: On the first plot, you see the Python visualization of the array without any slicing.
 

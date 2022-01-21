@@ -139,9 +139,9 @@ Dictionary `eeg` looks as follows:
 
 Position of FpZ channel on a skull:
 
-<center><img src="1020system.png" width="400"></center>
+<center><img src="imgs/1020system.png" width="400"></center>
 
-Cavanagh, J. F., Bismark, A. W., Frank, M. J., & Allen, J. J. B. (2019). Multiple Dissociations Between Comorbid Depression and Anxiety on Reward and Punishment Processing: Evidence From Computationally Informed EEG. *Computational Psychiatry*, 3, 1–17. DOI: http://doi.org/10.1162/CPSY_a_00024
+Cavanagh, J. F., Bismark, A. W., Frank, M. J., & Allen, J. J. B. (2019). Multiple Dissociations Between Comorbid Depression and Anxiety on Reward and Punishment Processing: Evidence From Computationally Informed EEG. *Computational Psychiatry, 3*, 1–17. DOI: http://doi.org/10.1162/CPSY_a_00024
 
 <codeblock id="07_03">
 
@@ -154,5 +154,56 @@ Cavanagh, J. F., Bismark, A. W., Frank, M. J., & Allen, J. J. B. (2019). Multipl
 This was obviously a very sloppy example and there are lots and lots more what you could do with signal data. If you are interested in EEG analysis, I highly recommend [**Complete neural signal processing and analysis: Zero to hero**](https://www.udemy.com/course/solved-challenges-ants/) course at Udemy by Mike X Cohen.
 
 You can also check my blog post on working with this data using [MNE](https://mne.tools/stable/index.html) Python package: [Blog Post: EEG Data Analysis](https://defme.xyz/post/eeg-preprocessing-erp/).
+
+</exercise>
+
+<exercise id="4" title="Simulating the Reinforcement Learning agent">
+
+Reinforcement Learning (RL) is a relatively new subfield of Machine Learning, but it has already provided huge help in computational neuroscience. RL models have been widely used in modeling humans' and animals' behavior and helped to reveal neuronal correlates of decision making.
+
+<center><img src="imgs/reinforcement_learning.jpg" width="500"></center>
+
+Credits: Sutton, R. S., & Barto, A. G. (2018). *Reinforcement Learning: An Introduction (Adaptive Computation and Machine Learning series)* (second edition). A Bradford Book.
+
+The basic idea of RL is that the *agent* interacts with the *environment* by making the *actions*. Each action results in the outcome *reward* and brings the agent to a new *state*. This is a continuous loop and throughout this interaction, agent learns what actions lead to the highest reward by updating his beliefs about the action-state pairs.
+
+Imagine three slot machines, where each machine has a unique and unknown (to the agent) probability of reward (a.k.a. **Three-armed bandit task**).
+
+<center><img src="https://i.ibb.co/L67QBBz/slotmachine.gif" width="200"><img src="https://i.ibb.co/L67QBBz/slotmachine.gif" width="200"><img src="https://i.ibb.co/L67QBBz/slotmachine.gif" width="200"></center>
+
+Your task is to create the agent, who has to learn which option is more rewarding and maximize the total reward within the limited number of trials. For this, you are going to use the **Q-learning model**, which is most commonly used for decision-making modeling. There are several modifications of this model with different parameters, but in a simple form algorithm can be represented like this:
+
+<img src="imgs/q_model.png" width="500">
+
+* α is a *learning rate*, which lies in a range [0, 1] and controls the speed of updating the value function *Q*. The lower the value, the slower the learning process.
+* β is an *inverse temperature*, with the lower non-inclusive bound 0. Controls the behavior of the agent - the lower the value, the more explorative the agent.
+* *Q(a)* is a value function or expected reward of an action *a*.
+* The softmax function transforms the value function values to probabilities of making an action. It does that by computing the exponential of each value divided by the sum of the exponentials of all the values, scaled by the inverse temperature. In Python it can be calculated using [`softmax()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.softmax.html) function from `scipy.special` module.
+
+<codeblock id="07_04">
+
+* remember that at each trial you are working only with the slice of value function;
+
+</codeblock>
+
+What statement is **true**?
+
+<choice id="2">
+<opt text="Total reward for the agent is around 100 (a.u.)" >
+Look at the cumulative reward plot. Agent has ended up with reward of ~60.
+</opt>
+
+<opt text="Around 3/4 of agent's choices were suboptimal" >
+Check how many time agent has chosen each arm on the bar chart. Option #3 (optimal choice) was selected around 55 times out of 100, which means that around 45/100 choices were suboptimal. Even though suboptimal choices don't guarantee the highest total reward, they are essential for learning.
+</opt>
+
+<opt text="Agent had the highest expectation for the 3rd arm until the 80th trial, then it was switching between options #2 and #3" correct="true">
+Look at the value function plot. At trial ~80 agent didn't receive the expected reward, that's why the value function decreased and then agent was exploring between option #2 and #3.
+</opt>
+</choice>
+
+Can you improve agent's performance by changing α and β parameters?
+
+For more in-depth overview of RL check out these video series [Reinforcement Learning Course | DeepMind & UCL](https://www.youtube.com/playlist?list=PLqYmG7hTraZBKeNJ-JE_eyJHZ7XgBoAyb).
 
 </exercise>

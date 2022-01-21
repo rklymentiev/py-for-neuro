@@ -116,7 +116,7 @@ You have Python interpreter built on Binder directly on the website, so you can 
 
 <exercise id="5" title="Where to search for help">
 
-<center><img src="documentation.jpg" width="500"></img></center>
+<center><img src="imgs/documentation.jpg" width="500"></img></center>
 
 What could you do if you know the name of the function (for example `print()`) but you don't know how to use it? You can look into the documentation of the function on the [website](https://docs.python.org/3/library/functions.html#print) or use the [`help()`](https://docs.python.org/3/library/functions.html#help) function directly in Python:
 
@@ -139,7 +139,7 @@ print(...)
 
 However, what should you do if you don't know which function can help if solving an issue (for example, how to calculate average in Python)? In such a case Google search will help. Most of the questions you have were asked online before you. The best way to get the solution to your problem is Stack Overflow. Data Science has a great online community that is happy to help.
 
-<center><img src="stackoverflow.png" width="500"></img></center>
+<center><img src="imgs/stackoverflow.png" width="500"></img></center>
 
 There are hundreds of packages with hundreds of functions in each, so it's impossible to learn them all by heart. Here is a nice collection of the packages divided by tasks: [Awesome Python](https://awesome-python.com/) or [GitHub link](https://github.com/vinta/awesome-python).
 
@@ -151,7 +151,7 @@ And of course cheat sheets might also become handy: [Data Science Cheat Sheets](
 
 In 1963 there was an experiment by Held and Hein where they put neonatal (newborn) kittens in a special device. One kitten was able to move around in a circle, the other one was kept in a basket so he couldn't move around but could observe the world around due to the movements induced by the actively moving kitten. Animals spent around 3 hours a day in that device and the rest of the time they spent in a cage with no light. Each animal was tested in several tests afterward, such as avoidance of a visual cliff or blink to an approaching object. The study showed that passively moved kittens failed to show a response (blink) to an approaching object or discrimination of the cliff.
 
-<center><img src="cats.png" width="500"></img></center>
+<center><img src="imgs/cats.png" width="500"></img></center>
 
 Held, R., & Hein, A. (1963). Movement-produced stimulation in the development of visually guided behavior. *Journal of Comparative and Physiological Psychology*, 56(5), 872–876. https://doi.org/10.1037/h0040546
 
