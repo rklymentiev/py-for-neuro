@@ -69,7 +69,7 @@ const Layout = ({ isHome, title, description, children }) => {
                                                 className={classes.profile}
                                             />
                                         )}
-                                        <p>{meta.bio}</p>
+                                        <div dangerouslySetInnerHTML={{__html: meta.bio }} />
                                     </section>
 
                                     {meta.footerLinks && (

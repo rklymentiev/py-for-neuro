@@ -171,7 +171,7 @@ True & False = False
 
 </codeblock>
 
-**Exercise 2**. A palindromic sequence is a nucleic acid sequence in a double-stranded DNA or RNA molecule wherein reading in a certain direction (e.g. 5' to 3') on one strand matches the sequence reading in the opposite direction (e.g. 5' to 3') on the complementary strand. Is tje given sequence a palindromic sequence?
+**Exercise 2**. A palindromic sequence is a nucleic acid sequence in a double-stranded DNA or RNA molecule wherein reading in a certain direction (e.g. 5' to 3') on one strand matches the sequence reading in the opposite direction (e.g. 5' to 3') on the complementary strand. Is the given sequence a palindromic sequence?
 
 <codeblock id="01_07">
 
