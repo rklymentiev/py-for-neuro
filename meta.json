@@ -3,7 +3,7 @@
     "title": "Python for Neuroscience",
     "slogan": "Perform your favorite data analysis in Python",
     "description": "This free and interactive course is designed to guide you through the basics of Python programming. The course covers most of the topics to get you started, including the basics of programming, working with packages like NumPy or Pandas for data manipulation, making human-readable plots, and working with data in different formats.",
-    "bio": "<p>My name is Ruslan and I am a Master's student in Neuroscience with a background in Data Science. I feel passionate about computational neuroscience, post-rock, and hiking.</p><p><a href='https://www.buymeacoffee.com/ruslankl'><img src='https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png'/></a></p>",
+    "bio": "<p>My name is Ruslan Klymentiev and I am a Master's student in Neuroscience with a background in Data Science. I feel passionate about computational neuroscience, post-rock, and hiking.</p><p><a href='https://www.buymeacoffee.com/ruslankl' target='_blank'><img src='https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png'/></a></p>",
     "siteUrl": "https://pyforneuro.com",
     "twitter": "ruslan_kl",
     "fonts": "IBM+Plex+Mono:500|IBM+Plex+Sans:700|Lato:400,400i,700,700i",
