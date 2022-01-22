@@ -118,7 +118,7 @@ print(variances)
 
 Notes: Unlike `while` loops, `for` loops don't require any condition. But they require an iterable object (like a list). Even though `for` loops can be really computationally slow, they are really helpful in some applications.
 
-In the first example we were iterating over the list `my_list`, which consists of three strings. At each step of the loop, we defined a temporary variable `word` (name `word` is arbitrary, you can call it as you wish) as a value from the lists.
+In the first example, we were iterating over the list `my_list`, which consists of three strings. At each step of the loop, we defined a temporary variable `word` (name `word` is arbitrary, you can call it as you wish) as a value from the lists.
 
 * *Step 1*. `word` = `'data'`
 * *Step 2*. `word` = `'science'`

@@ -49,9 +49,9 @@ print(temperature_series)
 dtype: float64
 ```
 
-Notes: In the same way NumPy has its object data type `ndarray`, in the same Pandas has two main data types which allow you to perform all the cool stuff. We start with Series.
+Notes: Just like NumPy has its object data type `ndarray`, in the same way Pandas has two main data types which allow you to perform all the cool stuff. We start with Series.
 
-Series are basically **one**-dimensional array, that has a name and index name. Names could be integers or strings, but they have to be unique. To put it simply, remember built-in lists objects? Lists consist of different values that could be called by an integer index. Series are almost the same, but they also allow using specified names instead of ordering index. We will look at the example of this a bit later. Another key difference is that Series don't allow mixed data types within one object.
+Series are basically **one**-dimensional array, that has a name and index name. Names could be integers or strings, but they have to be unique. To put it simply, remember built-in lists objects? Lists consist of different values that could be called by an integer index. Series are almost the same, but they also allow usage of specified names instead of ordering index. We will look at the example of this a bit later. Another key difference is that Series don't allow mixed data types within one object.
 
 In our example, we have a Series with the values of `float64` type and indexes from `0` to `7`.
 
@@ -112,7 +112,7 @@ Notes: The second data type is Pandas DataFrames. It is basically a collection o
 
 You can see an example of a csv file being uploaded into Python and converted into DataFrame. The data is from Vos et al. (2013) experiment and represents the data of patients with different levels of dementia.
 
-Note that now the type is the same within each column but overall types are different for the whole DataFrame. And that's what you would probably expect. Usually, each row represents a particular observation or subject data, whereas the column represents different features of that observation. So you would expect that for the column (feature) "Age" all subjects have numeric values and strings for the column "Name".
+Note that now the type is the same within each column but overall types can be different for the whole DataFrame. And that's what you would probably expect. Usually, each row represents a particular observation or subject data, whereas the column represents different features of that observation. So you would expect that for the column (feature) "Age" all subjects have numeric values and strings for the column "Name".
 
 ---
 
@@ -195,7 +195,7 @@ If you want to select two or more columns at a time, you can pass a list with co
 Notes: DataFrames have a bit specific way of indexing. Remember that you can index by the columns and rows at the same time. There are two options:
 
 1. Index the the **index** (or `i`nteger-`loc`ation). In this case we use `<DataFrame>.iloc[<row position(s)>, <column position(s)>]`. You can specify one position as an integer, or multiple positions as a list or use slicing `<position1>:<position2>`. All the columns/rows will be selected (excluding the `position2`) in the slice.
-2. Index by the **name** (or `loc`ation). In this case, we use `<DataFrame>.loc[<row name(s)>, <column name(s)>]`. You can specify one name as a string, or multiple names as a list or use slicing `<name1>:<name2>`. All the columns/rows will be selected (including the `name2`) in the slice. Also, you can specify the Boolean list index where all the rows/columns that correspond to the `True` value will be included.
+2. Index by the **name** (or `loc`ation). In this case, we use `<DataFrame>.loc[<row name(s)>, <column name(s)>]`. You can specify one name as a string, multiple names as a list, or use slicing `<name1>:<name2>`. All the columns/rows will be selected (including the `name2`) in the slice. Also, you can specify the Boolean list index where all the rows/columns that correspond to the `True` value will be included.
 
 ---
 
@@ -229,11 +229,11 @@ dementia_df['ID'][dementia_df['nWBV'].between(0.7, 0.8)]
 Name: ID, Length: 162, dtype: object
 ```
 
-Notes: To filter the data you have to specify the condition to filter on. In the same way, as we did before, you can combine multiple condition with `&` (AND) or `|` (OR) operations.
+Notes: To filter the data you have to specify the condition to filter on. In the same way, as we did before, you can combine multiple conditions with `&` (AND) or `|` (OR) operations.
 
-In the first example we are taking all the observations that meet the criteria: gender is female and age is greater than 60. Note that you don't have to create a separate object (`condition`), it was done only for a better visual representation.
+In the first example, we are taking all the observations that meet the criteria: gender is female and age is greater than 60. Note that you don't have to create a separate object (`condition`), it was done only for a better visual representation.
 
-In the second example, first we take the column `ID` and then we filter the Series by the condition that normalized whole-brain volume (`nWBV`) should be in a range between 0.7 and 0.8.
+In the second example, first, we take the column `ID` and then we filter the Series by the condition that normalized whole-brain volume (`nWBV`) should be in a range between 0.7 and 0.8.
 
 ---
 

@@ -79,9 +79,9 @@ bool
 
 Notes: Example #1 is pretty straightforward. `x` is indeed smaller than 100, so the result is `True`.
 
-In the second example the left condition was `True` (`x` is greater than 10) and the right condition was `False` (`y` is not less than 5), which resulting in the final `True` result (in other words, at least one condition was `True`).
+In the second example, the left condition was `True` (`x` is greater than 10) and the right condition was `False` (`y` is not less than 5), which resulting in the final `True` result (in other words, at least one condition was `True`).
 
-In the third example we want to check if **both** conditions are `True`, which is not the case, that's why the final result is `False`. You can also save the result of a condition operation to a new object (like `result` in this example) for later use.
+In the third example, we want to check if **both** conditions are `True`, which is not the case, that's why the final result is `False`. You can also save the result of a condition operation to a new object (like `result` in this example) for later use.
 
 ---
 

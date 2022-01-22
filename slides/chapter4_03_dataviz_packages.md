@@ -17,9 +17,9 @@ Matplotlib is a comprehensive library for creating static, animated, and interac
 ```python
 import matplotlib.pyplot as plt
 ```
-Notes: Matplotlib must be the most commonly used package for the data visualization in Python. If you have worked in MATLAB, you might see a lot of similarities in the plotting syntax  (hence the name). Matplotlib has the gallery with the possible graphs you can make, which makes it easy to adopt the code for your own problem.
+Notes: Matplotlib must be the most commonly used package for data visualization in Python. If you have worked in MATLAB, you might see a lot of similarities in the plotting syntax  (hence the name). Matplotlib has a gallery with the possible graphs you can make, which makes it easy to adapt the code for your own problem.
 
-Most of the time we don't need the whole package, but just a module `pyplot`, which has commonly used alias name `plt`.
+Most of the time we don't need the whole package, but just a module `pyplot`, with the alias name `plt`.
 
 ---
 
@@ -75,7 +75,7 @@ plt.show()   # end
 
 <img src="plt/line2.png" width="400">
 
-Notes: Here is an example how you can add more objects to the figure. Note that order is not important, as long as you keep all the new plotting objects between `plt.figure()` and `plt.plot()`.
+Notes: Here is an example of how you can add more objects to the figure. Note that order is not important, as long as you keep all the new plotting objects between `plt.figure()` and `plt.plot()`.
 
 Some explanations:
 
@@ -101,9 +101,7 @@ plt.show()
 
 <img src="plt/area.png" width="400">
 
-Notes: Just like in MATLAB you can add several variables to plot in one `plt.plot()` function.
-
-One of the ways to create an area chart is to use `plt.fill_between()` function. `alpha` is responsible for opacity (`0`: object is transparent, `1`: full color).
+Notes: One of the ways to create an area chart is to use `plt.fill_between()` function. `alpha` is responsible for opacity (`0`: object is transparent, `1`: full color).
 
 ---
 
@@ -125,7 +123,7 @@ plt.show()
 
 <img src="plt/bar.png" width="350">
 
-Notes: `plt.bar()` displays the bar in a given order from the DataFrame/list. So if you want to represent bars in a specific order (for example, descending as on the example), you have to perform some manipulations on the DataFrame before calling plot function.
+Notes: `plt.bar()` displays the bar in a given order from the DataFrame/list. So if you want to represent bars in a specific order (for example, descending as on the example), you have to perform some manipulations on the DataFrame before calling the plot function.
 
 ---
 
@@ -141,7 +139,7 @@ Seaborn is a Python data visualization library based on Matplotlib. It provides 
 import seaborn as sns
 ```
 
-Notes: Even though Matplotlib is great, it works better in a combination with a Seaborn. You can think of Seaborn as a "wrapper" over Matplotlib functions. Both packages have it's own advantages or disadvantages, and some plots are easy to create in one package, some in another.
+Notes: Even though Matplotlib is great, it works better in a combination with a Seaborn. You can think of Seaborn as a "wrapper" over Matplotlib functions. Both packages have its own advantages or disadvantages, and some plots are easy to create in one package, some in another.
 
 ---
 
@@ -162,7 +160,7 @@ plt.show()
 
 Notes: Even though we are using Seaborn to create a scatter plot, we still need Matplotlib to call layout functions, like `plt.title()`.
 
-Note that we didn't call `plt.xlabel()` or `plt.ylabel()`, Seaborn takes the axis labels from column names (score another one for Seaborn). Also, you have two options on how to specify `x` and `y` arguments inside the Seaborn functions. First method is represented on the left, by specifying the `data` and then calling `x` and `y` as column names. Or you could do this in a Matplotlib style:
+Note that we didn't call `plt.xlabel()` or `plt.ylabel()`, Seaborn takes the axis labels from column names (score another one for Seaborn). Also, you have two options on how to specify `x` and `y` arguments inside the Seaborn functions. The first method is represented on the left, by specifying the `data` and then calling `x` and `y` as column names. Or you could do this in a Matplotlib style:
 
 ```python
 sns.scatterplot(
@@ -194,18 +192,18 @@ df = pd.DataFrame(
 
 <img src="plt/subplot.png" width="500">
 
-Notes: Matplotlib also allows to created a combined graphs unsig `plt.subplot()` function. Inside the subplot function we specify three values:
+Notes: Matplotlib also allows to created a combined graphs using `plt.subplot()` function. Inside the subplot function we specify three values:
 
 1. total number of rows for the final plot;
-2. total number of columns for final plot;
+2. total number of columns for the final plot;
 3. index of the plot that is currently modified. Ordering goes left to right, top to bottom.
 
-In this example we specified that final plot will consists of `1` row and `2` columns (meaning that we will have two different plots on the same row). For the first plot we are adding scatter plot, for the second plot we are adding bar plot.
+In this example, we specified that the final plot will consist of `1` row and `2` columns (meaning that we will have two different plots on the same row). For the first plot, we are adding the scatter plot, for the second plot we are adding the bar plot.
 
 Some comments:
 
-* `hue` allows to add a grouping variable;
-* we don't have to calculate the average to `weight` in order to pass the values to the [`sns.barplot()`](https://seaborn.pydata.org/generated/seaborn.barplot.html) function since Seaborn doesn this for us. In fact, we can change function to another one using `estimator` argument.
+* `hue` allows adding a grouping variable;
+* we don't have to calculate the average to `weight` in order to pass the values to the [`sns.barplot()`](https://seaborn.pydata.org/generated/seaborn.barplot.html) function since Seaborn does this for us. In fact, we can change the function to another one using the `estimator` argument.
 * [Matplotlib subplots and axes objects](http://www.math.buffalo.edu/~badzioch/MTH337/PT/PT-matplotlib_subplots/PT-matplotlib_subplots.html)
 
 ---

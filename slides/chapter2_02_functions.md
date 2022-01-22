@@ -103,7 +103,7 @@ list(filter(greater_than_two, stdev))
 
 Notes: `map()` function is used to apply a function on all the elements of specified iterable object and to return map object. Python map object is an iterator, so we can iterate over its elements. We can also convert a map object to a sequence object such as list, tuple etc.
 
-In the first example we applied function `squared` to **every** object from the list `stdev` and converted the result to a list.
+In the first example, we applied function `squared` to **every** object from the list `stdev` and converted the result to a list.
 
 The `filter()` function constructs an iterator from elements of an iterable for which a function returns true. In simple words, the `filter()` function filters the given iterable object with the help of a function that tests each element in the iterable to be true or not.
 
@@ -135,7 +135,7 @@ list(filter(lambda x: x>2, stdev))
 ```
 Notes: On the previous slide, we created two new functions `squared()` and `greater_than_two()` that we used only once and will not need them later at all. This might look like not a big deal for now, but imagine you have 100 of such "temporary" functions that do its own one-time task. This can result in unnecessary memory usage. We can fix this with the help of `lambda` functions.
 
-In the first example we created a `lambda` function that takes `x` as an input and returns `x**2`. If you compare it to `square` function, you can notice that they are basically the same, but `lambda` function has no name and you cannot access it later since it's not saved in the environment.
+In the first example, we created a `lambda` function that takes `x` as an input and returns `x**2`. If you compare it to `square` function, you can notice that they are basically the same, but `lambda` function has no name and you cannot access it later since it's not saved in the environment.
 
 In the second example, we created a `lambda` function that takes `x` as an input and returns the result of a comparison `x>2`.
 

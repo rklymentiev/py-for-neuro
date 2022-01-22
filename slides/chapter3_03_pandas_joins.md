@@ -40,7 +40,7 @@ Notes: In this example we have two tables:
 
 We will join the data by the column `Id`. *Think what would happen if we didn't have the `Id` column in table B. Would we be able to join these two tables together?*
 
-With inner join, we take only those observations that have matching `Id` values in both tables (these observations are marked with green ticks). Note that there were two observations in table B with `Id` "1", so in a resulting table (bottom right) we have two observations for "Bob".
+With the inner join, we take only those observations that have matching `Id` values in both tables (these observations are marked with green ticks). Note that there were two observations in table B with `Id` "1", so in a resulting table (bottom right) we have two observations for "Bob".
 
 ---
 
@@ -52,7 +52,7 @@ Notes: By performing a **left join** we have to define one table as "left" and t
 
 Some observations from table A didn't have matching observations in table B, that's why we see missing values in a table.
 
-**Right join** idea is basically the same, but in this case, we would take all the observations from the right table and add matches from the left table. So if we did a right join with table A is "right" and table B is "left" we would end up with the same results.
+An idea of the **right join** is basically the same, but in that case, we would take all the observations from the right table and add matches from the left table. So if we did a right join with table A is "right" and table B is "left" we would end up with the same results.
 
 ---
 

@@ -75,11 +75,11 @@ Nuocec ok!
 ```
 Notes: You can take a slice from the string by calling its index(es) in square brackets. It's important to remember, that indexes in Python start with 0 (the letter `N` in a string `Neuroscience` stands on a 0th index, not the 1st one).
 
-In the first example we are taking all the characters from 5th index to 11th included. We can drop the `:step` part if we want to take all the values.
+In the first example, we are taking all the characters from 5th index to 11th included. We can drop the `:step` part if we want to take all the values.
 
-In the second example we provide only starting index. In such case we return just one character, that stands on a 5th index.
+In the second example, we provide only starting index. In such case we return just one character, that stands on a 5th index.
 
-In the third example we drop starting index but provided the end index. That means that Python takes all the values from the beginning till 3th index is included.
+In the third example, we drop starting index but provided the end index. That means that Python takes all the values from the beginning till 3th index is included.
 
 In the fourth example, we drop both starting and end indexes, meaning that we want to take elements from the beginning till the end (all values basically). However, the step is set to 2, meaning that we take every second value.
 
