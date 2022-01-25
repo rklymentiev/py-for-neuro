@@ -16,9 +16,9 @@ Also, we are not really interested in the study designs and how exactly the obse
 
 Further reading:
 
-* Blog post: [Null Hypothesis Significance Testing, part 1](https://defme.xyz/post/null-hypothesis-significance-testing-part-1/): Inference for a population mean: *t*-tests & ANOVA;
-* Blog post: [Null Hypothesis Significance Testing, part 2](https://defme.xyz/post/null-hypothesis-significance-testing-part-2/): Inference for a population proportion: binomial test, Chi-squared test;
-* Blog post: [Null Hypothesis Significance Testing, part 3](https://defme.xyz/post/null-hypothesis-significance-testing-part-3/): Power of the Test, Sample Size and Effect Size;
+* Blog post: [Null Hypothesis Significance Testing, part 1](https://rklymentiev.com/post/null-hypothesis-significance-testing-part-1/): Inference for a population mean: *t*-tests & ANOVA;
+* Blog post: [Null Hypothesis Significance Testing, part 2](https://rklymentiev.com/post/null-hypothesis-significance-testing-part-2/): Inference for a population proportion: binomial test, Chi-squared test;
+* Blog post: [Null Hypothesis Significance Testing, part 3](https://rklymentiev.com/post/null-hypothesis-significance-testing-part-3/): Power of the Test, Sample Size and Effect Size;
 * YouTube channel: [StatQuest with Josh Starmer](https://www.youtube.com/user/joshstarmer) (I can recommend literally every single video);
 * Coursera specialization: [Statistics with R by Duke University](https://www.coursera.org/specializations/statistics).
 

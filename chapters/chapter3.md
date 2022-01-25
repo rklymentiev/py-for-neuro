@@ -204,7 +204,7 @@ which will result in (2x1) matrix with (1,1) value of *b0* and (2,1) value of *b
 
 Note that `X` array has (20,2) shape where the first column is column of ones. This is done to fit the intercept of the linear regression model. You can learn more about linear regression model here:
 
-* Blog post: [A (not that) Simple Least Squares Regression](https://defme.xyz/post/least-squares-regression/)
+* Blog post: [A (not that) Simple Least Squares Regression](https://rklymentiev.com/post/least-squares-regression/)
 * YouTube video: [StatQuest: Linear Models Pt.1 - Linear Regression](https://www.youtube.com/watch?v=nk2CQITm_eo)
 
 <codeblock id="03_01">

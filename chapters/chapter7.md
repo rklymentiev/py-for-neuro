@@ -40,7 +40,7 @@ Here are 9 random stimulus values that lead to the spike in the H1 neuron:
 
 Credits: [Wikipedia](https://en.wikipedia.org/wiki/Decision_tree_learning)
 
-<center><img src="https://defme.xyz/post/how-do-cart-models-work/trees.jpg" width="500"></center>
+<center><img src="https://rklymentiev.com/post/how-do-cart-models-work/trees.jpg" width="500"></center>
 
 Classification and regression trees (CART for short) models are not the first-choice models when it comes to **prediction** because they tend to overfit the data (in other words they can predict quite good on the training data, but much worse on the test data), but they are really good in **explaining** the data structure. If you are interested in the math behind the model, check out the links below. However, you don't need to know much to complete the exercise.
 
@@ -58,7 +58,7 @@ To build a classification tree we are going to use a [`tree`](https://scikit-lea
 8. Fit the data to the model and make a plot.
 
 Further readings:
-* Blog post: [How do CART models work](https://defme.xyz/post/how-do-cart-models-work/)
+* Blog post: [How do CART models work](https://rklymentiev.com/post/how-do-cart-models-work/)
 * YouTube video: [StatQuest: Decision Trees](https://youtu.be/7VeUPuFGJHk)
 
 <codeblock id="07_02">
@@ -153,7 +153,7 @@ Cavanagh, J. F., Bismark, A. W., Frank, M. J., & Allen, J. J. B. (2019). Multipl
 
 This was obviously a very sloppy example and there are lots and lots more what you could do with signal data. If you are interested in EEG analysis, I highly recommend [**Complete neural signal processing and analysis: Zero to hero**](https://www.udemy.com/course/solved-challenges-ants/) course at Udemy by Mike X Cohen.
 
-You can also check my blog post on working with this data using [MNE](https://mne.tools/stable/index.html) Python package: [Blog Post: EEG Data Analysis](https://defme.xyz/post/eeg-preprocessing-erp/).
+You can also check my blog post on working with this data using [MNE](https://mne.tools/stable/index.html) Python package: [Blog Post: EEG Data Analysis](https://rklymentiev.com/post/eeg-preprocessing-erp/).
 
 </exercise>
 
