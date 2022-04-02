@@ -211,26 +211,6 @@ True & False = False
 
 </codeblock>
 
-**Exercise 3**. The leaky integrate-and-fire (LIF) model is one of the most simplest mathematical model that tried to explain neuron's behavior. LIF model represents neuron as a parallel combination of a "leaky" resistor with a conductance *g_L* and a membrane capacitor with a capacitance *C_m*. If the input current *I* is sufficiently strong enough such that membrane potential *V* reaches a certain threshold value *V_thresh*, *V* is reset to *V_reset*.
-
-The membrane potential dynamics can be described by:
-
-<center><img src="https://latex.codecogs.com/svg.image?\tau_m\frac{dV}{dt}&space;=&space;-(V-E_L)&space;&plus;&space;\frac{I}{g_L}" title="\tau_m\frac{dV}{dt} = -(V-E_L) + \frac{I}{g_L}" /></center>
-
-* *E_L* is the resting potential;
-* <img src="https://latex.codecogs.com/svg.image?\tau_m=C_m/g_L" title="\tau_m=C_m/g_L" />, membrane time constant.
-
-Use this equation to simulate the LIF neuron. Store membrane voltage value in a list to visualize the results at the end.
-
-More information about LIF model can be found here: [Neuronal Dynamics book](https://neuronaldynamics.epfl.ch/online/Ch1.S3.html).
-
-<codeblock id="01_10">
-
-- once you calculated the `dv` value, you have to add it to the last value in the list;
-- negative indexes return values from the end of a list. For example, `<list object>[-2]` returns value that is second to the last;
-- to add new value to the list, you can use the `.append()` method.
-
-</codeblock>
 
 
 </exercise>

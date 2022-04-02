@@ -18,7 +18,7 @@
     "showProfileImage": true,
     "footerLinks": [
         {"text": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
-        {"text": "Source code", "url": "https://github.com/ruslan-kl/py-for-neuro" },
+        {"text": "Source code", "url": "https://github.com/rklymentiev/py-for-neuro" },
         {"text": "Get in touch on Twitter", "url": "https://twitter.com/r_klymentiev"}
     ],
     "theme": "#09a3d5"
