@@ -32,13 +32,13 @@ You can also add strings!
 Or even multiply!Or even multiply!Or even multiply!
 ```
 
-Notes: You might have seen codes like this:
+Notes: You might have seen code like this:
 
 ```python
-x = "Hello" # single quotes
+x = 'Hello'  # single quotes
 ```
 ```python
-x = 'Hello' # double quotes
+x = "Hello"  # double quotes
 ```
 
 What are the differences? There is absolutely no difference which type of quotes you are going to use, as long you are consistent within one string (for example, `"hello'` would raise an Error).
