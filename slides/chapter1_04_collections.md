@@ -86,29 +86,30 @@ participants = ['Bob', 'Bill', 'Sarah', 'Max', 'Jill']
 # methods that modify the initial list
 participants.append('Jack') # append one element to the end
 # ['Bob', 'Bill', 'Sarah', 'Max', 'Jill', 'Jack']
-participants.extend(['Anna', 'Bill']) # append multiple elements to end
+participants.extend(['Anna', 'Bill']) # append multiple elements to the end
 # ['Bob', 'Bill', 'Sarah', 'Max', 'Jill', 'Jack', 'Anna', 'Bill']
-participants.insert(0, 'Louis') # insert element at index 0 (shifts everything to the right)
+participants.insert(0, 'Louis') # insert the element at index 0 (shifts everything to the right)
 # ['Louis', 'Bob', 'Bill', 'Sarah', 'Max', 'Jill', 'Jack', 'Anna', 'Bill']
-participants.remove('Jill') # searches for first instance and removes it
+participants.remove('Jill') # searches for the first instance and removes it
 # ['Louis', 'Bob', 'Bill', 'Sarah', 'Max', Jack', 'Anna', 'Bill']
-participants.pop(1) # removes the element at index 0 and returns it
+participants.pop(1) # removes the element at index 1 and returns it
 # ['Louis', 'Bill', 'Sarah', 'Max', Jack', 'Anna', 'Bill']
-
-# not a method, but in this way you can change the value(s) of the list
-participants[2] = 'Ben' # replace element at the index 2
-# ['Louis', Bill', 'Ben', 'Max', Jack', 'Anna', 'Bill']
 ```
-
 ```python
-# methods that don't change a sting and return a new object
-print(participants.count('Bill')) # returns the number of instances;
-print(participants.index('Max'))  # returns index of first instance;
+# methods that don't modify initial list and return a new object
+print(participants.count('Bill')) # returns the number of instances
+print(participants.index('Max'))  # returns the index of the first instance
 ```
 
 ```out
 2
 3
+```
+
+```python
+# not a method, but in this way you can change the value(s) of the list
+participants[2] = 'Ben' # replace the element at the index 2
+# ['Louis', Bill', 'Ben', 'Max', Jack', 'Anna', 'Bill']
 ```
 
 Notes: You heard the terms "method" and "function" already and most of the time they could be used interchangeably. But in fact, they are not the same. Think of methods as a function, that could be applied only on a specific data type. Whereas function `len()` for example can be applied on strings, lists and many other objects. We call function by `function(object)` and method by `object.method()`.
