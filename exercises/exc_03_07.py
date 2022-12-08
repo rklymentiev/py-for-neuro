@@ -3,7 +3,7 @@ ___ numpy ___ np
 import matplotlib.pyplot as plt
 
 # load the pickled file
-with open("exercises/data/eeg_sample.pickle", mode="rb") as f:
+with open("exercises/data/eeg_sample.picklet", mode="rb") as f:
     eeg = pickle.load(file=f)
 
 # filter the elements in the array to find the location (index) of channel C1
