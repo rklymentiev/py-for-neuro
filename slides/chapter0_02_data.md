@@ -4,7 +4,7 @@ type: slides
 
 # Data sets used in the course
 
-Notes: All the files can be downloaded from the [GitHub page](https://github.com/ruslan-kl/py-for-neuro/tree/binder/exercises/data).
+Notes: All the files can be downloaded from the [GitHub page](https://github.com/rklymentiev/py-for-neuro/tree/binder/exercises/data).
 
 ---
 

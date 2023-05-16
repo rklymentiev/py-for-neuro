@@ -97,7 +97,7 @@ To read en Excel file (.xls, .xlsx) we can use [`pd.read_excel()`](https://panda
 #### URL with the file:
 
 ```python
-URL = "https://raw.githubusercontent.com/ruslan-kl/py-for-neuro/binder/exercises/data/oasis_cross-sectional.csv"
+URL = "https://raw.githubusercontent.com/rklymentiev/py-for-neuro/binder/exercises/data/oasis_cross-sectional.csv"
 dementia_df = pd.read_csv(filepath_or_buffer=URL)
 ```
 

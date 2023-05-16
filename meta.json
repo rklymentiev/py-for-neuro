@@ -9,7 +9,7 @@
     "fonts": "IBM+Plex+Mono:500|IBM+Plex+Sans:700|Lato:400,400i,700,700i",
     "testTemplate": "from wasabi import Printer\n__msg__ = Printer()\n__solution__ = \"\"\"${solution}\"\"\"\n\n${solution}\n\n${test}\n\ntry:\n    test()\nexcept AssertionError as e:\n    __msg__.fail(e)",
     "juniper": {
-        "repo": "ruslan-kl/py-for-neuro",
+        "repo": "rklymentiev/py-for-neuro",
         "branch": "binder",
         "lang": "python",
         "kernelType": "python3",
@@ -19,7 +19,7 @@
     "footerLinks": [
         {"text": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
         {"text": "Source code", "url": "https://github.com/rklymentiev/py-for-neuro" },
-        {"text": "Get in touch on Twitter", "url": "https://twitter.com/r_klymentiev"}
+        {"text": "Personal blog", "url": "https://rklymentiev.com/"}
     ],
     "theme": "#09a3d5"
 }

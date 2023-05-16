@@ -12,4 +12,4 @@ Website was built using the template: [course-starter-python](https://github.com
 
 This free and interactive course is designed to guide you through the basics of Python programming. Course covers most of the topics to get you started, including the basics of programming, working with packages like NumPy or Pandas for data manipulation, making human readable plots and working with data in different formats.
 
-If you spotted an error/typo, you can report an [issue](https://github.com/ruslan-kl/py-for-neuro/issues) or create a [pull request](https://github.com/ruslan-kl/py-for-neuro/pulls). Also feel free to add suggestions/feedback in [discussions](https://github.com/ruslan-kl/py-for-neuro/discussions).
+If you spotted an error/typo, you can report an [issue](https://github.com/rklymentiev/py-for-neuro/issues) or create a [pull request](https://github.com/rklymentiev/py-for-neuro/pulls). Also feel free to add suggestions/feedback in [discussions](https://github.com/rklymentiev/py-for-neuro/discussions).

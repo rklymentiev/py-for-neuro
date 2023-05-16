@@ -66,11 +66,11 @@ A: No, mainly for the reasons described in the previous answer.
 
 **Q: I have spotted a typo/error, where do I report it?**
 
-A: Feel free to report an issue on the [GitHub page](https://github.com/ruslan-kl/py-for-neuro) or create a pull request.
+A: Feel free to report an issue on the [GitHub page](https://github.com/rklymentiev/py-for-neuro) or create a pull request.
 
 **Q: I have an idea of relevant exercises/demos/slides, can I contribute?**
 
-A: Definitely yes! Feel free to start a discussion on the [GitHub page](https://github.com/ruslan-kl/py-for-neuro) or contact me directly.
+A: Definitely yes! Feel free to start a discussion on the [GitHub page](https://github.com/rklymentiev/py-for-neuro) or contact me directly.
 
 </exercise>
 
